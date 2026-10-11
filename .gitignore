@@ -1,0 +1,32 @@
+# Dependencies and builds
+node_modules/
+dist/
+build/
+.pnp
+.pnp.js
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+# Secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+# Local profile data
+backend/app/data/*.json
+# Local tooling
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+
+.npm-cache/

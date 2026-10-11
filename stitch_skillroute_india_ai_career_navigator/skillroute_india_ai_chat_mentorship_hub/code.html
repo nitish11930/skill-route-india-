@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SkillRoute India - AI Mentorship &amp; Workspace Chat</title>
+<!-- Google Fonts: Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-container": "#2f6fed",
+            "on-secondary-fixed": "#190064",
+            "on-primary-fixed": "#001847",
+            "secondary-fixed-dim": "#c8bfff",
+            "on-background": "#191b26",
+            "surface-variant": "#e1e1f1",
+            "on-secondary-fixed-variant": "#442bb5",
+            "surface-dim": "#d9d9e8",
+            "primary": "#0055ce",
+            "surface-container": "#ededfc",
+            "surface-container-low": "#f3f2ff",
+            "primary-fixed": "#dae2ff",
+            "error-container": "#ffdad6",
+            "surface-container-high": "#e7e7f6",
+            "surface-container-highest": "#e1e1f1",
+            "on-primary-container": "#ffffff",
+            "inverse-on-surface": "#f0efff",
+            "on-surface-variant": "#424654",
+            "secondary-fixed": "#e5deff",
+            "on-secondary": "#ffffff",
+            "surface": "#fbf8ff",
+            "outline": "#737786",
+            "on-tertiary-fixed-variant": "#862208",
+            "inverse-primary": "#b1c5ff",
+            "on-primary-fixed-variant": "#0040a0",
+            "on-tertiary": "#ffffff",
+            "tertiary-fixed-dim": "#ffb4a2",
+            "secondary": "#5a45cb",
+            "on-error-container": "#93000a",
+            "on-primary": "#ffffff",
+            "primary-fixed-dim": "#b1c5ff",
+            "surface-container-lowest": "#ffffff",
+            "on-surface": "#191b26",
+            "outline-variant": "#c2c6d7",
+            "on-error": "#ffffff",
+            "on-tertiary-fixed": "#3c0700",
+            "tertiary": "#a5381d",
+            "tertiary-container": "#c65033",
+            "error": "#ba1a1a",
+            "surface-tint": "#0056d0",
+            "inverse-surface": "#2e303b",
+            "surface-bright": "#fbf8ff",
+            "on-secondary-container": "#fffbff",
+            "tertiary-fixed": "#ffdad2",
+            "on-tertiary-container": "#fffeff",
+            "background": "#fbf8ff",
+            "secondary-container": "#7360e5"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "3xl": "1.25rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-2xl": "2.5rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "margin-desktop": "2rem",
+            "margin": "1rem",
+            "space-sm": "0.5rem",
+            "space-lg": "1.25rem",
+            "space-xl": "1.75rem",
+            "gutter-desktop": "1.5rem",
+            "gutter": "1.25rem",
+            "margin-tablet": "1.5rem"
+          },
+          "fontFamily": {
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #f4f5fb;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .soft-shadow {
+      box-shadow: 0 4px 20px -2px rgba(90, 80, 140, 0.06), 0 1px 3px 0 rgba(90, 80, 140, 0.04);
+    }
+    .popover-shadow {
+      box-shadow: 0 12px 28px -4px rgba(90, 80, 140, 0.12), 0 4px 8px -2px rgba(90, 80, 140, 0.04);
+    }
+    /* Custom clean scrollbar */
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #c2c6d7;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #737786;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased overflow-hidden h-screen w-screen flex">
+<!-- ================= SIDEBAR NAVIGATION (SHARED COMPONENT) ================= -->
+<aside class="fixed top-0 left-0 h-full w-64 z-40 bg-surface-container-lowest dark:bg-inverse-surface border-r border-outline-variant/30 dark:border-outline-variant/10 shadow-sm dark:shadow-none flex flex-col justify-between py-6 px-4">
+<!-- Header Brand Section -->
+<div class="flex flex-col gap-6">
+<div class="flex items-center justify-between px-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary to-secondary flex items-center justify-center text-on-primary font-headline-lg shadow-sm">
+<span class="material-symbols-outlined text-white" data-icon="hub">hub</span>
+</div>
+<div>
+<div class="text-headline-md font-headline-md font-bold text-on-surface dark:text-inverse-on-surface leading-tight">
+              SkillRoute
+            </div>
+<div class="text-body-sm font-body-sm text-on-surface-variant flex items-center gap-1">
+<span>India Workspace</span>
+<span class="material-symbols-outlined text-outline text-[14px]" data-icon="unfold_more">unfold_more</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick CTA Button -->
+<button class="w-full bg-primary-container hover:bg-primary text-on-primary-container font-headline-sm text-headline-sm py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-sm transition-all duration-150 active:scale-[0.98]">
+<span class="material-symbols-outlined text-[18px]" data-icon="add">add</span>
+<span>New</span>
+</button>
+<!-- Primary Navigation Tabs (JSON items: Home, Tasks, Docs, Goals, Chat) -->
+<!-- 'Chat' is mapped as the ACTIVE component for this screen -->
+<nav class="flex flex-col gap-1">
+<!-- 1. Home (Inactive) -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant dark:text-outline-variant font-medium hover:bg-surface-container dark:hover:bg-surface-variant/50 hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150 active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-label-md font-label-md">Home</span>
+</a>
+<!-- 2. Tasks (Inactive) -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant dark:text-outline-variant font-medium hover:bg-surface-container dark:hover:bg-surface-variant/50 hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150 active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined" data-icon="check_box">check_box</span>
+<span class="text-label-md font-label-md">Tasks</span>
+</a>
+<!-- 3. Docs (Inactive) -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant dark:text-outline-variant font-medium hover:bg-surface-container dark:hover:bg-surface-variant/50 hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150 active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="text-label-md font-label-md">Docs</span>
+</a>
+<!-- 4. Goals (Inactive) -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant dark:text-outline-variant font-medium hover:bg-surface-container dark:hover:bg-surface-variant/50 hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150 active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined" data-icon="flag">flag</span>
+<span class="text-label-md font-label-md">Goals</span>
+</a>
+<!-- 5. Chat (ACTIVE - Highlighted via JSON style_active_navigation) -->
+<a class="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-surface-container-high dark:bg-surface-variant text-on-surface dark:text-inverse-on-surface font-semibold shadow-sm transition-all duration-150 active:scale-[0.98]" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="chat_bubble" data-weight="fill" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+<span class="text-label-md font-label-md text-primary font-bold">Chat</span>
+</div>
+<span class="bg-primary text-on-primary text-[10px] font-bold px-2 py-0.5 rounded-full">3</span>
+</a>
+</nav>
+</div>
+<!-- Footer Area of Sidebar -->
+<div class="flex flex-col gap-3">
+<!-- Settings & Help -->
+<div class="flex flex-col gap-1 border-t border-outline-variant/20 pt-3">
+<a class="flex items-center gap-3 px-3.5 py-2 rounded-xl text-on-surface-variant dark:text-outline-variant font-medium hover:bg-surface-container hover:text-on-surface transition-colors duration-150 active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-label-md font-label-md">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-3.5 py-2 rounded-xl text-on-surface-variant dark:text-outline-variant font-medium hover:bg-surface-container hover:text-on-surface transition-colors duration-150 active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="text-label-md font-label-md">Help</span>
+</a>
+</div>
+<!-- User Profile Card -->
+<div class="bg-surface-container-low rounded-2xl p-2.5 flex items-center justify-between border border-outline-variant/20">
+<div class="flex items-center gap-2.5">
+<div class="relative">
+<img alt="Manjeet Sharma" class="w-9 h-9 rounded-full object-cover border border-white shadow-sm" data-alt="Professional modern portrait of Manjeet Sharma, an Indian software engineer with friendly warm expression, soft natural indoor studio light, minimalist corporate tech aesthetic with soft indigo depth background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANgAshZcMbqYrlOWLajzYSJL4bbfOHkxRS612Qo0eYMUBzLZWhHiZIcJYFlcICccC0XstL0wYYgE2Chi_YXoXiH2uaKEqaSEwKj8pnv3DjMmnfB2up9i57FfjfwRJdMWmHm2lLZUo2tXFwrUoUJyw6lb8adVPUutSyLN1EVXZobpriNvPXS7eacVo-ZA5Yu4-aItILkeopq4PHz7Ac0Txcz0LTim1HTKX4Ca823Ab8TAn97hLuyqnm"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-500 rounded-full border-2 border-white"></span>
+</div>
+<div class="leading-tight overflow-hidden">
+<div class="text-label-md font-label-md text-on-surface font-bold truncate">Manjeet Sharma</div>
+<div class="text-[11px] text-on-surface-variant truncate">DevOps &amp; SRE Track</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]" data-icon="more_vert">more_vert</span>
+</div>
+</div>
+</aside>
+<!-- ================= MAIN LAYOUT WRAPPER ================= -->
+<div class="ml-64 w-[calc(100%-16rem)] flex flex-col h-screen overflow-hidden">
+<!-- ================= TOP NAVIGATION BAR (SHARED COMPONENT) ================= -->
+<header class="flex justify-between items-center h-16 px-8 sticky top-0 z-30 bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant/20 shadow-[0_4px_20px_-2px_rgba(90,80,140,0.06)]">
+<!-- Search & Context status -->
+<div class="flex items-center gap-4 flex-1 max-w-xl">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]" data-icon="search">search</span>
+<input class="w-full bg-surface-container-low hover:bg-surface-container border border-outline-variant/30 focus:border-primary focus:ring-2 focus:ring-primary/20 text-body-sm font-body-sm text-on-surface rounded-full pl-10 pr-4 py-2 outline-none transition-all duration-150" placeholder="Search chats, mentors, interview advice (e.g. Walmart CTC, K8s)..." type="text"/>
+</div>
+</div>
+<!-- Middle/Right Actions & Badges -->
+<div class="flex items-center gap-3.5">
+<!-- Neo4j Latency Live Indicator -->
+<div class="hidden lg:flex items-center gap-2 px-3 py-1 bg-surface-container rounded-full border border-outline-variant/20 text-body-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span class="font-semibold text-on-surface text-label-sm">Neo4j Active</span>
+<span class="text-outline text-label-sm">· 32ms</span>
+</div>
+<!-- Language Pill Switcher -->
+<div class="flex items-center bg-surface-container-low p-1 rounded-full border border-outline-variant/20 text-label-sm font-label-md">
+<button class="px-2.5 py-1 rounded-full text-on-surface-variant hover:text-on-surface transition-colors">EN</button>
+<button class="px-2.5 py-1 rounded-full text-on-surface-variant hover:text-on-surface transition-colors">HI</button>
+<button class="px-2.5 py-1 rounded-full bg-primary text-white shadow-sm font-bold">Hinglish</button>
+</div>
+<!-- Trailing action icons from JSON: notifications, favorite, shopping_bag -->
+<div class="flex items-center gap-1">
+<button class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container active:scale-95 transition-all relative">
+<span class="material-symbols-outlined text-[20px]" data-icon="notifications">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"></span>
+</button>
+<button class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]" data-icon="favorite">favorite</span>
+</button>
+<button class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+<!-- Direct Message CTA -->
+<button class="bg-primary text-white px-4 py-2 rounded-full font-label-md text-label-md flex items-center gap-2 shadow-[0_4px_14px_rgba(47,111,237,0.35)] hover:bg-[#2458c7] transition-transform active:scale-95">
+<span class="material-symbols-outlined text-[18px]" data-icon="edit_square">edit_square</span>
+<span>New Direct Message</span>
+</button>
+</div>
+</header>
+<!-- ================= 3-COLUMN CHAT APPLICATION CANVAS ================= -->
+<div class="flex flex-1 overflow-hidden">
+<!-- ================= COLUMN 1: CHANNELS & CONVERSATION LIST (280px) ================= -->
+<aside class="w-[280px] bg-white border-r border-outline-variant/30 flex flex-col h-full shrink-0">
+<!-- Sub-header filter buttons -->
+<div class="p-3.5 border-b border-outline-variant/20 flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<span class="text-headline-sm font-headline-sm text-on-surface">Conversations</span>
+<span class="material-symbols-outlined text-outline text-[18px] cursor-pointer hover:text-primary" data-icon="tune">tune</span>
+</div>
+<!-- Channel Fast Filters -->
+<div class="flex items-center gap-1 overflow-x-auto pb-1 text-label-sm font-label-sm no-scrollbar">
+<button class="px-2.5 py-1 rounded-full bg-primary-container text-white shrink-0 font-bold">All</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant shrink-0">AI Coaches</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant shrink-0">Peer Circles</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant shrink-0">Recruiters</button>
+</div>
+</div>
+<!-- Channel List Scrollable -->
+<div class="flex-1 overflow-y-auto px-2 py-3 space-y-4">
+<!-- Section 1: AI Mentor Channels -->
+<div>
+<div class="flex items-center justify-between px-2.5 mb-1.5">
+<span class="text-[11px] font-bold text-outline uppercase tracking-wider font-label-sm">AI MENTOR CHANNELS</span>
+<span class="material-symbols-outlined text-outline text-[15px]" data-icon="smart_toy">smart_toy</span>
+</div>
+<div class="space-y-0.5">
+<!-- Active Channel -->
+<a class="flex items-center justify-between px-3 py-2 rounded-xl bg-surface-container-high text-primary font-bold shadow-sm" href="#">
+<div class="flex items-center gap-2 truncate">
+<span class="text-primary font-bold text-[15px]">#</span>
+<span class="truncate text-body-sm">ai-career-coach</span>
+</div>
+<span class="bg-primary-container text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">ACTIVE</span>
+</a>
+<a class="flex items-center justify-between px-3 py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#">
+<div class="flex items-center gap-2 truncate">
+<span class="text-outline font-bold text-[15px]">#</span>
+<span class="truncate text-body-sm">mock-interview-prep</span>
+</div>
+<span class="text-[11px] text-outline font-label-sm">1m ago</span>
+</a>
+<a class="flex items-center justify-between px-3 py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#">
+<div class="flex items-center gap-2 truncate">
+<span class="text-outline font-bold text-[15px]">#</span>
+<span class="truncate text-body-sm">system-design-triage</span>
+</div>
+</a>
+<a class="flex items-center justify-between px-3 py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#">
+<div class="flex items-center gap-2 truncate">
+<span class="text-outline font-bold text-[15px]">#</span>
+<span class="truncate text-body-sm">resume-ats-audit</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+</a>
+</div>
+</div>
+<!-- Section 2: Direct Conversations -->
+<div>
+<div class="flex items-center justify-between px-2.5 mb-1.5">
+<span class="text-[11px] font-bold text-outline uppercase tracking-wider font-label-sm">DIRECT CONVERSATIONS</span>
+<span class="material-symbols-outlined text-outline text-[15px]" data-icon="forum">forum</span>
+</div>
+<div class="space-y-0.5">
+<!-- Priya Raman -->
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#">
+<div class="relative shrink-0">
+<img alt="Priya Raman" class="w-7 h-7 rounded-full object-cover" data-alt="Portrait photo of Priya Raman, experienced Indian female cloud architect mentor, professional tech executive in modern glass office setting with warm ambient glow and clean styling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4BPTZXY9yRTLo_1Oah9zngKXbABrnWg3gb4CKHGBW2RZRg9ph4xoOjN0yAvroh3SAUaPOvvFv7uFSayas6YFcG6UN_GsCi_KifJosj6i4EQwaXgpnf6RK2Jep1HZ0oAjLs2JYlQ9xMsaef6xTo8-ZqH8H1OtK4a_98PBcd1PAUoD7ZrJnstEfVbOYSSRthMvDEVGohyQdeNiTPkczBZ7yk_7zN1h3TGZOlakiA3k07zoYPNolSADK"/>
+<span class="absolute bottom-0 right-0 w-2 h-2 bg-emerald-500 rounded-full border border-white"></span>
+</div>
+<div class="truncate flex-1">
+<div class="text-body-sm font-semibold truncate text-on-surface">Priya Raman</div>
+<div class="text-[11px] text-outline truncate">AI Architect · Online</div>
+</div>
+</a>
+<!-- Vikram Rao (Recruiter) -->
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#">
+<div class="relative shrink-0">
+<img alt="Vikram Rao" class="w-7 h-7 rounded-full object-cover" data-alt="Corporate headshot of Vikram Rao, male HR talent recruiter in India GCC corporate tech firm, smiling warmly with blue office ambient lighting and professional attire." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiOR9SvybnqfRW2Lw0wUJPteBgHnAf-WaPIfhouXbwd_YdKp8OZKm-VxlelkuwTNRPmBb0DcWxWmLSF-wykbByP3c8KQVUFKvJ0HnloWKVrt1ZkgCBigwxL6STOg60uVoRFCHeoBlzSVc5sgjN7NI5z_Xj0yIMzdzu628K3WDEzX2aISScB8DXuth2VYkCwkGJZBQi03gzJsGOeAlbmJghgEAkrCNSNLxuH0L6fckWpYI_HbcjNBNS"/>
+<span class="absolute bottom-0 right-0 w-2 h-2 bg-amber-500 rounded-full border border-white"></span>
+</div>
+<div class="truncate flex-1">
+<div class="text-body-sm font-semibold truncate text-on-surface">Vikram Rao</div>
+<div class="text-[11px] text-outline truncate">Target India Recruiter</div>
+</div>
+<span class="text-label-sm text-primary font-bold">Offer</span>
+</a>
+<!-- Ananya Sen -->
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#">
+<div class="relative shrink-0">
+<img alt="Ananya Sen" class="w-7 h-7 rounded-full object-cover" data-alt="Professional portrait of Ananya Sen, young female software engineer and SRE peer from Bangalore tech park, wearing headphones in collaborative workspace with soft daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBU9G8JQ_ixvEjRdyM32t68BToZnWiBX2RUxuMIii-6DhI8V1pRWKR_Kv9WP43rsHt8-GiswDOjUd516AaVSAOfAPFjo20qgR4QepgXJ9-uzj9USK2VwxKia2GrS6OYaoNndIvTA3hcyhJRP5J2ampkWbhDLFlbN7PVe_n9k6BCGrG8T9vScg7iQ1EPAvfCZzpO8y4sxb1pOk40HPreXtbBhcSbW00t16FChJkGMe7jn2_EyFd4zC-X"/>
+<span class="absolute bottom-0 right-0 w-2 h-2 bg-emerald-500 rounded-full border border-white"></span>
+</div>
+<div class="truncate flex-1">
+<div class="text-body-sm font-semibold truncate text-on-surface">Ananya Sen</div>
+<div class="text-[11px] text-outline truncate">SRE Study Group Lead</div>
+</div>
+</a>
+</div>
+</div>
+<!-- Section 3: Tech Corridors -->
+<div>
+<div class="flex items-center justify-between px-2.5 mb-1.5">
+<span class="text-[11px] font-bold text-outline uppercase tracking-wider font-label-sm">TECH CORRIDORS (INDIA)</span>
+<span class="material-symbols-outlined text-outline text-[15px]" data-icon="location_city">location_city</span>
+</div>
+<div class="space-y-0.5">
+<a class="flex items-center justify-between px-3 py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#">
+<div class="flex items-center gap-2 truncate">
+<span class="text-outline font-bold text-[14px]">📍</span>
+<span class="truncate text-body-sm">bengaluru-devops-talk</span>
+</div>
+<span class="text-[10px] bg-surface-variant px-1.5 py-0.5 rounded-full text-on-surface-variant">42 online</span>
+</a>
+<a class="flex items-center justify-between px-3 py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#">
+<div class="flex items-center gap-2 truncate">
+<span class="text-outline font-bold text-[14px]">📍</span>
+<span class="truncate text-body-sm">hyderabad-cloud-hub</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+<!-- Bottom channel status -->
+<div class="p-3 border-t border-outline-variant/20 bg-surface-container-low/50 flex items-center justify-between">
+<span class="text-body-sm text-outline flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span> Connected to Sandbox
+          </span>
+<span class="text-label-sm text-primary font-bold cursor-pointer">Re-sync</span>
+</div>
+</aside>
+<!-- ================= COLUMN 2: MAIN CONVERSATION STREAM (HERO) ================= -->
+<main class="flex-1 bg-surface-container-low/30 flex flex-col h-full overflow-hidden">
+<!-- Conversation Stream Header -->
+<div class="h-16 px-6 bg-white border-b border-outline-variant/20 flex items-center justify-between shrink-0">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]" data-icon="psychology" data-weight="fill" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h1 class="text-headline-sm font-headline-sm text-on-surface font-bold">#ai-career-coach</h1>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-[11px] font-bold">Graph-Grounded Agent</span>
+</div>
+<div class="text-[12px] text-outline flex items-center gap-2">
+<span>Context: Docker &amp; K8s Node #201</span>
+<span>•</span>
+<span class="text-primary font-medium">Bengaluru Tier-1 GCC Target</span>
+</div>
+</div>
+</div>
+<!-- Header Interactive Action Controls -->
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-xl border border-outline-variant/40 bg-white hover:bg-surface-container text-body-sm font-semibold flex items-center gap-1.5 text-on-surface shadow-sm transition-all active:scale-95">
+<span class="material-symbols-outlined text-[16px] text-primary" data-icon="push_pin">push_pin</span>
+<span>Pin Graph Node</span>
+</button>
+<button class="px-3 py-1.5 rounded-xl border border-outline-variant/40 bg-white hover:bg-surface-container text-body-sm font-semibold flex items-center gap-1.5 text-on-surface shadow-sm transition-all active:scale-95">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="terminal">terminal</span>
+<span>Sandbox Logs</span>
+</button>
+<button class="px-3 py-1.5 rounded-xl bg-primary/10 text-primary hover:bg-primary/20 text-body-sm font-bold flex items-center gap-1.5 transition-all">
+<span class="material-symbols-outlined text-[16px]" data-icon="translate">translate</span>
+<span>Hinglish Mode</span>
+</button>
+<button class="w-8 h-8 rounded-full border border-outline-variant/30 flex items-center justify-center text-outline hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]" data-icon="mic">mic</span>
+</button>
+</div>
+</div>
+<!-- Chat History Scroll View -->
+<div class="flex-1 overflow-y-auto p-6 space-y-6">
+<!-- Date Separator -->
+<div class="flex items-center justify-center">
+<div class="bg-surface-container px-4 py-1 rounded-full text-label-sm text-outline font-label-md">
+              Today · Session Context Seeded via Neo4j Knowledge Graph
+            </div>
+</div>
+<!-- Message 1: AI Coach Welcome -->
+<div class="flex items-start gap-3.5 max-w-3xl">
+<div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-primary to-secondary flex items-center justify-center text-white shrink-0 shadow-sm mt-0.5">
+<span class="material-symbols-outlined text-[20px]" data-icon="robot_2">robot_2</span>
+</div>
+<div class="space-y-1 flex-1">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-[14px] text-on-surface font-bold">SkillRoute AI Mentor</span>
+<span class="px-2 py-0.2 rounded-full bg-emerald-50 text-emerald-600 text-[10px] font-bold border border-emerald-200">Verified System</span>
+<span class="text-[11px] text-outline">10:42 AM</span>
+</div>
+<div class="bg-white border border-outline-variant/30 p-4 rounded-2xl rounded-tl-sm soft-shadow text-body-md text-on-surface leading-relaxed">
+                Welcome back <strong class="text-primary font-semibold">Manjeet</strong>! Analyzing your recent Docker sandbox execution (<code class="bg-surface-container px-1.5 py-0.5 rounded text-[12px] font-mono text-primary font-bold">Node #201: Multi-stage Alpine Build</code>). Your layer caching optimization reached a <span class="text-emerald-600 font-bold">94.2% image reduction</span> (142MB down to 18.4MB). 
+                <br/><br/>
+                This puts your container optimization benchmark in the top <strong>8% of SRE aspirants</strong> targeting Tier-1 GCCs in Bengaluru &amp; Hyderabad. How can I help you navigate the compensation and technical interview stages today?
+              </div>
+</div>
+</div>
+<!-- Message 2: User Query (Manjeet) -->
+<div class="flex items-start justify-end gap-3.5 pl-12">
+<div class="space-y-1 max-w-2xl text-right">
+<div class="flex items-center justify-end gap-2">
+<span class="text-[11px] text-outline">10:45 AM</span>
+<span class="font-headline-sm text-[14px] text-on-surface font-bold">Manjeet Sharma</span>
+</div>
+<div class="bg-primary text-white p-4 rounded-2xl rounded-tr-sm shadow-md text-left text-body-md leading-relaxed">
+                Priya, <span class="font-semibold underline decoration-white/40">Walmart Global Tech</span> aur <span class="font-semibold underline decoration-white/40">Target India</span> dono se fast-track interview invites aaye hain. Walmart ₹13L fixed offer kar raha hai, but current company mein notice period 60 days bacha hai. How should I counter on fixed CTC vs sign-on buyout without sounding aggressive?
+              </div>
+</div>
+<img alt="User Avatar" class="w-9 h-9 rounded-full object-cover shrink-0 mt-0.5 border border-primary-container" data-alt="Close up profile photo of Manjeet Sharma, Indian tech aspirant looking confident and attentive in a clean tech workstation with ambient daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-4ufPASk0rl6P-5XKIfY8tLtXHecDxXaYzRbfEjhM9hdjhGdyWt69VCCftMcbBkfU-97tTsAPzLmMlbAMh37ym6CF10vwim0tpq7b-tUVzSFrEq-t-LSD7mRV5TQH0CR6vmfBrCqy3qJD863EmneUc60v77HWGqQ_R4Hs77oOEe62ZQvxBPEBsdaU--zOgcaSvltVNIR5cd_o_SiOK6uSWdm7CTQiwrL0VVEuyTlQGZTq28mSovIF"/>
+</div>
+<!-- Message 3: AI Coach Rich Interactive Response -->
+<div class="flex items-start gap-3.5 max-w-3xl">
+<div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-primary to-secondary flex items-center justify-center text-white shrink-0 shadow-sm mt-0.5">
+<span class="material-symbols-outlined text-[20px]" data-icon="robot_2">robot_2</span>
+</div>
+<div class="space-y-3 flex-1">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-[14px] text-on-surface font-bold">SkillRoute AI Mentor</span>
+<span class="bg-[#EEF2FF] text-[#2F6FED] px-2 py-0.5 rounded-full text-label-sm font-bold">Negotiation Strategy · Hinglish + English</span>
+<span class="text-[11px] text-outline">10:46 AM</span>
+</div>
+<!-- Main Rich Content Card -->
+<div class="bg-white border border-outline-variant/30 p-5 rounded-2xl rounded-tl-sm soft-shadow space-y-4">
+<div class="text-body-md text-on-surface leading-relaxed">
+                  Solid leverage position, Manjeet! Walmart Global Tech Bangalore GCC standard compensation band for 2-3 YOE DevOps is <strong class="text-on-surface">₹13.5L – ₹15.8L</strong>. 
+                  <br/><br/>
+<em>Pehle notice period buyout leverage karo:</em> Walmart recruiting teams usually have an unallocated signing bonus budget of <strong class="text-emerald-600">₹75,000 – ₹1.5L</strong> specifically for candidates joining in &lt;30 days. Don’t reduce your fixed CTC expectation.
+                </div>
+<!-- Interactive Strategy Breakdown Box -->
+<div class="bg-surface-container-low border border-outline-variant/30 rounded-xl p-4 space-y-3">
+<div class="flex items-center justify-between border-b border-outline-variant/20 pb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="balance">balance</span>
+<span class="font-headline-sm text-[13px] text-on-surface">Target vs Walmart Benchmarked Counter</span>
+</div>
+<span class="text-label-sm text-emerald-600 font-bold bg-emerald-50 px-2 py-0.5 rounded-full">+18.5% Probability</span>
+</div>
+<div class="grid grid-cols-3 gap-3 text-center">
+<div class="bg-white p-2.5 rounded-lg border border-outline-variant/20">
+<div class="text-[11px] text-outline font-label-sm">CURRENT PROPOSAL</div>
+<div class="font-headline-md text-headline-sm text-on-surface font-bold mt-0.5">₹13.0L</div>
+<div class="text-[10px] text-outline">Fixed Base</div>
+</div>
+<div class="bg-white p-2.5 rounded-lg border border-primary/30">
+<div class="text-[11px] text-primary font-bold font-label-sm">RECOMMENDED COUNTER</div>
+<div class="font-headline-md text-headline-sm text-primary font-bold mt-0.5">₹14.2L + 1L</div>
+<div class="text-[10px] text-primary">Base + Joining Buyout</div>
+</div>
+<div class="bg-white p-2.5 rounded-lg border border-outline-variant/20">
+<div class="text-[11px] text-outline font-label-sm">ALTERNATIVE LEVER</div>
+<div class="font-headline-md text-headline-sm text-secondary font-bold mt-0.5">Target India</div>
+<div class="text-[10px] text-secondary">₹11.5L Counter-Weight</div>
+</div>
+</div>
+<!-- Email Snippet Box -->
+<div class="mt-2 bg-white rounded-lg p-3 border border-outline-variant/30 text-body-sm font-mono text-on-surface-variant relative">
+<div class="flex items-center justify-between mb-1.5 font-sans">
+<span class="text-label-sm text-outline font-bold">READY HR EMAIL DRAFT</span>
+<button class="text-primary hover:text-primary-container text-label-sm font-bold flex items-center gap-1 active:scale-95">
+<span class="material-symbols-outlined text-[14px]" data-icon="content_copy">content_copy</span>
+<span>Copy Draft</span>
+</button>
+</div>
+<p class="text-[12px] text-on-surface leading-normal font-sans bg-surface-container-low/50 p-2.5 rounded border border-outline-variant/20">
+                      "Hi [Recruiter], enthusiastic about Walmart’s Cloud Platform team. To expedite my 60-day notice with current employer and ensure early onboarding within 25 days, I would welcome a fixed CTC of ₹14.2L along with an early joining buyout bonus..."
+                    </p>
+</div>
+</div>
+<!-- Quick Action Chips -->
+<div class="flex flex-wrap items-center gap-2 pt-1">
+<button class="bg-[#EEF2FF] hover:bg-primary-fixed text-[#2F6FED] font-label-md text-label-sm px-3 py-1.5 rounded-full flex items-center gap-1 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[15px]" data-icon="send_and_archive">send_and_archive</span>
+<span>Generate Email Draft</span>
+</button>
+<button class="bg-[#FFF4ED] hover:bg-amber-100 text-[#FF7A59] font-label-md text-label-sm px-3 py-1.5 rounded-full flex items-center gap-1 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[15px]" data-icon="quiz">quiz</span>
+<span>Simulate Interview Q&amp;A</span>
+</button>
+<button class="bg-surface-container hover:bg-surface-variant text-on-surface-variant font-label-md text-label-sm px-3 py-1.5 rounded-full flex items-center gap-1 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[15px]" data-icon="insights">insights</span>
+<span>Consult Peer Benchmark</span>
+</button>
+<button class="bg-surface-container hover:bg-surface-variant text-on-surface-variant font-label-md text-label-sm px-3 py-1.5 rounded-full flex items-center gap-1 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[15px]" data-icon="language">language</span>
+<span>Switch to Pure English</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Message 4: System Event Card (Graph Sync) -->
+<div class="flex items-center justify-center my-2">
+<div class="bg-emerald-50 border border-emerald-200 text-emerald-800 px-4 py-2 rounded-xl text-body-sm flex items-center gap-2.5 soft-shadow">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span><strong>Neo4j Graph Synced:</strong> CTC leverage index increased to <strong>94/100</strong> based on verified Docker sandbox optimization score.</span>
+</div>
+</div>
+</div>
+<!-- Chat Input Footer Area -->
+<div class="p-4 bg-white border-t border-outline-variant/20 shrink-0 space-y-2.5">
+<!-- Suggested Prompt Autocomplete Pills -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar text-label-sm">
+<span class="text-outline text-[11px] font-bold shrink-0 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="auto_awesome">auto_awesome</span> SUGGESTED:
+            </span>
+<button class="bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface px-3 py-1 rounded-full whitespace-nowrap transition-colors border border-outline-variant/30">
+              Ask about 90-day notice buyout
+            </button>
+<button class="bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface px-3 py-1 rounded-full whitespace-nowrap transition-colors border border-outline-variant/30">
+              Explain Kubernetes OOMKilled in Hinglish
+            </button>
+<button class="bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface px-3 py-1 rounded-full whitespace-nowrap transition-colors border border-outline-variant/30">
+              Analyze Walmart CTC vs Target India
+            </button>
+</div>
+<!-- Input Container -->
+<div class="border border-outline-variant/30 rounded-2xl p-2 bg-surface-container-lowest focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/20 transition-all shadow-sm">
+<!-- Text area -->
+<textarea class="w-full bg-transparent border-0 resize-none text-body-md font-body-md text-on-surface placeholder:text-outline focus:ring-0 p-2 outline-none" placeholder="Message #ai-career-coach (Type in English or Hinglish, paste sandbox logs, ask salary advice)..." rows="2"></textarea>
+<!-- Controls Toolbar inside input -->
+<div class="flex items-center justify-between pt-1 border-t border-outline-variant/15 px-1">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]" data-icon="format_bold">format_bold</span>
+</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]" data-icon="code">code</span>
+</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]" data-icon="attach_file">attach_file</span>
+</button>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container-low hover:bg-surface-container text-[12px] font-semibold text-primary flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[15px]" data-icon="mic">mic</span>
+<span>Voice Note</span>
+</button>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[11px] text-outline font-label-sm hidden sm:inline">Ctrl + Enter to send</span>
+<button class="w-9 h-9 rounded-full bg-primary hover:bg-[#2458c7] text-white flex items-center justify-center shadow-md transition-transform active:scale-95">
+<span class="material-symbols-outlined text-[18px]" data-icon="send">send</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- ================= COLUMN 3: CONTEXTUAL INSPECTOR PANEL (320px) ================= -->
+<aside class="w-[320px] bg-white border-l border-outline-variant/30 flex flex-col h-full shrink-0 overflow-y-auto p-4 space-y-4">
+<!-- Header -->
+<div class="flex items-center justify-between border-b border-outline-variant/20 pb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="schema">schema</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Candidate Context</span>
+</div>
+<span class="bg-emerald-50 text-emerald-700 text-label-sm px-2 py-0.5 rounded-full font-bold">Live Graph</span>
+</div>
+<!-- Candidate Profile Snapshot Card -->
+<div class="bg-surface-container-low p-3.5 rounded-2xl border border-outline-variant/20 space-y-2">
+<div class="flex items-center gap-3">
+<img alt="Manjeet Avatar" class="w-12 h-12 rounded-xl object-cover shadow-sm" data-alt="Candidate avatar of Manjeet Sharma, professional Indian software engineer with friendly clean tech styling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZFbcHgCCeprItuoHTIQtDcXgLb75F704lGPOEd5a2Ibc1-4VgEf_Mwpo428YC1hwWsuCx4KEsrRxHh2MflvM7C1MBIreafe3yLVAsMdsEkU4bPmUyZRJ0LKFbsZGkfVpMeP2eyTMys26fMQ1KB_nFJe5rR3t1DCMO5Ovqdm2cHYDXGIqQQmgcaJ_XUamx1UzKDyYhDqlscs_twLHZQErUq2wG7bcg3OsBqEHrE5RepgmuFiyQH2ku"/>
+<div>
+<div class="text-headline-sm text-[15px] font-bold text-on-surface">Manjeet Sharma</div>
+<div class="text-[12px] text-outline">Target CTC: <strong class="text-on-surface">₹12L - ₹15L</strong></div>
+<div class="text-[11px] text-primary font-semibold">Bengaluru / Hybrid Relocation</div>
+</div>
+</div>
+<div class="pt-2 border-t border-outline-variant/20 flex items-center justify-between text-body-sm">
+<span class="text-outline text-label-sm">Notice Period:</span>
+<span class="font-bold text-tertiary bg-amber-50 px-2 py-0.5 rounded-full text-[11px]">60 Days (Buyout Eligible)</span>
+</div>
+</div>
+<!-- Pinned Graph Node Widget -->
+<div class="bg-white border border-outline-variant/30 rounded-2xl p-3.5 soft-shadow space-y-2.5">
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-bold text-outline font-label-sm uppercase">PINNED GRAPH NODE</span>
+<span class="material-symbols-outlined text-outline text-[16px]" data-icon="open_in_new">open_in_new</span>
+</div>
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center font-bold text-body-sm">
+              #201
+            </div>
+<div>
+<div class="text-body-sm font-bold text-on-surface">Multi-Stage Alpine Build</div>
+<div class="text-[11px] text-outline">Docker Caching &amp; Security Scans</div>
+</div>
+</div>
+<!-- Progress bar -->
+<div class="space-y-1">
+<div class="flex justify-between text-[11px] font-label-sm">
+<span class="text-outline">Skill Mastery</span>
+<span class="text-emerald-600 font-bold">94.2% Verified</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-emerald-500 h-full rounded-full" style="width: 94.2%"></div>
+</div>
+</div>
+</div>
+<!-- Active Offers & Corridors -->
+<div class="bg-white border border-outline-variant/30 rounded-2xl p-3.5 soft-shadow space-y-3">
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-bold text-outline font-label-sm uppercase">ACTIVE OFFERS &amp; STAGES</span>
+<span class="text-label-sm text-primary font-bold">2 GCCs</span>
+</div>
+<!-- Offer 1: Walmart -->
+<div class="p-2.5 bg-surface-container-low rounded-xl border border-outline-variant/20 space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-bold text-body-sm text-on-surface">Walmart Global Tech</span>
+<span class="text-label-sm bg-primary text-white px-2 py-0.5 rounded-full font-bold">₹13.0L</span>
+</div>
+<div class="flex items-center justify-between text-[11px] text-outline">
+<span>SRE Platform I · Bengaluru</span>
+<span class="text-tertiary font-bold">48h to respond</span>
+</div>
+</div>
+<!-- Offer 2: Target India -->
+<div class="p-2.5 bg-surface-container-low rounded-xl border border-outline-variant/20 space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-bold text-body-sm text-on-surface">Target India (GCC)</span>
+<span class="text-label-sm bg-secondary text-white px-2 py-0.5 rounded-full font-bold">₹11.5L</span>
+</div>
+<div class="flex items-center justify-between text-[11px] text-outline">
+<span>DevOps Associate · Manyata</span>
+<span class="text-emerald-600 font-semibold">Offer letter in hand</span>
+</div>
+</div>
+</div>
+<!-- Session Recommended Action Items (Checklist) -->
+<div class="bg-white border border-outline-variant/30 rounded-2xl p-3.5 soft-shadow space-y-2.5">
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-bold text-outline font-label-sm uppercase">RECOMMENDED ACTIONS</span>
+<span class="text-[11px] text-outline">1 of 3 complete</span>
+</div>
+<div class="space-y-2">
+<!-- Item 1 (Done) -->
+<label class="flex items-start gap-2.5 cursor-pointer">
+<input checked="" class="mt-0.5 rounded text-primary focus:ring-primary w-4 h-4 border-outline-variant" type="checkbox"/>
+<span class="text-body-sm text-outline line-through leading-tight">Run Docker Multi-Stage Benchmark in sandbox</span>
+</label>
+<!-- Item 2 (Pending) -->
+<label class="flex items-start gap-2.5 cursor-pointer">
+<input class="mt-0.5 rounded text-primary focus:ring-primary w-4 h-4 border-outline-variant" type="checkbox"/>
+<span class="text-body-sm text-on-surface font-medium leading-tight">Send Counter-Offer Email draft to Walmart HR</span>
+</label>
+<!-- Item 3 (Pending) -->
+<label class="flex items-start gap-2.5 cursor-pointer">
+<input class="mt-0.5 rounded text-primary focus:ring-primary w-4 h-4 border-outline-variant" type="checkbox"/>
+<span class="text-body-sm text-on-surface font-medium leading-tight">Review K8s Liveness Probe RCA for Round 2 prep</span>
+</label>
+</div>
+</div>
+<!-- AI Voice Audio Transcripts & Graph Telemetry -->
+<div class="bg-surface-container-low/80 p-3 rounded-2xl border border-outline-variant/20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-icon="graphic_eq">graphic_eq</span>
+<div>
+<div class="text-label-sm font-bold text-on-surface">Voice Sync Ready</div>
+<div class="text-[10px] text-outline">Hinglish Model v4.2</div>
+</div>
+</div>
+<button class="bg-white border border-outline-variant/30 hover:bg-surface-container px-2.5 py-1 rounded-full text-label-sm font-semibold text-on-surface shadow-xs transition-colors">
+            Listen
+          </button>
+</div>
+</aside>
+</div>
+</div>
+</body></html>

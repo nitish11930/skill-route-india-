@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SkillRoute India - Live Technical Interview Simulator &amp; AI Mock Assessment</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-fixed-dim": "#b1c5ff",
+            "on-background": "#191b26",
+            "surface-tint": "#0056d0",
+            "secondary": "#5a45cb",
+            "on-primary": "#ffffff",
+            "on-primary-fixed-variant": "#0040a0",
+            "on-secondary": "#ffffff",
+            "on-secondary-fixed-variant": "#442bb5",
+            "tertiary-fixed": "#ffdad2",
+            "on-tertiary-fixed": "#3c0700",
+            "surface-container-high": "#e7e7f6",
+            "on-primary-container": "#ffffff",
+            "on-error-container": "#93000a",
+            "surface": "#fbf8ff",
+            "inverse-surface": "#2e303b",
+            "surface-variant": "#e1e1f1",
+            "on-primary-fixed": "#001847",
+            "primary-container": "#2f6fed",
+            "primary-fixed": "#dae2ff",
+            "on-surface-variant": "#424654",
+            "surface-container-lowest": "#ffffff",
+            "background": "#fbf8ff",
+            "primary": "#0055ce",
+            "on-error": "#ffffff",
+            "tertiary": "#a5381d",
+            "inverse-primary": "#b1c5ff",
+            "surface-container-highest": "#e1e1f1",
+            "outline": "#737786",
+            "error": "#ba1a1a",
+            "outline-variant": "#c2c6d7",
+            "on-secondary-container": "#fffbff",
+            "surface-container": "#ededfc",
+            "on-tertiary-container": "#fffeff",
+            "tertiary-fixed-dim": "#ffb4a2",
+            "surface-container-low": "#f3f2ff",
+            "on-tertiary-fixed-variant": "#862208",
+            "secondary-fixed": "#e5deff",
+            "surface-bright": "#fbf8ff",
+            "inverse-on-surface": "#f0efff",
+            "on-secondary-fixed": "#190064",
+            "surface-dim": "#d9d9e8",
+            "on-tertiary": "#ffffff",
+            "secondary-container": "#7360e5",
+            "tertiary-container": "#c65033",
+            "secondary-fixed-dim": "#c8bfff",
+            "on-surface": "#191b26",
+            "error-container": "#ffdad6"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-desktop": "2rem",
+            "gutter": "1.25rem",
+            "gutter-desktop": "1.5rem",
+            "space-lg": "1.25rem",
+            "space-2xl": "2.5rem",
+            "margin-tablet": "1.5rem",
+            "space-xs": "0.25rem",
+            "margin": "1rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-xl": "1.75rem"
+          },
+          "fontFamily": {
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "headline-xl": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #c2c6d7;
+      border-radius: 9999px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: transparent;
+    }
+  </style>
+</head>
+<body class="bg-[#F4F5FB] text-on-surface font-body-md text-body-md antialiased overflow-x-hidden min-h-screen">
+<!-- ==================== SIDE NAVIGATION DRAWER (From Shared Components) ==================== -->
+<aside class="fixed top-0 left-0 h-screen w-64 flex flex-col justify-between py-6 px-4 bg-surface-container-lowest border-r border-outline-variant/30 shadow-sm z-40">
+<div class="flex flex-col gap-6">
+<!-- Brand Anchor Header -->
+<div class="flex items-center gap-3 px-2">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary-container via-secondary-container to-secondary flex items-center justify-center text-on-primary shadow-md shadow-primary/20">
+<span class="material-symbols-outlined text-2xl" data-icon="hub">hub</span>
+</div>
+<div>
+<h1 class="text-headline-sm font-headline-sm font-bold text-on-surface leading-tight">SkillRoute</h1>
+<p class="text-body-sm font-body-sm text-outline">India Workspace</p>
+</div>
+</div>
+<!-- Quick Action / New -->
+<button class="w-full flex items-center justify-between px-4 py-2.5 bg-surface-container hover:bg-surface-container-high rounded-full text-on-surface font-label-md text-label-md transition-colors duration-150">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="add_circle">add_circle</span>
+<span>New Session</span>
+</span>
+<span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant">⌘K</span>
+</button>
+<!-- Navigation Links from Shared Components with Active Mock Interview context -->
+<nav class="flex flex-col gap-1.5">
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant font-medium hover:bg-surface-container hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="home">home</span>
+<span>Home</span>
+</a>
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant font-medium hover:bg-surface-container hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="check_box">check_box</span>
+<span>Tasks</span>
+<span class="ml-auto text-xs px-2 py-0.5 rounded-full bg-secondary-fixed text-secondary font-bold">14</span>
+</a>
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant font-medium hover:bg-surface-container hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="description">description</span>
+<span>Docs</span>
+</a>
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant font-medium hover:bg-surface-container hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="flag">flag</span>
+<span>Goals</span>
+</a>
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant font-medium hover:bg-surface-container hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="chat_bubble">chat_bubble</span>
+<span>Chat</span>
+</a>
+<div class="my-2 border-t border-outline-variant/20"></div>
+<!-- Extended Lumina Suite Context -->
+<span class="px-3.5 text-xs font-bold text-outline uppercase tracking-wider">GCC Assessment Suite</span>
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant font-medium hover:bg-surface-container hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="schema">schema</span>
+<span>Roadmap &amp; Graph</span>
+</a>
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-surface-container-high text-on-surface font-semibold shadow-sm" href="#">
+<span class="material-symbols-outlined text-xl text-primary" data-icon="psychology">psychology</span>
+<span>Mock Interviews</span>
+<span class="ml-auto w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+</a>
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant font-medium hover:bg-surface-container hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="domain">domain</span>
+<span>GCC Hiring Hub</span>
+</a>
+</nav>
+</div>
+<!-- Sidebar Footer -->
+<div class="flex flex-col gap-2 pt-4 border-t border-outline-variant/20">
+<a class="flex items-center gap-3 px-3.5 py-2 rounded-xl text-on-surface-variant font-medium hover:bg-surface-container hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+<a class="flex items-center gap-3 px-3.5 py-2 rounded-xl text-on-surface-variant font-medium hover:bg-surface-container hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="help">help</span>
+<span>Help &amp; Support</span>
+</a>
+<!-- Candidate Profile Snippet -->
+<div class="mt-2 p-2.5 rounded-xl bg-surface-container-low flex items-center gap-3">
+<img class="w-9 h-9 rounded-full object-cover border border-outline-variant/40" data-alt="Professional headshot of a smart Indian tech professional software engineer in casual dark blue shirt smiling confidently against a soft studio backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS6AoDEDg45SKQbAmKWY7Za-ZE2Y8hjhSr49zWYTNQO_9C3IXsC5HdoHU47nZT04l9FeFUX8Ox5ftAI1Y7lfOl_c-5c2Vi-5xYU5kF5gdTgZaf32ZgmFYGQ1LHsY3YN9DYEy8h-pgd5uIJkGiP33fOVtxwuD08F2FskBuNOaaxvylb7vHvzP8zH-uxtYHZfB9Ai8kD67F76slP65p0l4uBoNN45JACNav49Ef7SLqps6y6YfjnTuqq"/>
+<div class="overflow-hidden">
+<p class="text-label-md font-label-md text-on-surface font-bold truncate">Aditya Sen</p>
+<p class="text-body-sm font-body-sm text-outline truncate">Target SRE Track</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- ==================== TOP NAVIGATION BAR ==================== -->
+<header class="flex justify-between items-center h-16 px-8 ml-64 w-[calc(100%-16rem)] sticky top-0 z-30 bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant/20 shadow-[0_4px_20px_-2px_rgba(90,80,140,0.06)]">
+<!-- Left Cluster: Search & Graph Sync Status -->
+<div class="flex items-center gap-4">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline text-lg" data-icon="search">search</span>
+<input class="w-72 pl-9 pr-4 py-1.5 text-body-sm font-body-sm bg-surface-container rounded-full border border-transparent focus:border-primary focus:bg-surface-container-lowest focus:ring-0 transition-all outline-none" placeholder="Search telemetry, commands, runbooks..." type="text"/>
+</div>
+<!-- Live Neo4j Sync Status -->
+<div class="hidden xl:flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low border border-outline-variant/30 text-body-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+<span class="text-xs font-semibold text-on-surface-variant">Neo4j Graph Synced · 38ms</span>
+</div>
+<div class="hidden lg:flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-50 text-secondary border border-secondary/20 text-xs font-semibold">
+<span class="material-symbols-outlined text-sm" data-icon="military_tech">military_tech</span>
+<span>Bengaluru Tier-1 GCC Round 2 Simulation</span>
+</div>
+</div>
+<!-- Center/Right Cluster: Timer, Language Toggle, Audio Checks, Actions -->
+<div class="flex items-center gap-3">
+<!-- Session Countdown Timer -->
+<div class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 text-tertiary border border-red-200">
+<span class="material-symbols-outlined text-base animate-pulse" data-icon="timer">timer</span>
+<span class="text-xs font-bold font-mono tracking-tight">42:15 remaining</span>
+</div>
+<!-- Hinglish / English Toggle -->
+<div class="flex items-center bg-surface-container rounded-full p-0.5 border border-outline-variant/30 text-xs font-semibold">
+<button class="px-2.5 py-1 rounded-full bg-surface-container-lowest text-primary shadow-xs">Hinglish</button>
+<button class="px-2.5 py-1 rounded-full text-on-surface-variant hover:text-on-surface">English</button>
+</div>
+<!-- Device Check Audio/Video Pills -->
+<div class="flex items-center gap-1 px-2 py-1 rounded-full bg-surface-container text-on-surface-variant">
+<button class="p-1 hover:text-primary rounded-full transition-colors" title="Mic Active: Sennheiser USB">
+<span class="material-symbols-outlined text-lg text-emerald-600" data-icon="mic">mic</span>
+</button>
+<button class="p-1 hover:text-primary rounded-full transition-colors" title="HD Cam 1080p">
+<span class="material-symbols-outlined text-lg text-emerald-600" data-icon="videocam">videocam</span>
+</button>
+</div>
+<!-- Notifications & Bookmark Icons from Shared Components -->
+<button class="w-9 h-9 flex items-center justify-center rounded-full hover:bg-surface-container text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="notifications">notifications</span>
+</button>
+<!-- Primary Action CTA -->
+<button class="flex items-center gap-2 px-5 py-2 bg-primary-container hover:bg-primary text-on-primary rounded-full font-label-md text-label-md font-semibold shadow-md shadow-primary/20 transition-all active:scale-95">
+<span class="material-symbols-outlined text-base" data-icon="flag">flag</span>
+<span>Conclude &amp; Generate Scorecard</span>
+</button>
+</div>
+</header>
+<!-- ==================== MAIN CONTENT CANVAS ==================== -->
+<main class="ml-64 p-6 w-[calc(100%-16rem)] flex flex-col gap-5">
+<!-- Top Interview Context Banner Header -->
+<section class="bg-surface-container-lowest rounded-2xl p-5 border border-outline-variant/30 shadow-[0_4px_20px_-2px_rgba(90,80,140,0.06)] flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="flex items-start md:items-center gap-4">
+<!-- AI Interviewer Avatar -->
+<div class="relative">
+<img class="w-14 h-14 rounded-2xl object-cover ring-2 ring-primary/20 shadow-sm" data-alt="Contemporary cinematic portrait of an intelligent Indian female Principal Solutions Architect wearing smart formal tech apparel with warm glasses, modern Bengaluru IT campus setting with subtle purple architectural lighting in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOAr1ovUq_GZYUVk77Oa_q3y9iTDRw_MW448JLhR0Hww-dNj3hAcraeJk6EfCUnHcxX8_oM8oXmpAsUcJtKVWUSDmIhMGSLnxSuUkk34T8zkrKv0jamWaWEaywkIAM4BxRszSjJwqY9Wn07OkPp-nmCrB7D2vbBCBhYm_N66WnRY-XVacoVpdU64KoOSQNO3QfnD38jEnlBNVcCz90XhtIVDHlSK7G44E_ulV6VC4jJYeLpUpdTLHL"/>
+<span class="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 border-2 border-white rounded-full flex items-center justify-center"></span>
+</div>
+<div>
+<div class="flex items-center gap-2 flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-50 text-primary border border-blue-100">Live Interview Panel</span>
+<span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-surface-container text-on-surface-variant">Round 2: Architecture &amp; Live RCA</span>
+<span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700">Audio Stream Active</span>
+</div>
+<h2 class="text-headline-sm font-headline-sm font-bold text-on-surface mt-1">
+            System Failure Triage: Cascading Pod CrashLoopBackOff &amp; High Memory Leaks
+          </h2>
+<p class="text-body-sm font-body-sm text-outline mt-0.5">
+            Interviewer: <span class="font-semibold text-on-surface">Priya Raman</span> (Principal Architect AI Agent · Ex-Flipkart / Intuit) · Target: <span class="font-semibold text-on-surface">Lead SRE &amp; Platform Engineer @ Target / Walmart GCC Corridor</span>
+</p>
+</div>
+</div>
+<!-- Realtime Audio Waveform & Speech Telemetry -->
+<div class="flex items-center gap-3 bg-surface-container-low px-4 py-2.5 rounded-xl border border-outline-variant/30 min-w-[280px]">
+<div class="flex items-center gap-1 h-6">
+<span class="w-1 h-3 bg-primary rounded-full animate-pulse"></span>
+<span class="w-1 h-5 bg-primary rounded-full animate-bounce"></span>
+<span class="w-1 h-2 bg-primary rounded-full"></span>
+<span class="w-1 h-6 bg-secondary rounded-full animate-pulse"></span>
+<span class="w-1 h-4 bg-primary rounded-full animate-bounce"></span>
+<span class="w-1 h-1 bg-outline rounded-full"></span>
+</div>
+<div class="text-xs">
+<p class="font-semibold text-on-surface">Candidate Audio Stream</p>
+<p class="text-outline">Articulation Speed: <span class="text-emerald-700 font-bold">142 WPM (Optimal)</span></p>
+</div>
+</div>
+</section>
+<!-- ==================== THREE-COLUMN WORKSPACE ==================== -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-5 items-start">
+<!-- ================= LEFT PANEL: CANDIDATE CONSOLE & RCA CHECKLIST (Col-span 3) ================= -->
+<section class="xl:col-span-3 flex flex-col gap-4">
+<!-- Scenario Spec Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 border border-outline-variant/30 shadow-[0_4px_20px_-2px_rgba(90,80,140,0.06)]">
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant/20">
+<h3 class="text-label-md font-label-md font-bold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-base" data-icon="assignment">assignment</span>
+              Incident Brief
+            </h3>
+<span class="text-xs px-2 py-0.5 rounded-full bg-red-100 text-tertiary font-bold">P1 Outage</span>
+</div>
+<div class="mt-3 text-body-sm font-body-sm text-on-surface-variant space-y-2">
+<p>
+              At 14:02 IST, <code class="bg-surface-container px-1 py-0.5 rounded text-xs text-primary font-mono">checkout-order-worker</code> deployed across 40 nodes began experiencing cascading OOM kills during the Big Billion Day mock traffic surge.
+            </p>
+<div class="p-2.5 rounded-xl bg-orange-50 border border-orange-200 text-tertiary text-xs">
+<strong>Objective:</strong> Isolate cgroup limit discrepancy vs JVM heap sizing, patch YAML probes, and mitigate pod eviction without dropping customer queue events.
+            </div>
+</div>
+</div>
+<!-- Live Audio Speech Transcript with Real-time Articulation -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 border border-outline-variant/30 shadow-[0_4px_20px_-2px_rgba(90,80,140,0.06)] flex flex-col">
+<div class="flex items-center justify-between pb-2 border-b border-outline-variant/20">
+<h3 class="text-label-md font-label-md font-bold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-base" data-icon="record_voice_over">record_voice_over</span>
+              Live Speech Transcript
+            </h3>
+<span class="text-xs text-outline">Real-time NLP</span>
+</div>
+<div class="mt-3 space-y-3 max-h-48 overflow-y-auto custom-scroll pr-1">
+<div class="p-2.5 rounded-xl bg-purple-50/70 border border-purple-100 text-xs">
+<span class="font-bold text-secondary">Priya (AI Interviewer):</span>
+<p class="text-on-surface mt-0.5">"Aditya, kubectl describe shows Exit Code 137. What diagnostic step will you execute before touching replicas?"</p>
+</div>
+<div class="p-2.5 rounded-xl bg-blue-50/70 border border-blue-100 text-xs">
+<span class="font-bold text-primary">Candidate (Aditya):</span>
+<p class="text-on-surface mt-0.5">"137 indicates a SIGKILL from the Linux kernel OOM Killer. I'm verifying if `-XX:+UseCGroupMemoryLimitForHeap` is honored under container cgroup v2..."</p>
+<div class="mt-1 flex gap-2 text-[10px] text-emerald-700 font-semibold">
+<span>✓ High Technical Precision</span>
+<span>✓ Calm Cadence</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Diagnostic Checklist -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 border border-outline-variant/30 shadow-[0_4px_20px_-2px_rgba(90,80,140,0.06)]">
+<div class="flex items-center justify-between pb-2.5 border-b border-outline-variant/20">
+<h3 class="text-label-md font-label-md font-bold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-emerald-600 text-base" data-icon="checklist">checklist</span>
+              Diagnostic Checklist
+            </h3>
+<span class="text-xs font-bold text-primary">2 / 4 Solved</span>
+</div>
+<div class="mt-3 space-y-2.5">
+<!-- Item 1: Checked -->
+<div class="flex items-start gap-2.5 p-2 rounded-xl bg-emerald-50/60 border border-emerald-100">
+<span class="material-symbols-outlined text-emerald-600 text-lg mt-0.5" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="text-xs">
+<p class="font-bold text-on-surface">Incident RCA Root Cause Identified</p>
+<p class="text-outline text-[11px]">Identified kernel OOM SIGKILL 137 on worker nodes.</p>
+</div>
+</div>
+<!-- Item 2: Checked -->
+<div class="flex items-start gap-2.5 p-2 rounded-xl bg-emerald-50/60 border border-emerald-100">
+<span class="material-symbols-outlined text-emerald-600 text-lg mt-0.5" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="text-xs">
+<p class="font-bold text-on-surface">Memory Limit OOMKilled Flagged</p>
+<p class="text-outline text-[11px]">Pinpointed mismatch between limit: 4Gi and heap 3800m.</p>
+</div>
+</div>
+<!-- Item 3: In Progress -->
+<div class="flex items-start gap-2.5 p-2 rounded-xl bg-blue-50/80 border border-blue-200">
+<span class="material-symbols-outlined text-primary text-lg mt-0.5 animate-spin" data-icon="progress_activity">progress_activity</span>
+<div class="text-xs">
+<div class="flex items-center justify-between">
+<p class="font-bold text-primary">K8s Liveness vs Readiness Probes</p>
+<span class="text-[10px] font-bold px-1.5 py-0.2 rounded-full bg-blue-200 text-primary">In-progress</span>
+</div>
+<p class="text-on-surface-variant text-[11px]">Tune initialDelaySeconds to prevent restart storms.</p>
+</div>
+</div>
+<!-- Item 4: Pending -->
+<div class="flex items-start gap-2.5 p-2 rounded-xl bg-surface-container-low border border-outline-variant/20 opacity-80">
+<span class="material-symbols-outlined text-outline text-lg mt-0.5" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+<div class="text-xs">
+<p class="font-semibold text-on-surface-variant">Multi-region Latency Trade-offs</p>
+<p class="text-outline text-[11px]">Explain cross-AZ Kafka replica lag mitigation.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Hinglish Hint Assistance Module -->
+<div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-3.5 border border-amber-200 shadow-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-xs font-bold text-amber-900">
+<span class="material-symbols-outlined text-amber-600 text-base" data-icon="lightbulb">lightbulb</span>
+<span>AI Co-Pilot Hint (Hinglish)</span>
+</div>
+<span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-200 text-amber-800">Tier-1 Tip</span>
+</div>
+<p class="mt-2 text-xs text-amber-950 font-body-sm leading-relaxed">
+            "<strong>Tip:</strong> Pehle JVM cgroup v2 memory limits inspect karo before tweaking pod resource specs directly. Make sure Metaspace and DirectByteBuffer allocations are accounted for!"
+          </p>
+</div>
+</section>
+<!-- ================= CENTER PANEL: SPLIT TERMINAL & ARCHITECTURE WHITEBOARD (Col-span 6) ================= -->
+<section class="xl:col-span-6 flex flex-col gap-4">
+<!-- Top Half: Architecture & YAML Manifest Inspection Tab -->
+<div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/30 shadow-[0_4px_20px_-2px_rgba(90,80,140,0.06)] overflow-hidden">
+<!-- Segmented Tab Header -->
+<div class="flex items-center justify-between px-4 py-3 bg-surface-container-low border-b border-outline-variant/20">
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-surface-container-lowest text-on-surface font-semibold text-xs shadow-xs border border-outline-variant/30">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="description">description</span>
+<span>deployment.yaml</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1 rounded-lg text-on-surface-variant hover:text-on-surface text-xs">
+<span class="material-symbols-outlined text-outline text-sm" data-icon="code">code</span>
+<span>prometheus-rules.yml</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1 rounded-lg text-on-surface-variant hover:text-on-surface text-xs">
+<span class="material-symbols-outlined text-outline text-sm" data-icon="schema">schema</span>
+<span>Topology Graph</span>
+</button>
+</div>
+<div class="flex items-center gap-2 text-xs">
+<span class="text-outline">Namespace: <span class="font-mono text-on-surface font-semibold">prod-checkout</span></span>
+<button class="p-1 hover:bg-surface-container rounded-md text-on-surface-variant" title="Copy manifest">
+<span class="material-symbols-outlined text-sm" data-icon="content_copy">content_copy</span>
+</button>
+</div>
+</div>
+<!-- Code Manifest Area -->
+<div class="p-4 bg-[#1E202B] text-slate-100 font-mono text-xs leading-relaxed overflow-x-auto custom-scroll">
+<div class="flex">
+<div class="text-slate-500 select-none pr-4 text-right">
+                1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11
+              </div>
+<div class="w-full">
+<span class="text-blue-400">apiVersion</span>: apps/v1<br/>
+<span class="text-blue-400">kind</span>: Deployment<br/>
+<span class="text-blue-400">metadata</span>:<br/>
+                  <span class="text-blue-400">name</span>: checkout-order-worker<br/>
+<span class="text-blue-400">spec</span>:<br/>
+                  <span class="text-blue-400">replicas</span>: <span class="text-purple-300">24</span><br/>
+                  <span class="text-blue-400">template</span>:<br/>
+                    <span class="text-blue-400">spec</span>:<br/>
+                      <span class="text-blue-400">containers</span>:<br/>
+                      - <span class="text-blue-400">name</span>: worker<br/>
+                        <span class="text-blue-400">resources</span>:<br/>
+                          <span class="text-blue-400">limits</span>: { <span class="text-emerald-300">memory</span>: <span class="bg-red-950/60 text-red-300 px-1 rounded border border-red-800">"4Gi"</span>, <span class="text-emerald-300">cpu</span>: <span class="text-yellow-300">"2000m"</span> } <span class="text-red-400 text-[11px] font-sans">← [OOM Alert: JVM Heap is set to 3.8Gi]</span><br/>
+                          <span class="text-blue-400">requests</span>: { <span class="text-emerald-300">memory</span>: <span class="text-yellow-300">"2Gi"</span>, <span class="text-emerald-300">cpu</span>: <span class="text-yellow-300">"1000m"</span> }
+              </div>
+</div>
+</div>
+</div>
+<!-- Bottom Half: Live Telemetry Terminal & Metrics Charts -->
+<div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/30 shadow-[0_4px_20px_-2px_rgba(90,80,140,0.06)] overflow-hidden flex flex-col">
+<!-- Terminal Header -->
+<div class="flex items-center justify-between px-4 py-2.5 bg-surface-container-low border-b border-outline-variant/20">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-red-400"></span>
+<span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+<span class="w-3 h-3 rounded-full bg-green-400"></span>
+<span class="ml-2 font-mono text-xs font-bold text-on-surface">kubectl logs &amp; prometheus-stream</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-[11px] text-emerald-700 font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-ping"></span> Live 60 FPS
+              </span>
+<button class="text-xs px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant">Clear</button>
+</div>
+</div>
+<!-- Micro Prometheus Chart Summary Strip -->
+<div class="grid grid-cols-3 gap-2 px-4 py-2 bg-surface-container-lowest border-b border-outline-variant/20 text-xs">
+<div class="p-2 rounded-xl bg-red-50/50 border border-red-100 flex flex-col">
+<span class="text-outline text-[11px]">Pod Memory Saturation</span>
+<span class="text-base font-bold text-tertiary">98.4% (Critical)</span>
+<div class="w-full bg-red-200 h-1 rounded-full mt-1 overflow-hidden">
+<div class="bg-red-600 h-full w-[98%]"></div>
+</div>
+</div>
+<div class="p-2 rounded-xl bg-surface-container-low border border-outline-variant/20 flex flex-col">
+<span class="text-outline text-[11px]">Worker CPU Throttling</span>
+<span class="text-base font-bold text-on-surface">14.2%</span>
+<div class="w-full bg-surface-container-highest h-1 rounded-full mt-1 overflow-hidden">
+<div class="bg-primary h-full w-[14%]"></div>
+</div>
+</div>
+<div class="p-2 rounded-xl bg-surface-container-low border border-outline-variant/20 flex flex-col">
+<span class="text-outline text-[11px]">HTTP 502 Gateway Errors</span>
+<span class="text-base font-bold text-tertiary">428 req/s</span>
+<div class="w-full bg-amber-200 h-1 rounded-full mt-1 overflow-hidden">
+<div class="bg-amber-600 h-full w-[65%]"></div>
+</div>
+</div>
+</div>
+<!-- Terminal Log Feed -->
+<div class="p-3 bg-[#11131A] text-slate-200 font-mono text-xs leading-5 h-44 overflow-y-auto custom-scroll">
+<p class="text-slate-400">[14:04:19.012] <span class="text-red-400">ERROR</span> pod/checkout-order-worker-7df9c8b8-x9p2z: kernel: [48912.41] Out of memory: Killed process 2149 (java) total-vm:4298104kB, anon-rss:4192080kB</p>
+<p class="text-slate-400">[14:04:19.450] <span class="text-yellow-400">WARN</span> kubelet, node-bengaluru-az2-worker-14: Container worker failed liveness probe, will be restarted</p>
+<p class="text-slate-400">[14:04:20.108] <span class="text-blue-400">INFO</span> scheduler: Successfully assigned checkout-order-worker-7df9c8b8-k4lm1 to node-bengaluru-az1-worker-08</p>
+<p class="text-slate-400">[14:04:21.890] <span class="text-emerald-400">STDOUT</span> java.lang.OutOfMemoryError: Java heap space [GC overhead limit exceeded at com.walmart.cart.CartService.flushQueue]</p>
+<p class="text-slate-300 font-bold">$ candidate-terminal: kubectl describe pod checkout-order-worker-7df9c8b8-x9p2z | grep -i oom</p>
+<p class="text-purple-300">&gt;&gt; Last State: Terminated | Reason: OOMKilled | Exit Code: 137</p>
+</div>
+<!-- Action Control Bar -->
+<div class="p-3 bg-surface-container-low border-t border-outline-variant/20 flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface text-xs font-semibold border border-outline-variant/30 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="terminal">terminal</span>
+<span>Run Diagnostic Query</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface text-xs font-semibold border border-outline-variant/30 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="build">build</span>
+<span>Apply Configuration Patch</span>
+</button>
+</div>
+<button class="flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-primary hover:bg-primary-container text-on-primary text-xs font-semibold shadow-xs active:scale-95 transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="chat">chat</span>
+<span>Explain Approach to Priya</span>
+</button>
+</div>
+</div>
+</section>
+<!-- ================= RIGHT PANEL: REAL-TIME RECRUITER & GRAPH SCORING (Col-span 3) ================= -->
+<section class="xl:col-span-3 flex flex-col gap-4">
+<!-- Probability Score Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 border border-outline-variant/30 shadow-[0_4px_20px_-2px_rgba(90,80,140,0.06)] relative overflow-hidden">
+<div class="flex items-center justify-between pb-2 border-b border-outline-variant/20">
+<h3 class="text-label-md font-label-md font-bold text-on-surface">GCC Benchmark Outcome</h3>
+<span class="text-xs px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold">Strong Hire</span>
+</div>
+<div class="mt-3 flex items-center justify-between">
+<div>
+<p class="text-xs text-outline">Pass Probability</p>
+<p class="text-headline-lg font-headline-lg font-extrabold text-primary">87%</p>
+<p class="text-[11px] font-semibold text-emerald-700 mt-0.5">Tier-1 GCC Top 5% Percentile</p>
+</div>
+<div class="w-16 h-16 rounded-full bg-gradient-to-tr from-primary to-secondary p-1 flex items-center justify-center shadow-md">
+<div class="w-full h-full bg-surface-container-lowest rounded-full flex flex-col items-center justify-center">
+<span class="text-xs font-bold text-on-surface">L5 SRE</span>
+<span class="text-[9px] text-outline">Ready</span>
+</div>
+</div>
+</div>
+<div class="mt-3 p-2 rounded-xl bg-purple-50 border border-purple-200 text-xs">
+<p class="text-secondary font-bold">Projected CTC Bracket:</p>
+<p class="text-on-surface font-semibold text-sm">₹14L – ₹18L Fixed + Retention Bonus</p>
+</div>
+</div>
+<!-- Radar Competency Breakdown -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 border border-outline-variant/30 shadow-[0_4px_20px_-2px_rgba(90,80,140,0.06)]">
+<h3 class="text-label-md font-label-md font-bold text-on-surface pb-2 border-b border-outline-variant/20 flex items-center justify-between">
+<span>Skill Dimension Matrix</span>
+<span class="material-symbols-outlined text-outline text-base" data-icon="analytics">analytics</span>
+</h3>
+<div class="mt-3 space-y-3">
+<div>
+<div class="flex justify-between text-xs font-semibold mb-1">
+<span class="text-on-surface">Architectural Depth</span>
+<span class="text-primary font-bold">88%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 88%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs font-semibold mb-1">
+<span class="text-on-surface">Incident Troubleshooting</span>
+<span class="text-emerald-600 font-bold">92%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-emerald-500 h-full rounded-full" style="width: 92%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs font-semibold mb-1">
+<span class="text-on-surface">Communication Clarity</span>
+<span class="text-secondary font-bold">84%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 84%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs font-semibold mb-1">
+<span class="text-on-surface">Code &amp; Config Hygiene</span>
+<span class="text-primary font-bold">90%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 90%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Neo4j Knowledge Node Verification -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 border border-outline-variant/30 shadow-[0_4px_20px_-2px_rgba(90,80,140,0.06)]">
+<div class="flex items-center justify-between pb-2 border-b border-outline-variant/20">
+<h3 class="text-label-md font-label-md font-bold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-base" data-icon="bubble_chart">bubble_chart</span>
+              Neo4j Node Sync
+            </h3>
+<span class="text-[11px] px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-bold">Verified</span>
+</div>
+<div class="mt-3 p-2.5 rounded-xl bg-surface-container-low border border-outline-variant/20 text-xs">
+<p class="font-bold text-on-surface">Live Node Verification #209</p>
+<p class="text-outline text-[11px] mt-0.5">Kubernetes Troubleshooting &amp; Prometheus Observability</p>
+<div class="mt-2 flex items-center gap-1 text-[11px] text-secondary font-semibold">
+<span class="material-symbols-outlined text-sm" data-icon="link">link</span>
+<span>Linked to 14 GCC Hiring Assessments</span>
+</div>
+</div>
+</div>
+<!-- Live Strengths & Red Flags Feed -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 border border-outline-variant/30 shadow-[0_4px_20px_-2px_rgba(90,80,140,0.06)]">
+<h3 class="text-label-md font-label-md font-bold text-on-surface pb-2 border-b border-outline-variant/20 flex items-center justify-between">
+<span>Live Evaluator Feed</span>
+<span class="text-[11px] text-outline">Automated</span>
+</h3>
+<div class="mt-3 space-y-2 text-xs">
+<div class="p-2 rounded-xl bg-emerald-50/70 border border-emerald-100 flex items-start gap-2">
+<span class="material-symbols-outlined text-emerald-600 text-sm mt-0.5" data-icon="thumb_up">thumb_up</span>
+<div>
+<span class="font-bold text-emerald-800">Strength:</span>
+<p class="text-on-surface-variant text-[11px]">Directly checked kernel logs via dmesg / cgroups before jumping to blind pod restarts.</p>
+</div>
+</div>
+<div class="p-2 rounded-xl bg-amber-50/70 border border-amber-100 flex items-start gap-2">
+<span class="material-symbols-outlined text-amber-600 text-sm mt-0.5" data-icon="flag">flag</span>
+<div>
+<span class="font-bold text-amber-800">Caution Area:</span>
+<p class="text-on-surface-variant text-[11px]">Needs to explain rolling deployment strategy impacts on client connection pools.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</body></html>

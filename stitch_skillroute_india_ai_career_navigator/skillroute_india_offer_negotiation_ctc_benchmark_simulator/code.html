@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SkillRoute India - Offer Negotiation &amp; CTC Benchmark Simulator</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Plus Jakarta Sans Font -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration verbatim -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-variant": "#e1e1f1",
+            "on-tertiary": "#ffffff",
+            "secondary-container": "#7360e5",
+            "error-container": "#ffdad6",
+            "surface-bright": "#fbf8ff",
+            "on-primary-fixed-variant": "#0040a0",
+            "on-tertiary-fixed-variant": "#862208",
+            "surface-dim": "#d9d9e8",
+            "on-primary-container": "#ffffff",
+            "on-tertiary-fixed": "#3c0700",
+            "tertiary-fixed-dim": "#ffb4a2",
+            "secondary-fixed": "#e5deff",
+            "secondary-fixed-dim": "#c8bfff",
+            "inverse-primary": "#b1c5ff",
+            "tertiary": "#a5381d",
+            "surface-container-highest": "#e1e1f1",
+            "outline-variant": "#c2c6d7",
+            "surface-tint": "#0056d0",
+            "surface": "#fbf8ff",
+            "secondary": "#5a45cb",
+            "primary-fixed-dim": "#b1c5ff",
+            "inverse-on-surface": "#f0efff",
+            "on-error-container": "#93000a",
+            "outline": "#737786",
+            "on-tertiary-container": "#fffeff",
+            "on-secondary-fixed-variant": "#442bb5",
+            "on-background": "#191b26",
+            "on-primary": "#ffffff",
+            "primary-container": "#2f6fed",
+            "on-surface": "#191b26",
+            "tertiary-fixed": "#ffdad2",
+            "surface-container": "#ededfc",
+            "primary": "#0055ce",
+            "on-primary-fixed": "#001847",
+            "on-surface-variant": "#424654",
+            "background": "#fbf8ff",
+            "on-secondary-container": "#fffbff",
+            "inverse-surface": "#2e303b",
+            "on-secondary-fixed": "#190064",
+            "on-secondary": "#ffffff",
+            "error": "#ba1a1a",
+            "primary-fixed": "#dae2ff",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-high": "#e7e7f6",
+            "surface-container-low": "#f3f2ff",
+            "tertiary-container": "#c65033",
+            "on-error": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.25rem",
+            "space-xs": "0.25rem",
+            "space-2xl": "2.5rem",
+            "gutter-desktop": "1.5rem",
+            "margin": "1rem",
+            "margin-desktop": "2rem",
+            "space-xl": "1.75rem",
+            "margin-tablet": "1.5rem",
+            "gutter": "1.25rem"
+          },
+          "fontFamily": {
+            "headline-lg": ["Plus Jakarta Sans"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      font-size: 20px;
+      line-height: 1;
+      display: inline-block;
+    }
+    .custom-shadow-card {
+      box-shadow: 0 4px 20px -2px rgba(90, 80, 140, 0.06), 0 1px 3px 0 rgba(90, 80, 140, 0.04);
+      border: 1px solid rgba(226, 228, 240, 0.7);
+    }
+    .custom-shadow-elevated {
+      box-shadow: 0 12px 28px -4px rgba(90, 80, 140, 0.12), 0 4px 8px -2px rgba(90, 80, 140, 0.04);
+    }
+    .glass-pill {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(6px);
+    }
+  </style>
+</head>
+<body class="bg-[#F4F5FB] text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col">
+<!-- SHARED COMPONENT 1: SideNavBar (desktop_drawer, fixed left, w-64) -->
+<aside class="fixed top-0 left-0 h-full w-64 z-40 bg-surface-container-lowest dark:bg-inverse-surface border-r border-outline-variant/30 dark:border-outline-variant/10 shadow-sm dark:shadow-none flex flex-col justify-between py-6 px-4">
+<!-- Brand / Workspace Header -->
+<div>
+<div class="flex items-center gap-3 px-2 mb-6">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary to-secondary-container flex items-center justify-center text-on-primary font-headline-lg shadow-sm">
+<span class="material-symbols-outlined" data-icon="hub">hub</span>
+</div>
+<div>
+<h1 class="text-headline-md font-headline-md font-bold text-on-surface dark:text-inverse-on-surface leading-tight">SkillRoute</h1>
+<p class="text-label-sm font-label-sm text-outline">India Workspace</p>
+</div>
+</div>
+<!-- Quick Action CTA -->
+<button class="w-full flex items-center justify-center gap-2 py-2.5 px-4 mb-6 rounded-full bg-primary-container hover:bg-primary text-on-primary-container font-label-md text-label-md shadow-[0_4px_14px_rgba(47,111,237,0.35)] transition-all duration-150 active:scale-[0.98]">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+<span>New</span>
+</button>
+<!-- Main Navigation Tabs: Exact JSON labels ["Home", "Tasks", "Docs", "Goals", "Chat"] -->
+<!-- Semantic lock: Page is "Offer Negotiation & CTC Benchmark", child of Career Goals -> "Goals" is ACTIVE -->
+<nav class="space-y-1">
+<!-- Home -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant dark:text-outline-variant font-medium hover:bg-surface-container dark:hover:bg-surface-variant/50 hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150 active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-label-md font-label-md">Home</span>
+</a>
+<!-- Tasks -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant dark:text-outline-variant font-medium hover:bg-surface-container dark:hover:bg-surface-variant/50 hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150 active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined" data-icon="check_box">check_box</span>
+<span class="text-label-md font-label-md">Tasks</span>
+</a>
+<!-- Docs -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant dark:text-outline-variant font-medium hover:bg-surface-container dark:hover:bg-surface-variant/50 hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150 active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="text-label-md font-label-md">Docs</span>
+</a>
+<!-- Goals (ACTIVE STATE: style_active_navigation verbatim) -->
+<a class="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-surface-container-high dark:bg-surface-variant text-on-surface dark:text-inverse-on-surface font-semibold shadow-xs" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="flag">flag</span>
+<span class="text-label-md font-label-md">Goals</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-label-sm font-label-sm">Active</span>
+</a>
+<!-- Chat -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant dark:text-outline-variant font-medium hover:bg-surface-container dark:hover:bg-surface-variant/50 hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150 active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+<span class="text-label-md font-label-md">Chat</span>
+</a>
+</nav>
+<!-- Sub-rail context for Career / Compensation Engine -->
+<div class="mt-8 pt-4 border-t border-outline-variant/30">
+<div class="px-3 text-label-sm font-label-sm text-outline tracking-wider uppercase mb-2">Live Simulators</div>
+<div class="space-y-1">
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-primary bg-primary-fixed/30 font-medium text-body-sm font-body-sm" href="#">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+            CTC Benchmark v5.18
+          </a>
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container font-medium text-body-sm font-body-sm" href="#">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+            Notice Buyout Calc
+          </a>
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container font-medium text-body-sm font-body-sm" href="#">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+            Tech Park Relocation
+          </a>
+</div>
+</div>
+</div>
+<!-- Footer Tabs: Settings & Help -->
+<div class="pt-4 border-t border-outline-variant/30 dark:border-outline-variant/10 space-y-1">
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant dark:text-outline-variant font-medium hover:bg-surface-container dark:hover:bg-surface-variant/50 transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-label-md font-label-md">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant dark:text-outline-variant font-medium hover:bg-surface-container dark:hover:bg-surface-variant/50 transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="text-label-md font-label-md">Help</span>
+</a>
+<!-- User small widget -->
+<div class="mt-3 pt-3 flex items-center gap-3 px-2">
+<div class="relative">
+<img class="w-9 h-9 rounded-full object-cover border border-outline-variant/40" data-alt="Close up portrait photograph of an Indian software engineer professional smiling confidently in a modern tech office setting in Bengaluru with ambient soft lighting and subtle purple and blue backdrops." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCOY5WAJEpC2xqORVsO8rwKbM1RTkLcFVj9bBsAiEXe4PKeAlrUMMSwjYzAWc5nQEP1abgsnqn1NBNe_Wvny3_3l5eYyFpdMNREpjVLCX59YeYwf5AXfapD95kmOywUP4FxcS3BNLicy0U_KnubmjmEhjhoGyQhhszFSgWTNXXzMtR0JxdTSKy-LmLvymhY7mLNJJHcEQJGlZXtyI5gYNOHroYrBXuVCblLmvsJ1doFVvosSb-IgG4"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-[#10B981] rounded-full ring-2 ring-white"></span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-body-sm font-body-sm font-bold text-on-surface truncate">Rohan Verma</p>
+<p class="text-label-sm font-label-sm text-outline truncate">L2 DevOps • 90d Notice</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- MAIN WORKSPACE CONTENT CONTAINER (Offset for w-64 SideNav) -->
+<div class="ml-64 flex-1 flex flex-col min-w-0">
+<!-- SHARED COMPONENT 2: TopNavBar (floating_header / docked full-width top-0) -->
+<header class="flex justify-between items-center h-16 px-8 sticky top-0 z-30 bg-surface-container-lowest/90 dark:bg-inverse-surface/90 backdrop-blur-md border-b border-outline-variant/20 dark:border-outline-variant/10 shadow-[0_4px_20px_-2px_rgba(90,80,140,0.06)] dark:shadow-none">
+<!-- Search on left -->
+<div class="flex items-center gap-6">
+<div class="relative w-72">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="w-full bg-[#EBEDF8] border-0 rounded-full pl-10 pr-4 py-2 text-body-sm font-body-sm focus:ring-2 focus:ring-primary focus:bg-white text-on-surface placeholder:text-outline outline-none transition-all" placeholder="Search roles, packages, skills..." type="text"/>
+</div>
+<!-- Navigation Links verbatim: ["Overview", "List", "Board", "Timeline"] -->
+<!-- "Overview" active matching project dashboard archetype -->
+<nav class="hidden lg:flex items-center gap-6">
+<a class="text-primary dark:text-inverse-primary font-semibold border-b-2 border-primary dark:border-inverse-primary pb-1 text-label-md font-label-md" href="#">
+            Overview
+          </a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-on-surface dark:hover:text-inverse-on-surface font-medium pb-1 text-label-md font-label-md transition-colors" href="#">
+            List
+          </a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-on-surface dark:hover:text-inverse-on-surface font-medium pb-1 text-label-md font-label-md transition-colors" href="#">
+            Board
+          </a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-on-surface dark:hover:text-inverse-on-surface font-medium pb-1 text-label-md font-label-md transition-colors" href="#">
+            Timeline
+          </a>
+</nav>
+</div>
+<!-- Trailing Action Icons verbatim: ["notifications", "favorite", "shopping_bag"] + profile photo -->
+<div class="flex items-center gap-3">
+<button class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-variant/40 transition-colors duration-150 active:scale-95" title="Notifications">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-variant/40 transition-colors duration-150 active:scale-95" title="Bookmarks">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<button class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-variant/40 transition-colors duration-150 active:scale-95" title="Offers Bag">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<div class="h-6 w-px bg-outline-variant/40 mx-1"></div>
+<button class="flex items-center gap-2 pl-2 pr-1 py-1 rounded-full hover:bg-surface-container transition-colors active:scale-95">
+<img alt="User profile photo" class="w-8 h-8 rounded-full object-cover border border-outline-variant/50" data-alt="Profile avatar photograph of an Indian engineering candidate with glasses and dark blazer on a clean neutral light violet backdrop with balanced soft studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4bU5S4xIRo9fjKCwQ_cOAPyBsvJP-NExXxNEhIbptYaUJVbK063NprqcUwCfEmIO1HQ0TRa54C9bTgESw6B8iKVSdfRxhjuNYlSwTjjtbp2e0EdXQ-g8ToJvm7wCDNVgoQ-iPUJ7tfwy9VrD9grQqNfvyWC1VmJLYc-Smv1ucAEbg24dkKeWhhRgptzNrGaDrkhS_9hZ-hHbEZXqKgPX94Lj0cNpSdt5Q_Ow6Gk3R9EAYUs4GvpgQ"/>
+<span class="material-symbols-outlined text-outline" data-icon="arrow_drop_down">arrow_drop_down</span>
+</button>
+</div>
+</header>
+<!-- MAIN BODY CANVAS -->
+<main class="flex-1 p-8 space-y-7 max-w-[1600px] w-full mx-auto">
+<!-- 1. HEADER CHROME & BREADCRUMBS & LIVE METADATA -->
+<section class="space-y-4">
+<!-- Breadcrumbs -->
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-outline">
+<span class="hover:text-primary cursor-pointer">Workspace</span>
+<span class="material-symbols-outlined text-xs" data-icon="chevron_right">chevron_right</span>
+<span class="hover:text-primary cursor-pointer">Career Goals</span>
+<span class="material-symbols-outlined text-xs" data-icon="chevron_right">chevron_right</span>
+<span class="text-on-surface font-semibold">Offer Negotiation &amp; CTC Benchmark</span>
+</div>
+<!-- Top Action Buttons -->
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-outline-variant/70 text-on-surface text-label-md font-label-md hover:bg-surface-container transition-colors duration-150 shadow-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="download">download</span>
+<span>Download Verified Compensation Dossier</span>
+</button>
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary-container text-on-primary-container text-label-md font-label-md shadow-[0_4px_14px_rgba(47,111,237,0.35)] hover:bg-[#2458C7] hover:-translate-y-0.5 transition-all duration-150">
+<span class="material-symbols-outlined text-lg" data-icon="smart_toy">smart_toy</span>
+<span>Ask AI Coach to Draft Negotiation Counter-Email</span>
+</button>
+</div>
+</div>
+<!-- Main Title & Live Calibrated Graph Badges -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pt-1">
+<div>
+<h2 class="text-headline-xl font-headline-xl text-on-surface">Offer Negotiation &amp; CTC Benchmark Simulator</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mt-1">
+              Deterministic real-time GCC market valuation engine powered by verified candidate sandbox percentiles and Indian tech park salary graphs.
+            </p>
+</div>
+<!-- Status Indicators / Badges -->
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#ECFDF5] text-[#10B981] text-label-sm font-label-sm border border-[#10B981]/20">
+<span class="w-2 h-2 rounded-full bg-[#10B981] animate-pulse"></span>
+              Neo4j AuraDB Salary Graph v5.18 Active
+            </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EEF2FF] text-[#2F6FED] text-label-sm font-label-sm border border-[#2F6FED]/20">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span>
+              Bengaluru &amp; Hyderabad Tech Parks Q2 2024 Calibrated
+            </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FFF4ED] text-[#FF7A59] text-label-sm font-label-sm border border-[#FF7A59]/20">
+<span class="material-symbols-outlined text-xs" data-icon="translate">translate</span>
+              EN | Hinglish Coach Mode
+            </span>
+</div>
+</div>
+</section>
+<!-- 2. TOP SUMMARY KPI ROW (ClickUp Style metrics with atmospheric soft elevation) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+<!-- Metric 1: Current Base Baseline -->
+<div class="bg-surface-container-lowest rounded-[18px] p-5 custom-shadow-card flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline mb-2">
+<span class="text-label-sm font-label-sm">Current Base / Baseline</span>
+<span class="material-symbols-outlined text-lg" data-icon="work_outline">work_outline</span>
+</div>
+<div>
+<div class="text-headline-lg font-headline-lg text-on-surface">₹4.50 <span class="text-body-sm font-body-sm text-outline">LPA</span></div>
+<div class="text-body-sm font-body-sm text-outline mt-1">Service Desk / Legacy L1</div>
+</div>
+<div class="mt-3 pt-3 border-t border-outline-variant/30 flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-outline">Wipro (3.2 Yrs)</span>
+<span class="text-[#ba1a1a] font-medium">-68% vs GCC avg</span>
+</div>
+</div>
+<!-- Metric 2: Top Active GCC Offer -->
+<div class="bg-surface-container-lowest rounded-[18px] p-5 custom-shadow-card flex flex-col justify-between border-l-4 border-l-primary">
+<div class="flex items-center justify-between text-outline mb-2">
+<span class="text-label-sm font-label-sm text-primary font-semibold">Top Active GCC Offer</span>
+<span class="material-symbols-outlined text-primary text-lg" data-icon="corporate_fare">corporate_fare</span>
+</div>
+<div>
+<div class="text-headline-lg font-headline-lg text-on-surface">₹12.50 <span class="text-body-sm font-body-sm text-outline">LPA</span></div>
+<div class="text-body-sm font-body-sm text-on-surface-variant font-medium mt-1">Walmart Global Tech</div>
+</div>
+<div class="mt-3 pt-3 border-t border-outline-variant/30 flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-outline">Bengaluru ORR</span>
+<span class="text-[#10B981] font-semibold">48h Expiry</span>
+</div>
+</div>
+<!-- Metric 3: Calculated Market Potential -->
+<div class="bg-surface-container-lowest rounded-[18px] p-5 custom-shadow-card flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline mb-2">
+<span class="text-label-sm font-label-sm">Calculated Market Potential</span>
+<span class="material-symbols-outlined text-lg" data-icon="query_stats">query_stats</span>
+</div>
+<div>
+<div class="text-headline-lg font-headline-lg text-secondary">₹15.80 <span class="text-body-sm font-body-sm text-outline">LPA</span></div>
+<div class="text-body-sm font-body-sm text-outline mt-1">Top Decile (92nd %tile)</div>
+</div>
+<div class="mt-3 pt-3 border-t border-outline-variant/30 flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-outline">Docker + K8s sealed</span>
+<span class="text-secondary font-medium">Headroom ₹3.3L</span>
+</div>
+</div>
+<!-- Metric 4: Negotiation Leverage Index -->
+<div class="bg-surface-container-lowest rounded-[18px] p-5 custom-shadow-card flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline mb-2">
+<span class="text-label-sm font-label-sm">Negotiation Leverage Index</span>
+<span class="material-symbols-outlined text-[#10B981] text-lg" data-icon="speed">speed</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="text-headline-xl font-headline-xl text-on-surface">94</span>
+<span class="text-body-sm font-body-sm text-outline">/ 100</span>
+<span class="px-2 py-0.5 rounded-full bg-[#ECFDF5] text-[#10B981] text-label-sm font-label-sm font-bold">Very High</span>
+</div>
+<div class="text-body-sm font-body-sm text-outline mt-1">3 Sealed Nodes • 4 Invites</div>
+</div>
+<div class="mt-3 pt-3 border-t border-outline-variant/30 w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-[#10B981] h-full rounded-full" style="width: 94%"></div>
+</div>
+</div>
+<!-- Metric 5: Net CTC Leap -->
+<div class="bg-gradient-to-br from-[#2F6FED]/5 to-[#7360e5]/10 rounded-[18px] p-5 custom-shadow-card flex flex-col justify-between border border-[#2F6FED]/30">
+<div class="flex items-center justify-between text-primary mb-2">
+<span class="text-label-sm font-label-sm font-semibold">Net CTC Leap</span>
+<span class="material-symbols-outlined text-lg" data-icon="trending_up">trending_up</span>
+</div>
+<div>
+<div class="text-headline-xl font-headline-xl text-primary font-extrabold">+177%</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant font-medium mt-1">Jump from ₹4.5L Baseline</div>
+</div>
+<div class="mt-3 pt-3 border-t border-[#2F6FED]/20 flex items-center justify-between text-label-sm font-label-sm text-primary font-semibold">
+<span>Career Wealth Multiplier</span>
+<span>2.78x</span>
+</div>
+</div>
+</section>
+<!-- 3. SIDE-BY-SIDE OFFER COMPARISON & COUNTER SIMULATOR (3-Column Bento Cards) -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<h3 class="text-headline-md font-headline-md text-on-surface">Live Offer Comparison Matrix</h3>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-outline text-label-sm font-label-sm">Bengaluru Tech Corridor</span>
+</div>
+<span class="text-body-sm font-body-sm text-outline">Comparing 2 Active Offers against AI Benchmark</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Card 1: Walmart Global Tech -->
+<div class="bg-surface-container-lowest rounded-[18px] p-6 custom-shadow-card flex flex-col justify-between hover:custom-shadow-elevated transition-all duration-200 border-t-4 border-t-primary">
+<div>
+<!-- Header -->
+<div class="flex items-start justify-between gap-3 mb-4">
+<div>
+<span class="px-2.5 py-0.5 rounded-full bg-[#FFF4ED] text-[#FF7A59] text-label-sm font-label-sm font-semibold">
+                    Active • 48h Decision Window
+                  </span>
+<h4 class="text-headline-sm font-headline-sm text-on-surface mt-2">Walmart Global Tech</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Associate DevOps &amp; Cloud Engineer</p>
+<p class="text-label-sm font-label-sm text-outline flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-xs" data-icon="pin_drop">pin_drop</span>
+                    Outer Ring Road (ORR), Bengaluru
+                  </p>
+</div>
+<div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+</div>
+</div>
+<!-- Compensation Breakdown Table -->
+<div class="bg-[#F4F5FB] rounded-xl p-3.5 space-y-2 mb-4">
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-outline">Fixed Base CTC:</span>
+<span class="font-semibold text-on-surface">₹10.50 L</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-outline">Annual Performance Variable:</span>
+<span class="font-semibold text-on-surface">₹1.50 L</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-outline">First-Year Joining Bonus:</span>
+<span class="font-semibold text-[#10B981]">₹1.00 L</span>
+</div>
+<div class="pt-2 border-t border-outline-variant/30 flex justify-between items-center">
+<span class="text-label-md font-label-md font-bold text-on-surface">Total 1st Year Package:</span>
+<span class="text-headline-sm font-headline-sm text-primary font-bold">₹13.00 LPA</span>
+</div>
+</div>
+<!-- Verified Matched Sandbox Nodes -->
+<div class="space-y-2 mb-4">
+<div class="text-label-sm font-label-sm text-outline uppercase tracking-wide">SkillRoute Verified Matched Nodes:</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-white border border-outline-variant/50 text-body-sm font-body-sm flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-xs text-[#10B981]" data-icon="check_circle">check_circle</span>
+                    Linux Kernel #108
+                  </span>
+<span class="px-2.5 py-1 rounded-full bg-white border border-outline-variant/50 text-body-sm font-body-sm flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-xs text-[#10B981]" data-icon="check_circle">check_circle</span>
+                    Docker Multi-Stage #201
+                  </span>
+<span class="px-2.5 py-1 rounded-full bg-white border border-outline-variant/50 text-body-sm font-body-sm flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-xs text-[#10B981]" data-icon="check_circle">check_circle</span>
+                    GitHub Actions CI/CD
+                  </span>
+</div>
+</div>
+<!-- Coach Evaluation -->
+<div class="p-3 rounded-xl bg-surface-container text-body-sm font-body-sm text-on-surface-variant">
+<strong class="text-on-surface">Coach Verdict:</strong> Fair market valuation, high upside for SRE progression. Notice buyout support included up to ₹75,000.
+              </div>
+</div>
+<!-- Action footer -->
+<div class="mt-5 pt-4 border-t border-outline-variant/30 flex gap-2">
+<button class="flex-1 py-2 px-3 rounded-full bg-primary-container text-on-primary-container text-label-md font-label-md text-center hover:bg-primary transition-colors">
+                Accept &amp; Sign
+              </button>
+<button class="py-2 px-3 rounded-full border border-outline-variant text-on-surface hover:bg-surface-container text-label-md font-label-md">
+                Counter Offer
+              </button>
+</div>
+</div>
+<!-- Card 2: Target India -->
+<div class="bg-surface-container-lowest rounded-[18px] p-6 custom-shadow-card flex flex-col justify-between hover:custom-shadow-elevated transition-all duration-200 border-t-4 border-t-secondary">
+<div>
+<!-- Header -->
+<div class="flex items-start justify-between gap-3 mb-4">
+<div>
+<span class="px-2.5 py-0.5 rounded-full bg-[#EEF2FF] text-[#2F6FED] text-label-sm font-label-sm font-semibold">
+                    Under Consideration
+                  </span>
+<h4 class="text-headline-sm font-headline-sm text-on-surface mt-2">Target India</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Platform Operations Engineer</p>
+<p class="text-label-sm font-label-sm text-outline flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-xs" data-icon="pin_drop">pin_drop</span>
+                    Manyata Tech Park, Hebbal, Bengaluru
+                  </p>
+</div>
+<div class="w-11 h-11 rounded-xl bg-purple-50 border border-purple-100 flex items-center justify-center text-secondary font-bold">
+<span class="material-symbols-outlined" data-icon="adjust">adjust</span>
+</div>
+</div>
+<!-- Compensation Breakdown Table -->
+<div class="bg-[#F4F5FB] rounded-xl p-3.5 space-y-2 mb-4">
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-outline">Fixed Base CTC:</span>
+<span class="font-semibold text-on-surface">₹9.50 L</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-outline">Annual Performance Variable:</span>
+<span class="font-semibold text-on-surface">₹1.00 L</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-outline">ESOP / Retention Year 1:</span>
+<span class="font-semibold text-secondary">₹1.00 L</span>
+</div>
+<div class="pt-2 border-t border-outline-variant/30 flex justify-between items-center">
+<span class="text-label-md font-label-md font-bold text-on-surface">Total 1st Year Package:</span>
+<span class="text-headline-sm font-headline-sm text-secondary font-bold">₹11.50 LPA</span>
+</div>
+</div>
+<!-- Matched Nodes -->
+<div class="space-y-2 mb-4">
+<div class="text-label-sm font-label-sm text-outline uppercase tracking-wide">SkillRoute Verified Matched Nodes:</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-white border border-outline-variant/50 text-body-sm font-body-sm flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-xs text-[#10B981]" data-icon="check_circle">check_circle</span>
+                    Kubernetes Triage #209
+                  </span>
+<span class="px-2.5 py-1 rounded-full bg-white border border-outline-variant/50 text-body-sm font-body-sm flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-xs text-[#10B981]" data-icon="check_circle">check_circle</span>
+                    Prometheus &amp; Grafana
+                  </span>
+</div>
+</div>
+<!-- Evaluation -->
+<div class="p-3 rounded-xl bg-surface-container text-body-sm font-body-sm text-on-surface-variant">
+<strong class="text-on-surface">Coach Verdict:</strong> Good corporate stability &amp; hybrid policy (2 days/week). Fixed base is ₹1L lower than market median for K8s specialists.
+              </div>
+</div>
+<!-- Action footer -->
+<div class="mt-5 pt-4 border-t border-outline-variant/30 flex gap-2">
+<button class="flex-1 py-2 px-3 rounded-full bg-[#EBEDF8] hover:bg-surface-container-high text-on-surface text-label-md font-label-md text-center transition-colors">
+                Leverage Against Walmart
+              </button>
+<button class="py-2 px-3 rounded-full border border-outline-variant text-on-surface hover:bg-surface-container text-label-md font-label-md">
+                View Policy
+              </button>
+</div>
+</div>
+<!-- Card 3: Counter-Offer Simulator (AI Recommended Pitch) -->
+<div class="bg-gradient-to-b from-white via-white to-surface-container-low rounded-[18px] p-6 custom-shadow-card flex flex-col justify-between hover:custom-shadow-elevated transition-all duration-200 border-2 border-primary/30 relative overflow-hidden">
+<!-- Glow ribbon -->
+<div class="absolute -top-10 -right-10 w-28 h-28 bg-primary/10 rounded-full blur-xl pointer-events-none"></div>
+<div>
+<!-- Header -->
+<div class="flex items-start justify-between gap-3 mb-4">
+<div>
+<span class="px-3 py-1 rounded-full bg-gradient-to-r from-primary to-secondary text-white text-label-sm font-label-sm font-bold uppercase tracking-wider inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="auto_awesome">auto_awesome</span>
+                    AI Recommended Pitch
+                  </span>
+<h4 class="text-headline-sm font-headline-sm text-on-surface mt-2.5">Counter-Offer Simulator</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Calibrated for Walmart Talent Acquisition</p>
+</div>
+<div class="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined" data-icon="balance">balance</span>
+</div>
+</div>
+<!-- Recommendation Card -->
+<div class="bg-surface-container-low border border-primary/20 rounded-xl p-4 space-y-2.5 mb-4">
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Recommended Fixed Target:</span>
+<span class="font-bold text-headline-sm font-headline-sm text-primary">₹14.00 LPA</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Retention / Relocation Bonus:</span>
+<span class="font-bold text-on-surface">₹2.00 LPA</span>
+</div>
+<div class="pt-2 border-t border-outline-variant/30 flex justify-between items-center">
+<span class="text-label-md font-label-md font-bold text-on-surface">Target 1st Year Package:</span>
+<span class="text-headline-md font-headline-md text-secondary font-bold">₹16.00 LPA</span>
+</div>
+</div>
+<!-- Probability Gauge & Rationale -->
+<div class="p-3.5 rounded-xl bg-white border border-outline-variant/40 space-y-2.5 mb-4">
+<div class="flex justify-between items-center">
+<span class="text-label-md font-label-md font-bold text-on-surface">Win Probability:</span>
+<span class="text-label-md font-label-md font-extrabold text-[#10B981] flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="insights">insights</span>
+                    78% Acceptance
+                  </span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-gradient-to-r from-primary to-[#10B981] h-full rounded-full" style="width: 78%"></div>
+</div>
+<p class="text-body-sm font-body-sm text-outline pt-1">
+                  Backed by 92nd percentile assessment in Production Sandbox #201 (Docker Triage) and current Bangalore GCC hiring velocity.
+                </p>
+</div>
+</div>
+<!-- Action footer -->
+<div class="mt-5 pt-4 border-t border-outline-variant/30 space-y-2">
+<button class="w-full py-2.5 px-4 rounded-full bg-primary hover:bg-[#2458C7] text-white font-label-md text-label-md shadow-sm transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="send">send</span>
+<span>Apply Counter Strategy</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. INTERACTIVE CTC CALCULATOR & IN-HAND BREAKDOWN (Indian Tax, EPF, Gratuity, Tech Parks) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Left: Salary Structure Calculator (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-[18px] p-6 custom-shadow-card flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-4 border-b border-outline-variant/30 mb-5">
+<div>
+<h3 class="text-headline-md font-headline-md text-on-surface">CTC to In-Hand Calculator (India FY 2024-25)</h3>
+<p class="text-body-sm font-body-sm text-outline">Deterministic Indian Payroll breakdown comparing Tax Regimes</p>
+</div>
+<div class="flex items-center bg-surface-container rounded-full p-1 border border-outline-variant/40">
+<button class="px-3 py-1 rounded-full text-label-sm font-label-sm bg-white text-primary shadow-xs font-semibold">New Regime (Default)</button>
+<button class="px-3 py-1 rounded-full text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface">Old Regime</button>
+</div>
+</div>
+<!-- Live Slider: Package selection -->
+<div class="bg-[#F4F5FB] rounded-xl p-4 mb-6">
+<div class="flex justify-between items-center mb-2">
+<label class="text-label-md font-label-md text-on-surface font-semibold">Simulated Annual CTC:</label>
+<span class="text-headline-sm font-headline-sm text-primary font-bold">₹12,50,000 (₹12.50 LPA)</span>
+</div>
+<input class="w-full accent-primary h-2 bg-surface-container-high rounded-lg cursor-pointer" max="25" min="6" step="0.5" type="range" value="12.5"/>
+<div class="flex justify-between text-label-sm font-label-sm text-outline mt-1.5">
+<span>₹6.00L (Floor)</span>
+<span>₹12.50L (Selected: Walmart Offer)</span>
+<span>₹25.00L (Principal)</span>
+</div>
+</div>
+<!-- Indian Salary Structure Grid -->
+<div class="space-y-3">
+<div class="text-label-sm font-label-sm text-outline uppercase tracking-wider font-semibold">Annual Component Breakdown</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="p-3 rounded-xl border border-outline-variant/40 flex justify-between items-center">
+<div>
+<div class="text-label-md font-label-md text-on-surface font-semibold">Basic Salary (50%)</div>
+<div class="text-label-sm font-label-sm text-outline">EPF &amp; Gratuity foundation</div>
+</div>
+<div class="text-body-md font-body-md font-bold text-on-surface">₹6,25,000</div>
+</div>
+<div class="p-3 rounded-xl border border-outline-variant/40 flex justify-between items-center">
+<div>
+<div class="text-label-md font-label-md text-on-surface font-semibold">House Rent Allowance (HRA)</div>
+<div class="text-label-sm font-label-sm text-outline">40% / 50% Metro Index</div>
+</div>
+<div class="text-body-md font-body-md font-bold text-on-surface">₹2,50,000</div>
+</div>
+<div class="p-3 rounded-xl border border-outline-variant/40 flex justify-between items-center">
+<div>
+<div class="text-label-md font-label-md text-on-surface font-semibold">Special Allowance</div>
+<div class="text-label-sm font-label-sm text-outline">Flexible benefit bucket</div>
+</div>
+<div class="text-body-md font-body-md font-bold text-on-surface">₹1,75,000</div>
+</div>
+<div class="p-3 rounded-xl border border-outline-variant/40 flex justify-between items-center">
+<div>
+<div class="text-label-md font-label-md text-on-surface font-semibold">Employer PF (12% of basic)</div>
+<div class="text-label-sm font-label-sm text-outline">Statutory Retirement Fund</div>
+</div>
+<div class="text-body-md font-body-md font-bold text-on-surface">₹21,600</div>
+</div>
+<div class="p-3 rounded-xl border border-outline-variant/40 flex justify-between items-center">
+<div>
+<div class="text-label-md font-label-md text-on-surface font-semibold">NPS &amp; Gratuity Accrual</div>
+<div class="text-label-sm font-label-sm text-outline">4.81% Basic statutory reserve</div>
+</div>
+<div class="text-body-md font-body-md font-bold text-on-surface">₹30,050</div>
+</div>
+<div class="p-3 rounded-xl border border-outline-variant/40 flex justify-between items-center">
+<div>
+<div class="text-label-md font-label-md text-on-surface font-semibold">Annual Performance Variable</div>
+<div class="text-label-sm font-label-sm text-outline">Paid in Q4 appraisal</div>
+</div>
+<div class="text-body-md font-body-md font-bold text-on-surface">₹1,50,000</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Summary Strip: Estimated Monthly In-Hand -->
+<div class="mt-6 pt-5 border-t border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-4 bg-surface-container-low p-4 rounded-xl">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-[#ECFDF5] flex items-center justify-center text-[#10B981]">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+</div>
+<div>
+<div class="text-headline-md font-headline-md text-on-surface font-bold">~₹84,200 / month</div>
+<div class="text-body-sm font-body-sm text-outline">Estimated Monthly In-Hand (Post Tax &amp; PF Deductions)</div>
+</div>
+</div>
+<div class="text-right">
+<span class="text-label-sm font-label-sm text-primary font-semibold">Saves ₹28,400/mo vs ₹4.5L Baseline</span>
+</div>
+</div>
+</div>
+<!-- Right: Tech Park Cost of Living & Commute Index (5 cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-[18px] p-6 custom-shadow-card flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant/30 mb-4">
+<div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Tech Park Cost of Living &amp; Rent Index</h3>
+<p class="text-body-sm font-body-sm text-outline">Commute &amp; Rent vs Savings analysis</p>
+</div>
+<span class="material-symbols-outlined text-outline" data-icon="map">map</span>
+</div>
+<!-- Location 1: Bengaluru ORR / Bellandur (Walmart Offer) -->
+<div class="p-4 rounded-xl bg-[#F4F5FB] border border-outline-variant/30 mb-3">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="text-label-md font-label-md font-bold text-on-surface">Bengaluru (Bellandur / Sarjapur)</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-label-sm font-label-sm font-semibold">Walmart Office</span>
+</div>
+<div class="grid grid-cols-3 gap-2 text-center pt-1">
+<div class="bg-white p-2 rounded-lg border border-outline-variant/20">
+<div class="text-label-sm font-label-sm text-outline">1BHK / Studio Rent</div>
+<div class="text-body-md font-body-md font-bold text-on-surface">₹22k - 26k</div>
+</div>
+<div class="bg-white p-2 rounded-lg border border-outline-variant/20">
+<div class="text-label-sm font-label-sm text-outline">ORR Commute</div>
+<div class="text-body-md font-body-md font-bold text-on-surface">25 mins</div>
+</div>
+<div class="bg-white p-2 rounded-lg border border-outline-variant/20">
+<div class="text-label-sm font-label-sm text-outline">Monthly Savings</div>
+<div class="text-body-md font-body-md font-bold text-[#10B981]">~₹48,000</div>
+</div>
+</div>
+</div>
+<!-- Location 2: Manyata Tech Park / Hebbal (Target Offer) -->
+<div class="p-4 rounded-xl bg-[#F4F5FB] border border-outline-variant/30 mb-3">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="text-label-md font-label-md font-bold text-on-surface">Bengaluru (Hebbal / Manyata)</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary/10 text-secondary text-label-sm font-label-sm font-semibold">Target Office</span>
+</div>
+<div class="grid grid-cols-3 gap-2 text-center pt-1">
+<div class="bg-white p-2 rounded-lg border border-outline-variant/20">
+<div class="text-label-sm font-label-sm text-outline">1BHK / Studio Rent</div>
+<div class="text-body-md font-body-md font-bold text-on-surface">₹18k - 21k</div>
+</div>
+<div class="bg-white p-2 rounded-lg border border-outline-variant/20">
+<div class="text-label-sm font-label-sm text-outline">Airport Rd Travel</div>
+<div class="text-body-md font-body-md font-bold text-on-surface">20 mins</div>
+</div>
+<div class="bg-white p-2 rounded-lg border border-outline-variant/20">
+<div class="text-label-sm font-label-sm text-outline">Monthly Savings</div>
+<div class="text-body-md font-body-md font-bold text-[#10B981]">~₹44,500</div>
+</div>
+</div>
+</div>
+<!-- Location 3: Pune Comparison (Hinjawadi) -->
+<div class="p-4 rounded-xl bg-white border border-outline-variant/40">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-outline"></span>
+<span class="text-label-md font-label-md font-bold text-on-surface">Pune (Hinjawadi Phase 1)</span>
+</div>
+<span class="text-label-sm font-label-sm text-outline">Remote / Hybrid Benchmark</span>
+</div>
+<div class="grid grid-cols-3 gap-2 text-center pt-1">
+<div class="bg-[#F4F5FB] p-2 rounded-lg">
+<div class="text-label-sm font-label-sm text-outline">1BHK Rent</div>
+<div class="text-body-md font-body-md font-bold text-on-surface">₹14k - 16k</div>
+</div>
+<div class="bg-[#F4F5FB] p-2 rounded-lg">
+<div class="text-label-sm font-label-sm text-outline">Cab / Metro</div>
+<div class="text-body-md font-body-md font-bold text-on-surface">15 mins</div>
+</div>
+<div class="bg-[#F4F5FB] p-2 rounded-lg">
+<div class="text-label-sm font-label-sm text-outline">Relocation Cost</div>
+<div class="text-body-md font-body-md font-bold text-primary">₹35,000</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/30 flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-outline">Living Standard Score:</span>
+<span class="text-on-surface font-semibold">Tier-1 GCC Executive Baseline</span>
+</div>
+</div>
+</section>
+<!-- 5. AI NEGOTIATION PLAYBOOK & COUNTER-EMAIL GENERATOR WITH HINGLISH TIPS -->
+<section class="bg-surface-container-lowest rounded-[18px] p-6 custom-shadow-card space-y-6">
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-4 border-b border-outline-variant/30 gap-4">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="psychology">psychology</span>
+<h3 class="text-headline-md font-headline-md text-on-surface">AI Negotiation Playbook &amp; Counter-Email Generator</h3>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant mt-0.5">
+              Tactical playbooks for Indian GCC recruiters: Overcoming 90-day notice bias, multi-offer leverage, and deterministic sandbox proofs.
+            </p>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-4 py-2 rounded-full border border-primary text-primary text-label-md font-label-md hover:bg-primary/5 transition-colors">
+              Reset Script
+            </button>
+<button class="px-5 py-2.5 rounded-full bg-primary-container text-on-primary-container text-label-md font-label-md font-semibold hover:bg-primary shadow-sm flex items-center gap-2 transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="content_copy">content_copy</span>
+<span>Copy Ready-to-Send Counter Email</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Tactical Playbook Steps (5 cols) -->
+<div class="lg:col-span-5 space-y-4">
+<div class="text-label-sm font-label-sm text-outline uppercase tracking-wider font-semibold">Negotiation Strategy Steps</div>
+<!-- Step 1 -->
+<div class="p-4 rounded-xl border border-outline-variant/40 bg-white hover:border-primary/50 transition-colors">
+<div class="flex items-start gap-3">
+<span class="w-6 h-6 rounded-full bg-primary/10 text-primary font-bold text-label-sm font-label-sm flex items-center justify-center shrink-0">1</span>
+<div>
+<h5 class="text-label-md font-label-md font-bold text-on-surface">Notice Period Leverage (90 Days to 15 Days)</h5>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">
+                    Frame your remaining 60-day notice not as a delay, but as an opportunity for Walmart to buy out via their standard ₹75,000 relocation/buyout allowance.
+                  </p>
+</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="p-4 rounded-xl border border-outline-variant/40 bg-white hover:border-primary/50 transition-colors">
+<div class="flex items-start gap-3">
+<span class="w-6 h-6 rounded-full bg-primary/10 text-primary font-bold text-label-sm font-label-sm flex items-center justify-center shrink-0">2</span>
+<div>
+<h5 class="text-label-md font-label-md font-bold text-on-surface">Defending Fixed Base vs Variable Bonus</h5>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">
+                    Insist on raising Fixed CTC from ₹10.50L to ₹13.00L citing your verified Kubernetes Sandbox score (top 8% pan-India).
+                  </p>
+</div>
+</div>
+</div>
+<!-- Step 3: Hinglish Coach Note (Highlighted) -->
+<div class="p-4 rounded-xl bg-gradient-to-r from-[#FFF4ED] to-[#FFF8F4] border border-[#FF7A59]/40 relative overflow-hidden">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-[#FF7A59]/20 flex items-center justify-center text-[#FF7A59] shrink-0">
+<span class="material-symbols-outlined text-lg" data-icon="lightbulb">lightbulb</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h5 class="text-label-md font-label-md font-bold text-on-surface">Hinglish Coach Secret Note</h5>
+<span class="text-label-sm font-label-sm px-2 py-0.2 rounded-full bg-[#FF7A59] text-white">Pro Tip</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1 italic leading-relaxed">
+                    "HR se call pe baat karte time sirf 'market standard' mat bolo. Say: 'Maine SkillRoute ke sealed production environments mein multi-node cluster triage complete kiya hai at the 92nd percentile.' GCC engineering directors respect deterministic sandbox proof over generic negotiation bluffing!"
+                  </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Counter-Email Preview & Dynamic Field Editor (7 cols) -->
+<div class="lg:col-span-7 bg-[#F4F5FB] rounded-xl p-5 border border-outline-variant/40 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant/30 mb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-sm" data-icon="mail">mail</span>
+<span class="text-label-md font-label-md font-bold text-on-surface">Target Recruiter: talent.acquisition@walmartglobaltech.com</span>
+</div>
+<span class="text-label-sm font-label-sm text-outline">Generated 2 mins ago</span>
+</div>
+<!-- Subject Line -->
+<div class="bg-white rounded-lg p-2.5 border border-outline-variant/30 mb-3">
+<span class="text-label-sm font-label-sm text-outline font-semibold">Subject: </span>
+<span class="text-body-sm font-body-sm text-on-surface font-semibold">Rohan Verma — Offer Discussion: Associate DevOps &amp; Cloud Engineer (Ref: WGT-BLR-4091)</span>
+</div>
+<!-- Email Body -->
+<div class="bg-white rounded-lg p-4 border border-outline-variant/30 text-body-sm font-body-sm text-on-surface-variant space-y-3 leading-relaxed font-mono">
+<p>Dear Talent Acquisition Team,</p>
+<p>
+                  Thank you sincerely for extending the offer for the Associate DevOps &amp; Cloud Engineer role at Walmart Global Tech (Outer Ring Road, Bengaluru). I am genuinely thrilled by the team's platform scalability vision and modern Kubernetes infrastructure.
+                </p>
+<p>
+                  After carefully reviewing the compensation structure against my verified skill dossier on SkillRoute India—where I hold a 92nd percentile credential in Multi-Stage Docker Triage (#201) and Kubernetes Cluster Recovery (#209)—and considering concurrent discussions with Target India for ₹11.50L, I would like to request an adjustment to the fixed base component.
+                </p>
+<p class="bg-surface-container-low p-2.5 rounded border border-primary/20 text-on-surface">
+<strong>Proposed Counter Compensation:</strong><br/>
+                  • Fixed Base: ₹13,00,000 per annum (adjusted from ₹10.50L)<br/>
+                  • Target Performance Bonus: ₹1,50,000<br/>
+                  • Notice Buyout / Sign-on: ₹1,50,000 (enables joining within 15 days instead of 60 days)
+                </p>
+<p>
+                  I have attached my SkillRoute Verified Cryptographic Dossier verifying production sandbox execution benchmarks. If this structure aligns with your leadership banding, I am prepared to sign immediately today and initiate fast-track transition.
+                </p>
+<p>
+                  Warm regards,<br/>
+<strong class="text-on-surface">Rohan Verma</strong><br/>
+<span class="text-outline text-label-sm font-label-sm">+91 98450 12894 • Bengaluru</span>
+</p>
+</div>
+</div>
+<!-- Email Action Controls -->
+<div class="mt-4 pt-3 border-t border-outline-variant/30 flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<span class="text-label-sm font-label-sm text-outline">Tone Setting:</span>
+<button class="px-2.5 py-1 rounded-md text-label-sm font-label-sm bg-white border border-outline-variant/40 text-primary font-semibold">Professional Assertive</button>
+<button class="px-2.5 py-1 rounded-md text-label-sm font-label-sm text-outline hover:bg-white">Polite Inquiring</button>
+</div>
+<button class="flex items-center gap-1.5 text-primary text-label-sm font-label-sm font-semibold hover:underline">
+<span class="material-symbols-outlined text-sm" data-icon="edit_note">edit_note</span>
+<span>Customize Custom Tokens</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. FOOTER STATS & SECURITY COMPLIANCE STRIP -->
+<footer class="pt-4 pb-8 flex flex-col sm:flex-row items-center justify-between text-body-sm font-body-sm text-outline border-t border-outline-variant/20 gap-3">
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-[#10B981]" data-icon="lock">lock</span>
+            256-bit Encrypted Compensation Nodes
+          </span>
+<span>•</span>
+<span>SkillRoute India © 2024</span>
+</div>
+<div class="flex items-center gap-4 text-label-sm font-label-sm">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Karnataka Labor Law Standards</a>
+<a class="hover:text-primary transition-colors" href="#">GCC Salary Benchmarks API</a>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

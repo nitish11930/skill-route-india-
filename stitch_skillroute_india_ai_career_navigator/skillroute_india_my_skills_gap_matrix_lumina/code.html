@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SkillRoute India - My Skills &amp; Gap Matrix</title>
+<!-- Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config from Design System -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-container": "#c65033",
+            "primary-fixed": "#dae2ff",
+            "on-secondary-fixed-variant": "#442bb5",
+            "inverse-surface": "#2e303b",
+            "on-secondary-container": "#fffbff",
+            "tertiary": "#a5381d",
+            "on-error-container": "#93000a",
+            "inverse-primary": "#b1c5ff",
+            "on-surface-variant": "#424654",
+            "on-background": "#191b26",
+            "surface": "#fbf8ff",
+            "on-primary-fixed": "#001847",
+            "surface-container-lowest": "#ffffff",
+            "on-error": "#ffffff",
+            "on-primary": "#ffffff",
+            "error-container": "#ffdad6",
+            "tertiary-fixed-dim": "#ffb4a2",
+            "primary-fixed-dim": "#b1c5ff",
+            "on-tertiary-fixed": "#3c0700",
+            "inverse-on-surface": "#f0efff",
+            "secondary-fixed": "#e5deff",
+            "secondary-container": "#7360e5",
+            "surface-container-highest": "#e1e1f1",
+            "on-primary-fixed-variant": "#0040a0",
+            "tertiary-fixed": "#ffdad2",
+            "secondary": "#5a45cb",
+            "on-surface": "#191b26",
+            "on-tertiary": "#ffffff",
+            "error": "#ba1a1a",
+            "on-primary-container": "#ffffff",
+            "on-secondary": "#ffffff",
+            "surface-bright": "#fbf8ff",
+            "outline-variant": "#c2c6d7",
+            "surface-container-high": "#e7e7f6",
+            "surface-tint": "#0056d0",
+            "surface-container-low": "#f3f2ff",
+            "background": "#fbf8ff",
+            "secondary-fixed-dim": "#c8bfff",
+            "primary": "#0055ce",
+            "on-secondary-fixed": "#190064",
+            "on-tertiary-fixed-variant": "#862208",
+            "surface-dim": "#d9d9e8",
+            "surface-container": "#ededfc",
+            "surface-variant": "#e1e1f1",
+            "outline": "#737786",
+            "on-tertiary-container": "#fffeff",
+            "primary-container": "#2f6fed"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-desktop": "2rem",
+            "space-lg": "1.25rem",
+            "gutter-desktop": "1.5rem",
+            "space-2xl": "2.5rem",
+            "margin-tablet": "1.5rem",
+            "margin": "1rem",
+            "gutter": "1.25rem",
+            "space-xs": "0.25rem",
+            "space-xl": "1.75rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem"
+          },
+          "fontFamily": {
+            "label-md": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "mono": ["JetBrains Mono", "monospace"]
+          },
+          "fontSize": {
+            "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .material-symbols-outlined.fill {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+    }
+    /* Subtle Lumina SaaS atmospheric drops */
+    .lumina-card-shadow {
+      box-shadow: 0 4px 20px -2px rgba(90, 80, 140, 0.06), 0 1px 3px 0 rgba(90, 80, 140, 0.04);
+    }
+    .lumina-pill-shadow {
+      box-shadow: 0 4px 14px rgba(47, 111, 237, 0.35);
+    }
+    .lumina-border {
+      border: 1px solid rgba(226, 228, 240, 0.7);
+    }
+    /* Custom subtle scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F4F5FB;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #c2c6d7;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="bg-[#F4F5FB] text-on-surface antialiased h-full flex flex-col font-body-md select-none">
+<!-- Desktop App Shell Wrapper -->
+<div class="flex h-screen w-screen overflow-hidden">
+<!-- SIDEBAR NAVIGATION (Desktop Drawer mapped to Shared Component tokens) -->
+<aside class="w-64 bg-surface-container-lowest border-r border-outline-variant/30 flex flex-col justify-between py-6 px-4 z-40 shrink-0 h-full overflow-y-auto">
+<div class="flex flex-col gap-6">
+<!-- Brand Header -->
+<div class="flex items-center gap-3 px-2">
+<div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-primary to-secondary flex items-center justify-center text-white font-headline-sm font-bold shadow-md shadow-primary/20">
+            SR
+          </div>
+<div class="flex flex-col leading-tight">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">SkillRoute</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">India Workspace</span>
+</div>
+</div>
+<!-- Career Goal Action Button -->
+<button class="w-full flex items-center justify-center gap-2 py-2.5 px-4 bg-primary-container text-on-primary-container rounded-full font-label-md text-label-md lumina-pill-shadow hover:bg-primary transition-all duration-150 active:scale-[0.98]">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>+ Add Career Goal</span>
+</button>
+<!-- Main Navigation Links -->
+<nav class="flex flex-col gap-1">
+<div class="text-[11px] font-bold text-outline uppercase tracking-wider px-3.5 mb-1.5">Learning Navigation</div>
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors duration-150 font-medium" href="#">
+<span class="material-symbols-outlined text-[20px]">account_tree</span>
+<span class="font-label-md text-label-md">Roadmap &amp; Graph</span>
+</a>
+<!-- ACTIVE TAB: Skill Gap Matrix -->
+<a class="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-primary-container text-on-primary-container font-semibold lumina-pill-shadow transition-all duration-150" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px] fill" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="font-label-md text-label-md">Skill Gap Matrix</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-white"></span>
+</a>
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors duration-150 font-medium" href="#">
+<span class="material-symbols-outlined text-[20px]">target</span>
+<span class="font-label-md text-label-md">Target Roles</span>
+<span class="ml-auto text-[10px] bg-surface-container px-2 py-0.5 rounded-full font-bold text-primary">DevOps</span>
+</a>
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors duration-150 font-medium" href="#">
+<span class="material-symbols-outlined text-[20px]">smart_toy</span>
+<span class="font-label-md text-label-md">AI Career Coach</span>
+<span class="ml-auto flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+</a>
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors duration-150 font-medium" href="#">
+<span class="material-symbols-outlined text-[20px]">folder_special</span>
+<span class="font-label-md text-label-md">Curated Resources</span>
+</a>
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors duration-150 font-medium" href="#">
+<span class="material-symbols-outlined text-[20px]">check_box</span>
+<span class="font-label-md text-label-md">Tasks</span>
+<span class="ml-auto text-[11px] bg-surface-container-high text-on-surface-variant px-1.5 py-0.5 rounded-md font-semibold">4</span>
+</a>
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors duration-150 font-medium" href="#">
+<span class="material-symbols-outlined text-[20px]">description</span>
+<span class="font-label-md text-label-md">Docs &amp; Notes</span>
+</a>
+</nav>
+</div>
+<!-- Footer & User Profile Block -->
+<div class="flex flex-col gap-3 pt-4 border-t border-outline-variant/20">
+<div class="flex items-center justify-between px-2 text-on-surface-variant">
+<a class="flex items-center gap-2 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[19px]">settings</span>
+<span class="font-label-sm text-label-sm">Settings</span>
+</a>
+<a class="flex items-center gap-2 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[19px]">help</span>
+<span class="font-label-sm text-label-sm">Help</span>
+</a>
+</div>
+<!-- User Profile Pill -->
+<div class="flex items-center gap-3 p-2 bg-surface-container-low rounded-xl border border-outline-variant/20">
+<img class="w-9 h-9 rounded-full object-cover border border-white shadow-sm shrink-0" data-alt="Close up professional headshot of Manjeet, a 24-year old Indian software engineer with dark hair, glasses, wearing a dark navy collar shirt in a modern bright tech office environment with soft depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs5k-tAXqgBRLfwY9Ai8tXX41xAS5tJKhlvqEK9zED62JKafnu9IjVQUp4htGlC6YboAo7jVTExxpvSjVhbwWzYMWyusi_fPm_waaBkyqSA0O__nbkE6MVlMiMXSA54EY2CsRstp2UWsZ5jXWpLnuFCmwGx1DL4cwdIRc9GaiWVAsKXvrKsN-D_JOudTjoq0QwedlCDxKRkrtTE2VwagjOhaspWRI17ghCNEzdcbyVKzy1vLO3_6Rm"/>
+<div class="flex flex-col overflow-hidden">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">Manjeet S.</span>
+<span class="font-label-sm text-label-sm text-outline truncate">Target: DevOps Eng.</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-outline ml-auto">unfold_more</span>
+</div>
+</div>
+</aside>
+<!-- MAIN VIEWPORT CONTAINER -->
+<div class="flex-1 flex flex-col h-screen overflow-hidden">
+<!-- TOP NAVBAR (Floating Header Style mapped from Shared Components) -->
+<header class="h-16 px-8 bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant/20 flex items-center justify-between sticky top-0 z-30 shrink-0">
+<!-- Search bar with Cmd+K -->
+<div class="flex items-center gap-4 flex-1 max-w-xl">
+<div class="relative w-80">
+<span class="material-symbols-outlined text-[18px] text-outline absolute left-3.5 top-1/2 -translate-y-1/2">search</span>
+<input class="w-full bg-[#EBEDF8] text-on-surface font-body-sm text-body-sm rounded-full pl-10 pr-12 py-2 border-0 focus:ring-2 focus:ring-primary focus:bg-white transition-all placeholder:text-outline outline-none" placeholder="Search skills, nodes, tools (⌘K)..." type="text"/>
+<span class="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] font-bold text-outline bg-white px-1.5 py-0.5 rounded border border-outline-variant/40">⌘K</span>
+</div>
+<!-- Micro Status Pills -->
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#ECFDF5] text-[#10B981] font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-[#10B981]"></span>
+<span>Neo4j Active</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px]">bolt</span>
+<span>AI Agent Ready</span>
+</div>
+</div>
+</div>
+<!-- Trailing Actions, Language, and Profile -->
+<div class="flex items-center gap-3">
+<!-- Language Selector -->
+<div class="flex items-center bg-surface-container px-2.5 py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant font-medium border border-outline-variant/30">
+<span class="text-primary font-bold">EN</span>
+<span class="mx-1.5 text-outline-variant">|</span>
+<span class="hover:text-on-surface cursor-pointer">HI</span>
+<span class="mx-1.5 text-outline-variant">|</span>
+<span class="hover:text-on-surface cursor-pointer">Hinglish</span>
+</div>
+<!-- Ask Coach Primary Action -->
+<button class="flex items-center gap-1.5 bg-primary-container text-on-primary-container px-4 py-1.5 rounded-full font-label-md text-label-md font-semibold lumina-pill-shadow hover:bg-primary transition-all active:scale-95">
+<span class="material-symbols-outlined text-[16px]">forum</span>
+<span>Ask Coach</span>
+</button>
+<!-- Icon actions -->
+<div class="flex items-center gap-1 border-l border-outline-variant/30 pl-3">
+<button class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+</button>
+<button class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<button class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+</button>
+</div>
+<!-- User Avatar in Header -->
+<div class="ml-1 pl-2 border-l border-outline-variant/30">
+<img class="w-9 h-9 rounded-full object-cover border-2 border-primary/20" data-alt="Portrait photo of a young modern Indian engineering professional with styled hair, warm studio lighting, neutral slate studio background, dressed in a contemporary minimal blazer." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlPNz4r0GhPAcznLa4BOlFat_2_izS6w9tmiblf4fw9a6_wkcg_fZNw1pfvUsvHsZ2H48LpG9eVtDFzhOgCGSAdfq7XrMTTMBlb4YubZPWHEDFjbwKcPIbSykHImvZpekbADQlEh8XXnVfpceDS2XpXUtG4171RLgpbMP-hKnugj0peNTTqrPCiTJXDXWwlhegt1PvWhuuwBO_4EMiP8mcHWhWq-XpgtdOpR9Vg8Y3trRxXFllK8OV"/>
+</div>
+</div>
+</header>
+<!-- SCROLLABLE CANVAS CONTENT -->
+<main class="flex-1 overflow-y-auto px-8 py-6 space-y-6">
+<!-- Breadcrumb & Header Hero -->
+<div>
+<nav class="flex items-center gap-2 text-label-sm font-label-sm text-outline mb-1.5">
+<span>Workspace</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>My Skills</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-semibold">Skill Gap Matrix</span>
+</nav>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<div class="flex items-center gap-3">
+<h1 class="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tight">My Skills &amp; Gap Matrix</h1>
+<span class="px-3 py-1 rounded-full bg-[#EEF2FF] text-primary border border-primary/20 font-label-sm text-label-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+                  NASSCOM Aligned Taxonomy
+                </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 max-w-3xl">
+                Audit your verified technical competencies, identify blocked prerequisites, and calibrate readiness against Indian IT employer benchmarks.
+              </p>
+</div>
+<!-- View Switcher Tabs (from visual inspiration header) -->
+<div class="flex items-center bg-white p-1 rounded-xl lumina-border self-start md:self-center shadow-xs">
+<button class="px-3 py-1.5 rounded-lg text-primary font-semibold text-label-sm font-label-sm bg-[#EEF2FF] flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px]">dashboard</span>
+                Matrix View
+              </button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[15px]">list_alt</span>
+                List
+              </button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[15px]">view_kanban</span>
+                Board
+              </button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[15px]">timeline</span>
+                Timeline
+              </button>
+</div>
+</div>
+</div>
+<!-- Filter Pill Action Bar -->
+<div class="bg-surface-container-lowest p-3 rounded-2xl lumina-border lumina-card-shadow flex flex-wrap items-center justify-between gap-4">
+<!-- Left side: Category filters -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 md:pb-0">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider mr-1">Categories:</span>
+<button class="px-3.5 py-1.5 rounded-full bg-primary-container text-white font-label-sm text-label-sm font-semibold shadow-xs">
+              All (12)
+            </button>
+<button class="px-3.5 py-1.5 rounded-full bg-[#F4F5FB] hover:bg-surface-container text-on-surface font-label-sm text-label-sm transition-colors">
+              Foundations (3)
+            </button>
+<button class="px-3.5 py-1.5 rounded-full bg-[#F4F5FB] hover:bg-surface-container text-on-surface font-label-sm text-label-sm transition-colors">
+              Programming (2)
+            </button>
+<button class="px-3.5 py-1.5 rounded-full bg-[#F4F5FB] hover:bg-surface-container text-on-surface font-label-sm text-label-sm transition-colors">
+              DevOps (2)
+            </button>
+<button class="px-3.5 py-1.5 rounded-full bg-[#F4F5FB] hover:bg-surface-container text-on-surface font-label-sm text-label-sm transition-colors">
+              Cloud &amp; Infra (2)
+            </button>
+<button class="px-3.5 py-1.5 rounded-full bg-[#F4F5FB] hover:bg-surface-container text-on-surface font-label-sm text-label-sm transition-colors">
+              Security (1)
+            </button>
+</div>
+<!-- Right side: Actions & Level filter -->
+<div class="flex items-center gap-2.5">
+<!-- Dropdown -->
+<div class="flex items-center gap-1 bg-[#F4F5FB] px-3 py-1.5 rounded-full lumina-border text-label-sm font-label-sm text-on-surface cursor-pointer hover:bg-surface-container">
+<span>Proficiency: All Levels</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</div>
+<button class="px-3.5 py-1.5 rounded-full border border-outline-variant/60 hover:bg-[#F4F5FB] text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+              Sync GitHub / LinkedIn
+            </button>
+<button class="px-4 py-1.5 rounded-full bg-primary-container text-white font-label-sm text-label-sm font-semibold lumina-pill-shadow hover:bg-primary flex items-center gap-1.5 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[16px]">add</span>
+              + Add Verified Skill
+            </button>
+</div>
+</div>
+<!-- TOP KPI SUMMARY CARDS (4 Modular Bento Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Card 1: Total Tracked Skills -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl lumina-border lumina-card-shadow flex flex-col justify-between hover:translate-y-[-2px] transition-transform duration-200">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Total Tracked Skills</span>
+<span class="w-8 h-8 rounded-full bg-[#EEF2FF] text-primary flex items-center justify-center material-symbols-outlined text-[18px]">fact_check</span>
+</div>
+<div class="my-3">
+<div class="font-headline-xl text-headline-xl font-bold text-on-surface">12 Skills</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-2 py-0.5 rounded-full bg-[#ECFDF5] text-[#10B981] font-label-sm text-label-sm font-bold">6 Verified / Met</span>
+<span class="px-2 py-0.5 rounded-full bg-[#FFF4ED] text-[#FF7A59] font-label-sm text-label-sm font-bold">6 Missing / Pending</span>
+</div>
+</div>
+<div class="w-full bg-[#F4F5FB] h-2 rounded-full overflow-hidden flex">
+<div class="bg-[#10B981] h-full" style="width: 50%;"></div>
+<div class="bg-[#FF7A59] h-full" style="width: 50%;"></div>
+</div>
+</div>
+<!-- Card 2: Target Role Readiness -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl lumina-border lumina-card-shadow flex flex-col justify-between hover:translate-y-[-2px] transition-transform duration-200">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Target Role Readiness</span>
+<span class="w-8 h-8 rounded-full bg-secondary-fixed text-secondary flex items-center justify-center material-symbols-outlined text-[18px]">military_tech</span>
+</div>
+<div class="my-3">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl font-bold text-primary">50%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Coverage</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                DevOps Engineer: <span class="font-semibold text-on-surface">65% benchmark</span> for interview calls.
+              </p>
+</div>
+<!-- Progress Bar -->
+<div>
+<div class="flex justify-between text-[11px] font-semibold text-outline mb-1">
+<span>Current: 50%</span>
+<span>Threshold: 65%</span>
+</div>
+<div class="w-full bg-[#F4F5FB] h-2 rounded-full overflow-hidden relative">
+<div class="bg-primary h-full rounded-full" style="width: 50%;"></div>
+<div class="absolute top-0 bottom-0 w-1 bg-amber-400" style="left: 65%;"></div>
+</div>
+</div>
+</div>
+<!-- Card 3: Immediate Next Move -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl lumina-border lumina-card-shadow flex flex-col justify-between hover:translate-y-[-2px] transition-transform duration-200 border-l-4 border-l-primary">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Immediate Next Move</span>
+<span class="px-2 py-0.5 rounded-full bg-[#EEF2FF] text-primary font-label-sm text-label-sm font-bold animate-pulse">100% Unlocked</span>
+</div>
+<div class="my-2">
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface">Docker Fundamentals</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Node #201 · Est. 18-24h investment
+              </p>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-outline-variant/20">
+<span class="font-label-sm text-label-sm text-[#10B981] font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                All 2 Prerequisites Met
+              </span>
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center">Start →</span>
+</div>
+</div>
+<!-- Card 4: Blocked Competency Nodes -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl lumina-border lumina-card-shadow flex flex-col justify-between hover:translate-y-[-2px] transition-transform duration-200">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Blocked Nodes</span>
+<span class="w-8 h-8 rounded-full bg-[#FFF4ED] text-[#FF7A59] flex items-center justify-center material-symbols-outlined text-[18px]">lock</span>
+</div>
+<div class="my-3">
+<div class="font-headline-xl text-headline-xl font-bold text-[#FF7A59]">2 Blocked</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 truncate">
+                Kubernetes &amp; Terraform waiting on Docker.
+              </p>
+</div>
+<div class="text-[11px] bg-[#FFF4ED] text-[#FF7A59] px-2.5 py-1 rounded-lg font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">info</span>
+              Resolve bottleneck to unlock ₹14L+ tier
+            </div>
+</div>
+</div>
+<!-- MAIN TWO-COLUMN CONTENT GRID -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- LEFT / MAIN COLUMN: Skill Inventory Table (8 Cols) -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-2xl lumina-border lumina-card-shadow overflow-hidden">
+<!-- Table Header Bar -->
+<div class="p-5 border-b border-outline-variant/20 flex flex-wrap items-center justify-between gap-3">
+<div>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface">Skill Verification Inventory</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Live prerequisite dependencies mapped from Neo4j knowledge graph</p>
+</div>
+<!-- Quick Table Actions -->
+<div class="flex items-center gap-2">
+<div class="relative">
+<span class="material-symbols-outlined text-[16px] text-outline absolute left-3 top-1/2 -translate-y-1/2">filter_list</span>
+<input class="bg-[#F4F5FB] text-on-surface text-body-sm rounded-lg pl-8 pr-3 py-1.5 border border-outline-variant/30 text-[13px] outline-none focus:border-primary" placeholder="Filter rows..." type="text"/>
+</div>
+<button class="p-2 rounded-lg bg-[#F4F5FB] hover:bg-surface-container text-on-surface-variant transition-colors" title="Export CSV">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+</button>
+</div>
+</div>
+<!-- Table Responsive Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-[#F8F9FE] text-outline font-label-sm text-label-sm border-b border-outline-variant/20 uppercase tracking-wider">
+<th class="py-3 px-4 font-semibold">Skill &amp; Graph Node</th>
+<th class="py-3 px-4 font-semibold">Category</th>
+<th class="py-3 px-4 font-semibold">Proficiency</th>
+<th class="py-3 px-4 font-semibold">Relevance</th>
+<th class="py-3 px-4 font-semibold">Market Demand (IND)</th>
+<th class="py-3 px-4 font-semibold">Prerequisites</th>
+<th class="py-3 px-4 font-semibold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/15 text-body-sm">
+<!-- Row 1: Linux Fundamentals -->
+<tr class="hover:bg-[#F4F5FB]/70 transition-colors duration-150 group">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-[#ECFDF5] text-[#10B981] flex items-center justify-center font-bold text-xs">
+                          LX
+                        </div>
+<div>
+<div class="font-semibold text-on-surface group-hover:text-primary transition-colors">Linux Fundamentals</div>
+<div class="text-[11px] text-outline font-mono">Node #104</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-on-surface-variant font-medium">Foundations</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#ECFDF5] text-[#10B981] font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[13px] fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        Proficient
+                      </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-[12px] font-semibold text-primary">Critical Prereq</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-[12px] font-medium text-on-surface">Top 3% · Bengaluru</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-[12px] text-[#10B981] font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">done_all</span> Base Met
+                      </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1 text-outline">
+<button class="hover:text-primary p-1" title="View Graph Node">
+<span class="material-symbols-outlined text-[18px]">hub</span>
+</button>
+<button class="hover:text-primary p-1" title="Edit Skill">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Git & Version Control -->
+<tr class="hover:bg-[#F4F5FB]/70 transition-colors duration-150 group">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-[#ECFDF5] text-[#10B981] flex items-center justify-center font-bold text-xs">
+                          GT
+                        </div>
+<div>
+<div class="font-semibold text-on-surface group-hover:text-primary transition-colors">Git &amp; Version Control</div>
+<div class="text-[11px] text-outline font-mono">Node #109</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-on-surface-variant font-medium">Foundations</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#ECFDF5] text-[#10B981] font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[13px] fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        Proficient
+                      </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-[12px] font-semibold text-primary">Critical Prereq</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-[12px] font-medium text-on-surface">Universal (98% Roles)</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-[12px] text-[#10B981] font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">done_all</span> Base Met
+                      </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1 text-outline">
+<button class="hover:text-primary p-1"><span class="material-symbols-outlined text-[18px]">hub</span></button>
+<button class="hover:text-primary p-1"><span class="material-symbols-outlined text-[18px]">more_vert</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Bash Scripting -->
+<tr class="hover:bg-[#F4F5FB]/70 transition-colors duration-150 group">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-on-surface-variant flex items-center justify-center font-bold text-xs">
+                          SH
+                        </div>
+<div>
+<div class="font-semibold text-on-surface group-hover:text-primary transition-colors">Bash Scripting</div>
+<div class="text-[11px] text-outline font-mono">Node #118</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-on-surface-variant font-medium">Foundations</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#EEF2FF] text-[#2F6FED] font-label-sm text-label-sm font-semibold">
+                        Comfortable
+                      </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-[12px] font-medium text-on-surface-variant">Core Competency</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-[12px] font-medium text-on-surface">Top 12% · Pune</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-[12px] text-[#10B981] font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> 1 of 1 Met
+                      </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1 text-outline">
+<button class="hover:text-primary p-1"><span class="material-symbols-outlined text-[18px]">hub</span></button>
+<button class="hover:text-primary p-1"><span class="material-symbols-outlined text-[18px]">more_vert</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Docker Fundamentals (ACTIVE / READY) -->
+<tr class="bg-[#F0F5FF]/60 hover:bg-[#EEF2FF] transition-colors duration-150 group">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-white flex items-center justify-center font-bold text-xs shadow-xs">
+                          DK
+                        </div>
+<div>
+<div class="font-semibold text-on-surface group-hover:text-primary transition-colors flex items-center gap-2">
+                            Docker Fundamentals
+                            <span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+</div>
+<div class="text-[11px] text-outline font-mono">Node #201 · DevOps</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-on-surface-variant font-medium">DevOps</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-primary-container text-white font-label-sm text-label-sm font-bold shadow-xs">
+<span class="material-symbols-outlined text-[13px]">play_arrow</span>
+                        Ready to Learn
+                      </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-[12px] font-semibold text-primary">Critical Prereq</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-[12px] font-medium text-on-surface">Top 5% · NCR/BLR</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-[12px] text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">done_all</span> 2 of 2 Met (Linux, Git)
+                      </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="px-3 py-1 rounded-full bg-primary-container text-white font-label-sm text-label-sm font-semibold hover:bg-primary transition-all">
+                        Start
+                      </button>
+</td>
+</tr>
+<!-- Row 5: CI/CD Pipelines -->
+<tr class="hover:bg-[#F4F5FB]/70 transition-colors duration-150 group">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-[#FFF4ED] text-[#FF7A59] flex items-center justify-center font-bold text-xs">
+                          CI
+                        </div>
+<div>
+<div class="font-semibold text-on-surface group-hover:text-primary transition-colors">CI/CD Pipelines</div>
+<div class="text-[11px] text-outline font-mono">Node #208</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-on-surface-variant font-medium">DevOps</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#FFF4ED] text-[#FF7A59] font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">pending</span>
+                        In Progress (30%)
+                      </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-[12px] font-medium text-on-surface-variant">Core Competency</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-[12px] font-medium text-on-surface">Top 4% · Hyderabad</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-[12px] text-outline font-medium">Requires Docker + Git</span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1 text-outline">
+<button class="hover:text-primary p-1"><span class="material-symbols-outlined text-[18px]">hub</span></button>
+<button class="hover:text-primary p-1"><span class="material-symbols-outlined text-[18px]">more_vert</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Kubernetes Orchestration (BLOCKED) -->
+<tr class="hover:bg-[#F4F5FB]/70 transition-colors duration-150 group bg-red-50/20">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-red-100 text-[#ba1a1a] flex items-center justify-center font-bold text-xs">
+                          K8
+                        </div>
+<div>
+<div class="font-semibold text-on-surface group-hover:text-primary transition-colors flex items-center gap-1.5">
+                            Kubernetes Orchestration
+                            <span class="material-symbols-outlined text-[14px] text-[#ba1a1a]">lock</span>
+</div>
+<div class="text-[11px] text-outline font-mono">Node #305 · Cloud &amp; Infra</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-on-surface-variant font-medium">Cloud &amp; Infra</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-error-container text-[#ba1a1a] font-label-sm text-label-sm font-semibold">
+                        Blocked
+                      </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-[12px] font-bold text-secondary">High Impact</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-[12px] font-medium text-on-surface">Top 8% · National</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-[12px] text-[#ba1a1a] font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span> Needs Docker (#201)
+                      </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<span class="text-[11px] text-outline bg-surface-container px-2 py-1 rounded">Locked</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Pagination/Status -->
+<div class="p-4 bg-[#F8F9FE] border-t border-outline-variant/20 flex items-center justify-between text-body-sm text-outline">
+<span>Showing 6 of 12 skills</span>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 rounded-md bg-white lumina-border text-xs font-semibold hover:bg-surface-container">Previous</button>
+<button class="px-2.5 py-1 rounded-md bg-primary text-white text-xs font-semibold">1</button>
+<button class="px-2.5 py-1 rounded-md bg-white lumina-border text-xs font-semibold hover:bg-surface-container">2</button>
+<button class="px-2.5 py-1 rounded-md bg-white lumina-border text-xs font-semibold hover:bg-surface-container">Next</button>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Dependency Chain, Benchmarks & Coach (~340px / 4 Cols) -->
+<div class="lg:col-span-4 space-y-6">
+<!-- CARD 1: Neo4j Subgraph Prerequisite Chain -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl lumina-border lumina-card-shadow">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">account_tree</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Dependency Chain</h3>
+</div>
+<span class="text-[11px] font-mono text-outline bg-[#F4F5FB] px-2 py-0.5 rounded border border-outline-variant/30">Neo4j Subgraph</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+                Completing <strong class="text-primary font-semibold">Docker Fundamentals</strong> directly unblocks 2 high-impact salary nodes:
+              </p>
+<!-- Node Tree Visual Micro-diagram -->
+<div class="p-4 bg-[#F4F5FB] rounded-xl lumina-border space-y-3 relative">
+<!-- Level 0 (Prereqs Met) -->
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-lg bg-[#ECFDF5] text-[#10B981] font-label-sm text-label-sm font-bold flex items-center gap-1 border border-[#10B981]/20">
+<span class="material-symbols-outlined text-[13px] fill" style="font-variation-settings: 'FILL' 1;">check</span> Linux
+                  </span>
+<span class="text-outline text-xs">+</span>
+<span class="px-2.5 py-1 rounded-lg bg-[#ECFDF5] text-[#10B981] font-label-sm text-label-sm font-bold flex items-center gap-1 border border-[#10B981]/20">
+<span class="material-symbols-outlined text-[13px] fill" style="font-variation-settings: 'FILL' 1;">check</span> Git
+                  </span>
+</div>
+<!-- Downward Arrow Connector -->
+<div class="flex items-center gap-2 pl-6 text-outline">
+<span class="material-symbols-outlined text-[16px] text-primary">arrow_downward</span>
+<span class="text-[11px] font-mono text-primary font-semibold">PREREQUISITE_FOR</span>
+</div>
+<!-- Level 1 (Immediate Next Step) -->
+<div class="p-2.5 rounded-xl bg-white border-2 border-primary-container lumina-pill-shadow flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-primary animate-pulse"></div>
+<span class="font-label-md text-label-md font-bold text-on-surface">Docker Fundamentals</span>
+</div>
+<span class="text-[11px] bg-primary-container text-white px-2 py-0.5 rounded-full font-bold">In Target</span>
+</div>
+<!-- Downward Arrow Connector -->
+<div class="flex items-center gap-2 pl-6 text-outline">
+<span class="material-symbols-outlined text-[16px] text-outline">arrow_downward</span>
+<span class="text-[11px] font-mono text-outline">ENABLES_CLUSTERING</span>
+</div>
+<!-- Level 2 (Locked Targets) -->
+<div class="grid grid-cols-2 gap-2">
+<div class="p-2 rounded-lg bg-surface-container/60 border border-dashed border-outline-variant/60 flex items-center gap-1.5 opacity-80">
+<span class="material-symbols-outlined text-[14px] text-outline">lock</span>
+<span class="text-[12px] font-semibold text-on-surface-variant truncate">Kubernetes</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container/60 border border-dashed border-outline-variant/60 flex items-center gap-1.5 opacity-80">
+<span class="material-symbols-outlined text-[14px] text-outline">lock</span>
+<span class="text-[12px] font-semibold text-on-surface-variant truncate">Terraform IAC</span>
+</div>
+</div>
+</div>
+<!-- Cypher Snippet Preview -->
+<div class="mt-3 bg-inverse-surface text-inverse-on-surface p-2.5 rounded-lg font-mono text-[11px] leading-tight overflow-x-auto">
+<span class="text-[#b1c5ff]">MATCH</span> (n:Skill {id: 201})-[r:UNLOCKS]-&gt;(m:Skill)<br/>
+<span class="text-[#b1c5ff]">RETURN</span> m.title, m.avg_salary_lpa;
+              </div>
+<div class="mt-3 flex justify-end">
+<a class="text-primary hover:underline font-label-sm text-label-sm font-semibold flex items-center gap-1" href="#">
+                  Inspect Full Knowledge Graph
+                  <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- CARD 2: Indian Tech Market Benchmark -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl lumina-border lumina-card-shadow">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-[#10B981]">trending_up</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">IND Market Calibrations</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-[#ECFDF5] text-[#10B981] font-label-sm text-label-sm font-bold">+85% Premium</span>
+</div>
+<div class="space-y-3">
+<!-- Baseline -->
+<div class="p-3 bg-[#F4F5FB] rounded-xl flex items-center justify-between">
+<div>
+<div class="font-label-sm text-label-sm text-outline">Current Skillset CTC (0-2 YOE)</div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface">₹6.5L - ₹9.5L / yr</div>
+</div>
+<span class="text-[11px] bg-white px-2 py-1 rounded text-outline font-medium border border-outline-variant/30">Entry DevOps</span>
+</div>
+<!-- Unlocked Potential -->
+<div class="p-3 bg-gradient-to-r from-[#EEF2FF] to-white rounded-xl border border-primary/20 flex items-center justify-between">
+<div>
+<div class="font-label-sm text-label-sm text-primary font-bold">With Docker + K8s Verified</div>
+<div class="font-headline-sm text-headline-sm font-bold text-primary">₹14L - ₹22L / yr</div>
+</div>
+<span class="text-[11px] bg-primary text-white px-2 py-1 rounded font-bold shadow-xs">High Demand</span>
+</div>
+<!-- Geo Hiring Heat -->
+<div class="text-[12px] text-on-surface-variant flex items-center justify-between pt-1">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-outline">location_on</span>
+                    420+ Openings: BLR, HYD, Pune
+                  </span>
+<span class="text-primary font-semibold hover:underline cursor-pointer">View Roles</span>
+</div>
+</div>
+</div>
+<!-- CARD 3: Quick AI Coach Advice -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl lumina-border lumina-card-shadow relative overflow-hidden">
+<div class="flex items-center gap-2.5 mb-3">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-white flex items-center justify-center font-bold text-xs shadow-sm">
+<span class="material-symbols-outlined text-[16px]">smart_toy</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">AI Career Coach</h4>
+<span class="text-[11px] text-outline">Calibrated to Indian Tech Ecosystem</span>
+</div>
+</div>
+<!-- Message Speech Bubble -->
+<div class="p-3.5 bg-[#F4F5FB] rounded-xl rounded-tl-xs text-body-sm text-on-surface border border-outline-variant/20 leading-relaxed">
+                “Manjeet, your Linux and Git baseline is solid (<span class="font-semibold text-primary">top 15% of candidates</span>). Focus 100% on <span class="font-semibold text-on-surface">Docker containers</span> this week to immediately unlock Kubernetes &amp; cloud CI/CD.”
+              </div>
+<!-- Quick Prompt Input Box -->
+<div class="mt-3 relative">
+<input class="w-full bg-white text-on-surface text-body-sm rounded-xl pl-3 pr-10 py-2 border border-outline-variant/40 focus:ring-2 focus:ring-primary focus:outline-none placeholder:text-outline text-[13px]" placeholder="Ask coach: 'How do I prep for Docker?'" type="text"/>
+<button class="absolute right-2 top-1/2 -translate-y-1/2 w-6 h-6 rounded-lg bg-primary-container text-white flex items-center justify-center hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-[14px]">send</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

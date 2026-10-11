@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-surface" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SkillRoute India - GCC Enterprise Talent Pipeline &amp; Recruiter Portal</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-variant": "#e1e1f1",
+            "on-tertiary": "#ffffff",
+            "secondary-container": "#7360e5",
+            "error-container": "#ffdad6",
+            "surface-bright": "#fbf8ff",
+            "on-primary-fixed-variant": "#0040a0",
+            "on-tertiary-fixed-variant": "#862208",
+            "surface-dim": "#d9d9e8",
+            "on-primary-container": "#ffffff",
+            "on-tertiary-fixed": "#3c0700",
+            "tertiary-fixed-dim": "#ffb4a2",
+            "secondary-fixed": "#e5deff",
+            "secondary-fixed-dim": "#c8bfff",
+            "inverse-primary": "#b1c5ff",
+            "tertiary": "#a5381d",
+            "surface-container-highest": "#e1e1f1",
+            "outline-variant": "#c2c6d7",
+            "surface-tint": "#0056d0",
+            "surface": "#fbf8ff",
+            "secondary": "#5a45cb",
+            "primary-fixed-dim": "#b1c5ff",
+            "inverse-on-surface": "#f0efff",
+            "on-error-container": "#93000a",
+            "outline": "#737786",
+            "on-tertiary-container": "#fffeff",
+            "on-secondary-fixed-variant": "#442bb5",
+            "on-background": "#191b26",
+            "on-primary": "#ffffff",
+            "primary-container": "#2f6fed",
+            "on-surface": "#191b26",
+            "tertiary-fixed": "#ffdad2",
+            "surface-container": "#ededfc",
+            "primary": "#0055ce",
+            "on-primary-fixed": "#001847",
+            "on-surface-variant": "#424654",
+            "background": "#fbf8ff",
+            "on-secondary-container": "#fffbff",
+            "inverse-surface": "#2e303b",
+            "on-secondary-fixed": "#190064",
+            "on-secondary": "#ffffff",
+            "error": "#ba1a1a",
+            "primary-fixed": "#dae2ff",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-high": "#e7e7f6",
+            "surface-container-low": "#f3f2ff",
+            "tertiary-container": "#c65033",
+            "on-error": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.25rem",
+            "space-xs": "0.25rem",
+            "space-2xl": "2.5rem",
+            "gutter-desktop": "1.5rem",
+            "margin": "1rem",
+            "margin-desktop": "2rem",
+            "space-xl": "1.75rem",
+            "margin-tablet": "1.5rem",
+            "gutter": "1.25rem"
+          },
+          "fontFamily": {
+            "headline-lg": ["Plus Jakarta Sans"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: rgba(226, 228, 240, 0.4);
+      border-radius: 9999px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #c2c6d7;
+      border-radius: 9999px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb:hover {
+      background: #737786;
+    }
+  </style>
+</head>
+<body class="h-full bg-background font-body-md text-on-surface antialiased overflow-x-hidden">
+<!-- ========================================================================= -->
+<!-- SHARED COMPONENT: SideNavBar (desktop_drawer)                             -->
+<!-- ========================================================================= -->
+<aside class="fixed top-0 left-0 h-full w-64 z-40 bg-surface-container-lowest dark:bg-inverse-surface border-r border-outline-variant/30 dark:border-outline-variant/10 shadow-sm dark:shadow-none h-screen flex flex-col justify-between py-6 px-4">
+<div class="flex flex-col gap-6">
+<!-- Workspace Brand Header -->
+<div class="flex items-center gap-3 px-2">
+<div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-primary-container via-secondary-container to-secondary flex items-center justify-center text-on-primary font-bold shadow-md shadow-primary-container/20">
+<span class="material-symbols-outlined text-[22px]">route</span>
+</div>
+<div class="flex flex-col">
+<div class="text-headline-md font-headline-md font-bold text-on-surface dark:text-inverse-on-surface leading-tight">SkillRoute</div>
+<div class="text-label-sm font-label-sm text-on-surface-variant dark:text-outline-variant">India Workspace</div>
+</div>
+</div>
+<!-- Quick Action CTA -->
+<button class="w-full flex items-center justify-center gap-2 bg-primary-container hover:bg-primary text-on-primary py-2.5 px-4 rounded-full font-label-md text-label-md font-semibold shadow-[0_4px_14px_rgba(47,111,237,0.35)] transition-all duration-150 active:scale-[0.98]">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>New</span>
+</button>
+<!-- Main Navigation Tabs -->
+<nav class="flex flex-col gap-1">
+<!-- 1. Home -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant dark:text-outline-variant font-medium hover:bg-surface-container dark:hover:bg-surface-variant/50 hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150 active:scale-[0.98]" href="#home">
+<span class="material-symbols-outlined text-[20px]">home</span>
+<span class="text-label-md font-label-md">Home</span>
+</a>
+<!-- 2. Tasks (Active: GCC Pipeline represents talent tasks/requisitions) -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-surface-container-high dark:bg-surface-variant text-on-surface dark:text-inverse-on-surface font-semibold hover:bg-surface-container dark:hover:bg-surface-variant/50 transition-colors duration-150 active:scale-[0.98]" href="#tasks">
+<span class="material-symbols-outlined text-[20px] text-primary dark:text-inverse-primary" style="font-variation-settings: 'FILL' 1;">check_box</span>
+<span class="text-label-md font-label-md">Tasks</span>
+<span class="ml-auto text-[10px] bg-primary-fixed text-on-primary-fixed font-bold px-2 py-0.5 rounded-full">41</span>
+</a>
+<!-- 3. Docs -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant dark:text-outline-variant font-medium hover:bg-surface-container dark:hover:bg-surface-variant/50 hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150 active:scale-[0.98]" href="#docs">
+<span class="material-symbols-outlined text-[20px]">description</span>
+<span class="text-label-md font-label-md">Docs</span>
+</a>
+<!-- 4. Goals -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant dark:text-outline-variant font-medium hover:bg-surface-container dark:hover:bg-surface-variant/50 hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150 active:scale-[0.98]" href="#goals">
+<span class="material-symbols-outlined text-[20px]">flag</span>
+<span class="text-label-md font-label-md">Goals</span>
+</a>
+<!-- 5. Chat -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant dark:text-outline-variant font-medium hover:bg-surface-container dark:hover:bg-surface-variant/50 hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150 active:scale-[0.98]" href="#chat">
+<span class="material-symbols-outlined text-[20px]">chat_bubble</span>
+<span class="text-label-md font-label-md">Chat</span>
+</a>
+<!-- SkillRoute Workspace Additions -->
+<div class="my-3 border-t border-outline-variant/20"></div>
+<div class="px-3 text-[11px] font-bold tracking-wider text-outline uppercase mb-1">Enterprise GCC Suite</div>
+<a class="flex items-center gap-3 px-3.5 py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#assessment">
+<span class="material-symbols-outlined text-[19px] text-secondary">terminal</span>
+<span class="text-label-md font-label-md">GCC Assessment Suite</span>
+</a>
+<a class="flex items-center gap-3 px-3.5 py-2 rounded-xl bg-surface-container-low text-primary font-semibold hover:bg-surface-container transition-colors" href="#hiringhub">
+<span class="material-symbols-outlined text-[19px]" style="font-variation-settings: 'FILL' 1;">hub</span>
+<span class="text-label-md font-label-md">GCC Hiring Hub</span>
+<span class="ml-auto w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+</a>
+</nav>
+</div>
+<!-- Footer navigation tabs -->
+<div class="flex flex-col gap-1 border-t border-outline-variant/20 pt-4">
+<a class="flex items-center gap-3 px-3.5 py-2 rounded-xl text-on-surface-variant dark:text-outline-variant font-medium hover:bg-surface-container dark:hover:bg-surface-variant/50 hover:text-on-surface transition-colors duration-150" href="#settings">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="text-label-md font-label-md">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-3.5 py-2 rounded-xl text-on-surface-variant dark:text-outline-variant font-medium hover:bg-surface-container dark:hover:bg-surface-variant/50 hover:text-on-surface transition-colors duration-150" href="#help">
+<span class="material-symbols-outlined text-[20px]">help</span>
+<span class="text-label-md font-label-md">Help</span>
+</a>
+<!-- Neo4j Graph Indicator in Nav Footer -->
+<div class="mt-2 p-2.5 rounded-xl bg-surface-container-low border border-outline-variant/30 flex items-center gap-2">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+</span>
+<div class="text-[11px] leading-tight text-on-surface-variant font-medium truncate">
+          Neo4j Graph Sync <span class="text-primary font-bold">28ms</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- ========================================================================= -->
+<!-- MAIN WORKSPACE CONTENT CONTAINER (ml-64 offset for desktop drawer)        -->
+<!-- ========================================================================= -->
+<div class="ml-64 min-h-screen flex flex-col bg-background">
+<!-- ======================================================================= -->
+<!-- SHARED COMPONENT: TopNavBar (floating_header)                           -->
+<!-- ======================================================================= -->
+<header class="sticky top-0 z-30 flex justify-between items-center h-16 px-8 w-full bg-surface-container-lowest/90 dark:bg-inverse-surface/90 backdrop-blur-md border-b border-outline-variant/20 dark:border-outline-variant/10 shadow-[0_4px_20px_-2px_rgba(90,80,140,0.06)] dark:shadow-none">
+<!-- Search Bar on Left with contextual placeholder -->
+<div class="flex items-center gap-4 flex-1 max-w-2xl">
+<div class="relative w-full max-w-lg">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span>
+<input class="w-full bg-surface-container-low hover:bg-surface-container focus:bg-surface-container-lowest border-0 rounded-full pl-10 pr-4 py-2 text-body-md font-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary-container transition-all text-xs" placeholder="Search verified candidates, graph nodes, tech stacks, or GCC requisitions..." type="text"/>
+<span class="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] bg-surface-container px-1.5 py-0.5 rounded text-outline font-mono">⌘K</span>
+</div>
+<!-- GCC Corridor Pill Badges -->
+<div class="hidden xl:flex items-center gap-1.5 text-xs text-on-surface-variant">
+<span class="inline-flex items-center gap-1 bg-surface-container-low border border-outline-variant/40 px-2.5 py-1 rounded-full font-label-sm text-label-sm text-primary hover:bg-surface-container cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-[13px]">location_on</span> Bengaluru Corridors
+          </span>
+<span class="inline-flex items-center gap-1 bg-surface-container-low border border-outline-variant/40 px-2.5 py-1 rounded-full font-label-sm text-label-sm text-on-surface hover:bg-surface-container cursor-pointer transition-colors">
+            Hyderabad
+          </span>
+<span class="inline-flex items-center gap-1 bg-emerald-50 text-emerald-700 border border-emerald-200 px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">verified</span> Zero Resume Hallucination
+          </span>
+</div>
+</div>
+<!-- Navigation Links from Shared Components JSON -->
+<div class="hidden lg:flex items-center gap-6">
+<a class="text-primary dark:text-inverse-primary font-semibold border-b-2 border-primary dark:border-inverse-primary pb-1 text-label-md font-label-md" href="#overview">Overview</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-on-surface dark:hover:text-inverse-on-surface font-medium pb-1 text-label-md font-label-md transition-colors" href="#list">List</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-on-surface dark:hover:text-inverse-on-surface font-medium pb-1 text-label-md font-label-md transition-colors" href="#board">Board</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-on-surface dark:hover:text-inverse-on-surface font-medium pb-1 text-label-md font-label-md transition-colors" href="#timeline">Timeline</a>
+</div>
+<!-- Trailing Icon Actions and User Profile -->
+<div class="flex items-center gap-3">
+<!-- EN/Hinglish Language Switcher -->
+<div class="hidden sm:flex items-center bg-surface-container-low rounded-full p-0.5 border border-outline-variant/30 text-[11px] font-semibold">
+<button class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-primary shadow-xs">EN</button>
+<button class="px-2 py-0.5 rounded-full text-outline hover:text-on-surface">हिंग्लिश</button>
+</div>
+<button class="p-2 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors active:scale-95" title="Notifications">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+</button>
+<button class="p-2 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors active:scale-95" title="Favorites">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<button class="p-2 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors active:scale-95" title="Requisition Bag">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+</button>
+<!-- Recruiter Profile -->
+<div class="flex items-center gap-3 pl-3 border-l border-outline-variant/30">
+<div class="relative">
+<img class="w-9 h-9 rounded-full object-cover ring-2 ring-primary-container/20" data-alt="A polished professional headshot portrait of Pooja Mehta, a corporate talent leader in India wearing a crisp navy-blue business blazer against a soft-lit, minimalist studio backdrop. The lighting is clean, bright, and modern, conveying executive warmth and sharp capability. Color accents reflect subtle corporate blue and serene neutral tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWinPBeQKJtGYFlVl8W9bUxBgl1MDNlmZ-MhuWFzFUe7UpGcmzoDWNjhgaJ0krrqsNlnjYrXEebrk9elFAknT7wJ57UTpbpvEK0coU3YPZuX6PQfZ9Qno_uM5kKd_0IguMgZpJ4SOZlV7AEGKi9ZjKV9borQCtibx8C_pdD3mUf7C-Z6Kd_nP5jHfc_87Lff15xrGJ5weD9JkPSdM_qJ4zCN84ICnSnyeTdv6prN9M1xDAl5qUCRJY"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="hidden 2xl:flex flex-col text-left">
+<span class="text-label-md font-label-md font-bold text-on-surface leading-tight">Pooja Mehta</span>
+<span class="text-[11px] text-outline truncate max-w-[170px]">Target &amp; Walmart GCC Consortium</span>
+</div>
+</div>
+</div>
+</header>
+<!-- ======================================================================= -->
+<!-- MAIN CANVAS CONTENT AREA                                                -->
+<!-- ======================================================================= -->
+<main class="flex-1 p-8 max-w-7xl w-full mx-auto space-y-6">
+<!-- Portal Hero Title Banner & Global Filter Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-2">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">GCC Talent Architecture</span>
+<span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">format_image_left</span>
+              Zero Screening Dropoff Guarantee
+            </span>
+</div>
+<h1 class="text-headline-xl font-headline-xl text-on-surface tracking-tight">
+            GCC Enterprise Talent Pipeline &amp; Recruiter Portal
+          </h1>
+<p class="text-body-md font-body-md text-on-surface-variant mt-0.5">
+            Real-time graph-grounded candidate matching across Bengaluru, Hyderabad, and Pune GCC captive centers.
+          </p>
+</div>
+<!-- Quick Top Filter Bar Actions -->
+<div class="flex items-center gap-2.5 self-start lg:self-auto">
+<button class="inline-flex items-center gap-2 px-4 py-2 bg-surface-container-lowest border border-outline-variant/40 rounded-xl text-label-md font-label-md font-semibold text-on-surface hover:bg-surface-container shadow-sm transition-all">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+<span>Notice: &lt;15 Days</span>
+</button>
+<button class="inline-flex items-center gap-2 px-4 py-2 bg-surface-container-lowest border border-outline-variant/40 rounded-xl text-label-md font-label-md font-semibold text-on-surface hover:bg-surface-container shadow-sm transition-all">
+<span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+<span>Batch 2024 Active</span>
+</button>
+<button class="inline-flex items-center gap-2 px-5 py-2.5 bg-primary-container text-on-primary rounded-full text-label-md font-label-md font-semibold shadow-[0_4px_14px_rgba(47,111,237,0.35)] hover:bg-primary transition-all active:scale-95">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Dispatch Fast-Track</span>
+</button>
+</div>
+</div>
+<!-- ===================================================================== -->
+<!-- SECTION 2: Header & Metrics Bar (ClickUp-style KPI summary cards)     -->
+<!-- ===================================================================== -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Card 1: Total Graph-Verified Candidates -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-[18px] p-5 shadow-[0_4px_20px_-2px_rgba(90,80,140,0.06)] hover:shadow-[0_12px_28px_-4px_rgba(90,80,140,0.12)] transition-all">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="text-label-md font-label-md font-semibold text-outline">Total Graph-Verified</span>
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">account_tree</span>
+</div>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="text-3xl font-extrabold text-on-surface tracking-tight">1,420</span>
+<span class="text-label-sm font-label-sm text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full font-bold">94% Sandbox</span>
+</div>
+<div class="mt-3 flex items-center gap-2 text-body-sm font-body-sm text-on-surface-variant">
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 94%"></div>
+</div>
+<span class="text-[11px] font-semibold text-outline whitespace-nowrap">Live Nodes</span>
+</div>
+</div>
+<!-- Card 2: Direct Fast-Track Invites Sent -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-[18px] p-5 shadow-[0_4px_20px_-2px_rgba(90,80,140,0.06)] hover:shadow-[0_12px_28px_-4px_rgba(90,80,140,0.12)] transition-all">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="text-label-md font-label-md font-semibold text-outline">Fast-Track Invites</span>
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</div>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="text-3xl font-extrabold text-on-surface tracking-tight">348</span>
+<span class="text-label-sm font-label-sm text-secondary bg-secondary-fixed px-2 py-0.5 rounded-full font-bold">82% Accepted</span>
+</div>
+<div class="mt-3 flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span class="text-xs text-outline">Conversion delta</span>
+<span class="text-xs font-semibold text-emerald-600">+34% vs Q1 Bench</span>
+</div>
+</div>
+<!-- Card 3: Median Salary Benchmark -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-[18px] p-5 shadow-[0_4px_20px_-2px_rgba(90,80,140,0.06)] hover:shadow-[0_12px_28px_-4px_rgba(90,80,140,0.12)] transition-all">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="text-label-md font-label-md font-semibold text-outline">Median Salary CTC</span>
+<div class="w-8 h-8 rounded-full bg-amber-50 flex items-center justify-center text-amber-600">
+<span class="material-symbols-outlined text-[18px]">currency_rupee</span>
+</div>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="text-3xl font-extrabold text-on-surface tracking-tight">₹12.4 LPA</span>
+</div>
+<div class="mt-3 flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span class="text-[11px] text-outline truncate">Trad. Services: ₹6.8L</span>
+<span class="text-label-sm font-label-sm text-primary font-bold bg-primary-fixed px-1.5 py-0.2 rounded">+82% Value</span>
+</div>
+</div>
+<!-- Card 4: Time-to-Hire Velocity -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-[18px] p-5 shadow-[0_4px_20px_-2px_rgba(90,80,140,0.06)] hover:shadow-[0_12px_28px_-4px_rgba(90,80,140,0.12)] transition-all">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="text-label-md font-label-md font-semibold text-outline">Time-to-Hire Velocity</span>
+<div class="w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600">
+<span class="material-symbols-outlined text-[18px]">speed</span>
+</div>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="text-3xl font-extrabold text-on-surface tracking-tight">9.2 Days</span>
+<span class="text-label-sm font-label-sm text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full font-bold">-79% Cycle</span>
+</div>
+<div class="mt-3 flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span class="text-[11px] text-outline">Trad: 45 Days</span>
+<span class="text-xs font-semibold text-secondary">Zero-dropoff</span>
+</div>
+</div>
+</section>
+<!-- ===================================================================== -->
+<!-- SECTION 3: Main Candidate Pipeline Kanban Matrix & Rich Cards        -->
+<!-- ===================================================================== -->
+<section class="space-y-4">
+<!-- Pipeline Stage Bar Tabs -->
+<div class="bg-surface-container-lowest p-2 rounded-2xl border border-outline-variant/30 flex flex-wrap items-center justify-between gap-3 shadow-xs">
+<div class="flex items-center gap-2 overflow-x-auto custom-scroll pb-1 sm:pb-0">
+<!-- Stage 1 -->
+<button class="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-surface-container-low text-on-surface font-semibold text-label-md font-label-md hover:bg-surface-container transition-colors">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span>Shortlisted via Graph Match</span>
+<span class="bg-surface-container px-2 py-0.5 rounded-full text-xs font-bold text-primary">18</span>
+</button>
+<!-- Stage 2 -->
+<button class="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-surface-container-low text-on-surface font-semibold text-label-md font-label-md hover:bg-surface-container transition-colors">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span>Sandbox Verified</span>
+<span class="bg-surface-container px-2 py-0.5 rounded-full text-xs font-bold text-secondary">12</span>
+</button>
+<!-- Stage 3 -->
+<button class="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-primary-fixed text-on-primary-fixed font-bold text-label-md font-label-md">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container animate-pulse"></span>
+<span>AI Triage Passed (Strong Hire)</span>
+<span class="bg-surface-container-lowest px-2 py-0.5 rounded-full text-xs font-extrabold text-primary">7</span>
+</button>
+<!-- Stage 4 -->
+<button class="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-surface-container-low text-on-surface font-semibold text-label-md font-label-md hover:bg-surface-container transition-colors">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+<span>GCC Final Offer Stage</span>
+<span class="bg-surface-container px-2 py-0.5 rounded-full text-xs font-bold text-emerald-600">4</span>
+</button>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs text-outline font-medium">Sorted by: <span class="text-on-surface font-semibold">Graph Compatibility Score</span></span>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-outline">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+</div>
+<!-- 2-Column Responsive Layout: Candidate Cards Grid (8 cols) + Side GCC Analytics Radar (4 cols) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- Candidate Cards List (8 columns) -->
+<div class="lg:col-span-8 space-y-4">
+<!-- Candidate 1: Aditya Sen -->
+<article class="bg-surface-container-lowest border border-outline-variant/40 rounded-[18px] p-6 shadow-[0_4px_20px_-2px_rgba(90,80,140,0.06)] hover:shadow-[0_12px_28px_-4px_rgba(90,80,140,0.12)] transition-all">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="relative">
+<img class="w-14 h-14 rounded-2xl object-cover ring-2 ring-primary-container/30" data-alt="A portrait of Aditya Sen, an experienced senior Site Reliability Engineer based in Bengaluru, India. He has a focused and confident expression, dressed in modern smart-casual tech company attire. The background features a clean architectural office ambient with subtle warm and lavender lighting accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYKIbICK7zhkxh1h6O2YYJ9vQlrLXyjGsMaO6gHrAn1MlKVV_cgAl6mt0T_4p1RwoYgQmCMNHTQZuB55MUFl_983l_5rD8nXMfgQlV_aOx5JeVbc8qh3mTXoIQHFFr-f9Uxg4EE447j7-rPOIxfHBfOIDC5AC_nNquZJWKS0nV5jONYGyC0WUxvvNJ-3mMxeyTYs6QCN0VUF-Z6ZOuSlE6Mx2MS9eYcEpaFmZEwQvfWNnryEmA06-S"/>
+<span class="absolute -bottom-1 -right-1 bg-emerald-500 text-white rounded-full p-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-2">
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-surface">Aditya Sen</h3>
+<span class="bg-emerald-50 text-emerald-700 text-label-sm font-label-sm font-bold px-2.5 py-0.5 rounded-full border border-emerald-200">
+                        Node #209 Verified SRE Track
+                      </span>
+<span class="bg-surface-container-low text-on-surface-variant text-[11px] px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">location_on</span> Bengaluru
+                      </span>
+</div>
+<div class="text-body-sm font-body-sm text-outline mt-1">
+                      Target CTC: <strong class="text-on-surface">₹14L – ₹18L</strong> • Notice Period: <strong class="text-emerald-600">Immediate (&lt;7 days)</strong> • 4 GCC Fast-tracks
+                    </div>
+</div>
+</div>
+<div class="flex items-center gap-2 sm:self-start">
+<div class="text-right">
+<div class="text-xs font-semibold text-outline">Graph Match</div>
+<div class="text-headline-sm font-headline-sm font-bold text-primary">98.4%</div>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-bold text-xs">
+                    98%
+                  </div>
+</div>
+</div>
+<!-- Node Benchmarks & Verified Triage Metrics -->
+<div class="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-2.5 p-3 rounded-xl bg-surface-container-low border border-outline-variant/20 text-xs">
+<div>
+<div class="text-outline text-[11px]">Live Triage Pass</div>
+<div class="font-bold text-on-surface mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-emerald-600">done_all</span> 87% (Top 2%)
+                  </div>
+</div>
+<div>
+<div class="text-outline text-[11px]">Incident Resolution</div>
+<div class="font-bold text-on-surface mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">timer</span> 98.4% in &lt;12 min
+                  </div>
+</div>
+<div>
+<div class="text-outline text-[11px]">Sandbox Testbed</div>
+<div class="font-bold text-on-surface mt-0.5">K8s Chaos Mesh OK</div>
+</div>
+<div>
+<div class="text-outline text-[11px]">GCC Match Vector</div>
+<div class="font-bold text-secondary mt-0.5">Walmart / Target SRE</div>
+</div>
+</div>
+<!-- Action Buttons Row -->
+<div class="mt-4 pt-4 border-t border-outline-variant/20 flex flex-wrap items-center justify-between gap-3">
+<div class="flex flex-wrap items-center gap-2">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-surface-container hover:bg-surface-variant text-on-surface rounded-xl text-label-sm font-label-sm font-semibold transition-colors">
+<span class="material-symbols-outlined text-[16px] text-secondary">token</span>
+<span>View Cryptographic Proof-of-Work</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-surface-container hover:bg-surface-variant text-on-surface rounded-xl text-label-sm font-label-sm font-semibold transition-colors">
+<span class="material-symbols-outlined text-[16px] text-primary">play_circle</span>
+<span>Play Interview Audio RCA (4:12)</span>
+</button>
+</div>
+<button class="inline-flex items-center gap-1.5 px-4 py-2 bg-primary-container text-on-primary hover:bg-primary rounded-full text-label-md font-label-md font-bold shadow-[0_4px_14px_rgba(47,111,237,0.3)] transition-all active:scale-95">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Issue One-Click Fast-Track Offer</span>
+</button>
+</div>
+</article>
+<!-- Candidate 2: Manjeet Sharma -->
+<article class="bg-surface-container-lowest border border-outline-variant/40 rounded-[18px] p-6 shadow-[0_4px_20px_-2px_rgba(90,80,140,0.06)] hover:shadow-[0_12px_28px_-4px_rgba(90,80,140,0.12)] transition-all">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="relative">
+<img class="w-14 h-14 rounded-2xl object-cover ring-2 ring-primary-container/30" data-alt="A professional headshot of Manjeet Sharma, a talented DevOps and Platform Engineer in India. He wears an open-collar casual shirt against a clean tech workspace setting with diffused natural light and soft blue ambient accents, looking approachable and confident." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJ2qta5RJmOJwRnaWj7pxYGr6FzRMiuutA9iM2qAuXPq1kMX9rnYpPNZxztN94_PSIAJ_LH4cPAMtWPkL8_iDxXazIRk_2CgXfbBOeTbWxFhZ65QXxDAQuXXEESo83CZPiti7yxY5j9coPkJp966YGzJa0QkxH3qNKocrQaFJfDJcN-Dq8GFxo83id1T_feIOdsgysv4rJm_RntLBbenHtHVwZPdCgsbXt4uzpVpuNmoAqaeq7iqXu"/>
+<span class="absolute -bottom-1 -right-1 bg-emerald-500 text-white rounded-full p-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-2">
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-surface">Manjeet Sharma</h3>
+<span class="bg-primary-fixed text-on-primary-fixed text-label-sm font-label-sm font-bold px-2.5 py-0.5 rounded-full">
+                        DevOps Platform Engineer
+                      </span>
+<span class="bg-surface-container-low text-on-surface-variant text-[11px] px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">location_on</span> Bengaluru / Hyderabad
+                      </span>
+</div>
+<div class="text-body-sm font-body-sm text-outline mt-1">
+                      Target CTC: <strong class="text-on-surface">₹10.5L – ₹12L</strong> • Status: <strong class="text-primary">4 Direct Invites Active</strong> • Distroless Verified
+                    </div>
+</div>
+</div>
+<div class="flex items-center gap-2 sm:self-start">
+<div class="text-right">
+<div class="text-xs font-semibold text-outline">Graph Match</div>
+<div class="text-headline-sm font-headline-sm font-bold text-primary">95.2%</div>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-bold text-xs">
+                    95%
+                  </div>
+</div>
+</div>
+<div class="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-2.5 p-3 rounded-xl bg-surface-container-low border border-outline-variant/20 text-xs">
+<div>
+<div class="text-outline text-[11px]">Node #201 Docker</div>
+<div class="font-bold text-on-surface mt-0.5">Distroless 94%</div>
+</div>
+<div>
+<div class="text-outline text-[11px]">CI/CD Actions</div>
+<div class="font-bold text-emerald-600 mt-0.5">0 CVEs in Sandbox</div>
+</div>
+<div>
+<div class="text-outline text-[11px]">ArgoCD Pipeline</div>
+<div class="font-bold text-on-surface mt-0.5">Blue/Green Verified</div>
+</div>
+<div>
+<div class="text-outline text-[11px]">Notice Period</div>
+<div class="font-bold text-primary mt-0.5">15 Days</div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-outline-variant/20 flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-surface-container hover:bg-surface-variant text-on-surface rounded-xl text-label-sm font-label-sm font-semibold transition-colors">
+<span class="material-symbols-outlined text-[16px] text-secondary">terminal</span>
+<span>View Dockerfile Audit</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-surface-container hover:bg-surface-variant text-on-surface rounded-xl text-label-sm font-label-sm font-semibold transition-colors">
+<span class="material-symbols-outlined text-[16px] text-outline">history</span>
+<span>View Commit Log</span>
+</button>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-4 py-2 border border-outline-variant/50 text-on-surface hover:bg-surface-container rounded-full text-label-md font-label-md font-semibold transition-colors">
+                    Schedule Technical Sync
+                  </button>
+<button class="px-4 py-2 bg-primary-container text-on-primary hover:bg-primary rounded-full text-label-md font-label-md font-bold shadow-[0_4px_14px_rgba(47,111,237,0.3)] transition-all">
+                    Fast-Track Invite
+                  </button>
+</div>
+</div>
+</article>
+<!-- Candidate 3: Sneha Kulkarni -->
+<article class="bg-surface-container-lowest border border-outline-variant/40 rounded-[18px] p-6 shadow-[0_4px_20px_-2px_rgba(90,80,140,0.06)] hover:shadow-[0_12px_28px_-4px_rgba(90,80,140,0.12)] transition-all">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="relative">
+<img class="w-14 h-14 rounded-2xl object-cover ring-2 ring-primary-container/30" data-alt="A high-resolution corporate portrait of Sneha Kulkarni, a female Cloud Infrastructure and FinOps lead from Pune, India. She is wearing a modern tailored light-gray blazer and warm confident smile in an airy, illuminated office space with lavender-blue tinted modern architecture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1VixabIsqL7YWpRfJaJL1kNS7jFIchj3AkFPZVWEtGOidymroVVdI0XYoi7ET6owXwev7_X1RLc5k1DwLxg4n_oQFRvhTHCBTIwB4Ec6SZmrcv2CJVejvjMFLjsmWAhbnF9M0065leHHjoOhc-N6trgykO3PP63Xb8YzEhYrbp-8p1XxpU0qTik-gF9PZl6pJIOLaAGKU1djfpOMQtKCqqp5lBhjzjrCaTFN8ubML7DERIdPfFbzb"/>
+<span class="absolute -bottom-1 -right-1 bg-emerald-500 text-white rounded-full p-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-2">
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-surface">Sneha Kulkarni</h3>
+<span class="bg-secondary-fixed text-on-secondary-fixed text-label-sm font-label-sm font-bold px-2.5 py-0.5 rounded-full">
+                        Cloud Infrastructure &amp; FinOps
+                      </span>
+<span class="bg-surface-container-low text-on-surface-variant text-[11px] px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">location_on</span> Pune IT Hub
+                      </span>
+</div>
+<div class="text-body-sm font-body-sm text-outline mt-1">
+                      Target CTC: <strong class="text-on-surface">₹11L – ₹13L</strong> • AWS + Terraform Verified (91st percentile)
+                    </div>
+</div>
+</div>
+<div class="flex items-center gap-2 sm:self-start">
+<div class="text-right">
+<div class="text-xs font-semibold text-outline">Graph Match</div>
+<div class="text-headline-sm font-headline-sm font-bold text-secondary">92.8%</div>
+</div>
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary font-bold text-xs">
+                    93%
+                  </div>
+</div>
+</div>
+<div class="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-2.5 p-3 rounded-xl bg-surface-container-low border border-outline-variant/20 text-xs">
+<div>
+<div class="text-outline text-[11px]">AWS Multi-Region</div>
+<div class="font-bold text-on-surface mt-0.5">Terraform Modules Pass</div>
+</div>
+<div>
+<div class="text-outline text-[11px]">FinOps Cost Audit</div>
+<div class="font-bold text-emerald-600 mt-0.5">-38% Cloud Spend Node</div>
+</div>
+<div>
+<div class="text-outline text-[11px]">Compliance Mesh</div>
+<div class="font-bold text-on-surface mt-0.5">SOC2 Sandbox Valid</div>
+</div>
+<div>
+<div class="text-outline text-[11px]">Target Captive</div>
+<div class="font-bold text-primary mt-0.5">Wells Fargo / Lowe's</div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-outline-variant/20 flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-surface-container hover:bg-surface-variant text-on-surface rounded-xl text-label-sm font-label-sm font-semibold transition-colors">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span>Terraform IaC Hash: #9f8c2</span>
+</button>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-4 py-2 bg-primary-container text-on-primary hover:bg-primary rounded-full text-label-md font-label-md font-bold shadow-[0_4px_14px_rgba(47,111,237,0.3)] transition-all">
+                    Send Consortium Offer
+                  </button>
+</div>
+</div>
+</article>
+<!-- Candidate 4: Rahul Nair -->
+<article class="bg-surface-container-lowest border border-outline-variant/40 rounded-[18px] p-6 shadow-[0_4px_20px_-2px_rgba(90,80,140,0.06)] hover:shadow-[0_12px_28px_-4px_rgba(90,80,140,0.12)] transition-all">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="relative">
+<img class="w-14 h-14 rounded-2xl object-cover ring-2 ring-primary-container/30" data-alt="A modern headshot of Rahul Nair, an Indian distributed systems software engineer. He is smiling mildly, wearing a dark casual tech hoodie against a contemporary minimalist workspace with clean white interior lighting and subtle cool lavender tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQp3NoxKzUhwML_XzjcWSjfCs-scbfvjgAO3I2BVZFuof8Ko5tHiTqqwj3om6LYIN_7_3R1mJGjD9svpl_TVhhfUY0q7jdkkWpYEAJyuHFbDUC03gndfEY9rZIcMNUr9hSmtCeuYZsxw2fMYwJwH-VSLcIvzoqwXGyUvWiFuoHj_S3fEeMlCPfYo14ZD1fPlqwImmS7m5cW-vLFvH7Xb7-w32NGmNR0MJBawlc75--2QMbCFdyROjw"/>
+<span class="absolute -bottom-1 -right-1 bg-emerald-500 text-white rounded-full p-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-2">
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-surface">Rahul Nair</h3>
+<span class="bg-amber-100 text-amber-800 text-label-sm font-label-sm font-bold px-2.5 py-0.5 rounded-full">
+                        Distributed Backend &amp; Kafka
+                      </span>
+<span class="bg-surface-container-low text-on-surface-variant text-[11px] px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">public</span> Remote / Pan-India
+                      </span>
+</div>
+<div class="text-body-sm font-body-sm text-outline mt-1">
+                      Target CTC: <strong class="text-on-surface">₹13L – ₹16L</strong> • Node #185 Verified (89% score)
+                    </div>
+</div>
+</div>
+<div class="flex items-center gap-2 sm:self-start">
+<div class="text-right">
+<div class="text-xs font-semibold text-outline">Graph Match</div>
+<div class="text-headline-sm font-headline-sm font-bold text-primary">89.6%</div>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-bold text-xs">
+                    90%
+                  </div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-outline-variant/20 flex flex-wrap items-center justify-between gap-3">
+<div class="text-xs text-outline flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-emerald-600">lock</span>
+<span>Zero Resume Hallucination: Cryptographically Anchored</span>
+</div>
+<button class="px-4 py-2 bg-surface-container hover:bg-surface-variant text-on-surface rounded-full text-label-md font-label-md font-semibold transition-colors">
+                  Review Event Stream Repo
+                </button>
+</div>
+</article>
+</div>
+<!-- ================================================================= -->
+<!-- SECTION 4: Side Analytics & GCC Market Radar (4 columns)          -->
+<!-- ================================================================= -->
+<div class="lg:col-span-4 space-y-5">
+<!-- GCC Hiring Benchmark Breakdown Card -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 rounded-[18px] p-5 shadow-[0_4px_20px_-2px_rgba(90,80,140,0.06)]">
+<div class="flex items-center justify-between mb-3">
+<h4 class="text-headline-sm font-headline-sm font-bold text-on-surface">GCC CTC Benchmarks</h4>
+<span class="text-[11px] font-bold text-secondary bg-secondary-fixed px-2 py-0.5 rounded-full">Tier-1 GCCs</span>
+</div>
+<p class="text-body-sm font-body-sm text-outline mb-4">
+                Compensation distributions across Target, Walmart, Wells Fargo, Lowe's India vs IT Services.
+              </p>
+<!-- Progress bar comparisons -->
+<div class="space-y-3">
+<div>
+<div class="flex justify-between text-xs font-semibold mb-1">
+<span class="text-on-surface">Walmart / Target GCC</span>
+<span class="text-primary font-bold">₹13.5L - ₹19.0L</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 88%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs font-semibold mb-1">
+<span class="text-on-surface">Wells Fargo / JPMC GCC</span>
+<span class="text-secondary font-bold">₹12.0L - ₹17.5L</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 78%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs font-semibold mb-1">
+<span class="text-on-surface">Lowe's India / Retail GCCs</span>
+<span class="text-on-surface-variant font-bold">₹11.2L - ₹15.8L</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-surface-tint h-full rounded-full" style="width: 70%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs font-semibold mb-1">
+<span class="text-outline">Traditional IT Services (Wipro/TCS)</span>
+<span class="text-outline font-bold">₹4.5L - ₹7.2L</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-outline-variant h-full rounded-full" style="width: 34%"></div>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/20 flex items-center justify-between text-[11px] text-outline">
+<span>Updated daily via Live GCC Index</span>
+<span class="text-primary font-semibold hover:underline cursor-pointer">Export CSV</span>
+</div>
+</div>
+<!-- Verified Node Popularity Radar -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 rounded-[18px] p-5 shadow-[0_4px_20px_-2px_rgba(90,80,140,0.06)]">
+<div class="flex items-center justify-between mb-3">
+<h4 class="text-headline-sm font-headline-sm font-bold text-on-surface">Top Demanded Nodes</h4>
+<span class="material-symbols-outlined text-outline text-[18px]">trending_up</span>
+</div>
+<div class="text-[12px] text-outline mb-3">Bengaluru Outer Ring Road &amp; Pune Hinjewadi Corridor</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-container text-xs font-semibold text-on-surface flex items-center gap-1.5 hover:bg-surface-container-high cursor-pointer">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                  Multi-stage Docker (Distroless)
+                </span>
+<span class="px-3 py-1 rounded-full bg-surface-container text-xs font-semibold text-on-surface flex items-center gap-1.5 hover:bg-surface-container-high cursor-pointer">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                  K8s Liveness &amp; Readiness Probes
+                </span>
+<span class="px-3 py-1 rounded-full bg-surface-container text-xs font-semibold text-on-surface flex items-center gap-1.5 hover:bg-surface-container-high cursor-pointer">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                  Prometheus Alertmanager RCA
+                </span>
+<span class="px-3 py-1 rounded-full bg-surface-container text-xs font-semibold text-on-surface flex items-center gap-1.5 hover:bg-surface-container-high cursor-pointer">
+<span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                  Terraform IaC State Locking
+                </span>
+<span class="px-3 py-1 rounded-full bg-surface-container text-xs font-semibold text-on-surface flex items-center gap-1.5 hover:bg-surface-container-high cursor-pointer">
+<span class="w-2 h-2 rounded-full bg-purple-500"></span>
+                  Kafka Partitions Rebalancing
+                </span>
+</div>
+</div>
+<!-- Graph Grounding Audit & Anti-Hallucination Hash Log -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 rounded-[18px] p-5 shadow-[0_4px_20px_-2px_rgba(90,80,140,0.06)]">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-[18px] text-emerald-600">security</span>
+<h4 class="text-headline-sm font-headline-sm font-bold text-on-surface">Graph Grounding Audit</h4>
+</div>
+<p class="text-body-sm font-body-sm text-outline mb-3">
+                Cryptographic verification log guaranteeing 0 resume inflation.
+              </p>
+<div class="bg-surface-container-low rounded-xl p-3 font-mono text-[11px] text-on-surface-variant space-y-2">
+<div class="flex items-center justify-between border-b border-outline-variant/20 pb-1.5">
+<span class="text-outline">SHA256: 8f4e2..a91</span>
+<span class="text-emerald-700 font-bold">Node #209 Verified</span>
+</div>
+<div class="flex items-center justify-between border-b border-outline-variant/20 pb-1.5">
+<span class="text-outline">SHA256: 3c17b..d48</span>
+<span class="text-emerald-700 font-bold">Sandbox Git Passed</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-outline">Neo4j Session: #3910</span>
+<span class="text-primary font-bold">28ms Latency</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ===================================================================== -->
+<!-- SECTION 5: Quick Actions & Bulk Operations Bar (ClickUp Style)        -->
+<!-- ===================================================================== -->
+<section class="bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-4 shadow-[0_4px_20px_-2px_rgba(90,80,140,0.06)] flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-primary-fixed flex items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined text-[20px]">dataset</span>
+</div>
+<div>
+<div class="text-label-md font-label-md font-bold text-on-surface">Bulk Candidate Requisitions &amp; ATS Integration</div>
+<div class="text-body-sm font-body-sm text-outline">Selected 4 verified GCC profiles ready for synchronized workflow injection</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-2.5">
+<button class="inline-flex items-center gap-2 px-4 py-2 bg-surface-container hover:bg-surface-variant text-on-surface rounded-xl text-label-md font-label-md font-semibold transition-colors">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+<span>Schedule Consolidated Panel Round</span>
+</button>
+<button class="inline-flex items-center gap-2 px-5 py-2.5 bg-primary-container text-on-primary hover:bg-primary rounded-full text-label-md font-label-md font-bold shadow-[0_4px_14px_rgba(47,111,237,0.35)] transition-all active:scale-95">
+<span class="material-symbols-outlined text-[18px]">cloud_upload</span>
+<span>Export Batch to ATS (Workday / Greenhouse)</span>
+</button>
+</div>
+</section>
+</main>
+</div>
+</body></html>

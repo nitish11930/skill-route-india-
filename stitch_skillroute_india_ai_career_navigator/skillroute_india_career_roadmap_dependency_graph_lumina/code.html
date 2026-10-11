@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-[#f4f5fb]" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SkillRoute India - Career Roadmap &amp; Prerequisite Graph</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-background": "#191b26",
+            "on-primary-fixed-variant": "#0040a0",
+            "primary": "#0055ce",
+            "on-tertiary-fixed-variant": "#862208",
+            "outline": "#737786",
+            "tertiary": "#a5381d",
+            "error": "#ba1a1a",
+            "on-primary-fixed": "#001847",
+            "surface-container-highest": "#e1e1f1",
+            "on-secondary-fixed": "#190064",
+            "secondary-container": "#7360e5",
+            "on-primary-container": "#ffffff",
+            "primary-fixed-dim": "#b1c5ff",
+            "on-primary": "#ffffff",
+            "on-error": "#ffffff",
+            "primary-fixed": "#dae2ff",
+            "on-tertiary-fixed": "#3c0700",
+            "surface-container-high": "#e7e7f6",
+            "surface-variant": "#e1e1f1",
+            "outline-variant": "#c2c6d7",
+            "inverse-primary": "#b1c5ff",
+            "on-secondary-fixed-variant": "#442bb5",
+            "surface": "#fbf8ff",
+            "on-surface": "#191b26",
+            "tertiary-fixed": "#ffdad2",
+            "secondary": "#5a45cb",
+            "tertiary-container": "#c65033",
+            "on-tertiary": "#ffffff",
+            "on-secondary": "#ffffff",
+            "surface-bright": "#fbf8ff",
+            "on-error-container": "#93000a",
+            "on-secondary-container": "#fffbff",
+            "inverse-surface": "#2e303b",
+            "secondary-fixed": "#e5deff",
+            "surface-tint": "#0056d0",
+            "background": "#fbf8ff",
+            "tertiary-fixed-dim": "#ffb4a2",
+            "on-tertiary-container": "#fffeff",
+            "primary-container": "#2f6fed",
+            "surface-dim": "#d9d9e8",
+            "surface-container-lowest": "#ffffff",
+            "on-surface-variant": "#424654",
+            "secondary-fixed-dim": "#c8bfff",
+            "surface-container-low": "#f3f2ff",
+            "error-container": "#ffdad6",
+            "surface-container": "#ededfc",
+            "inverse-on-surface": "#f0efff"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "3xl": "1.25rem",
+            "full": "9999px"
+          },
+          fontFamily: {
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "mono": ["JetBrains Mono", "monospace"]
+          },
+          boxShadow: {
+            'clickup': '0 4px 20px -2px rgba(90, 80, 140, 0.06), 0 1px 3px 0 rgba(90, 80, 140, 0.04)',
+            'clickup-hover': '0 12px 28px -4px rgba(90, 80, 140, 0.12), 0 4px 8px -2px rgba(90, 80, 140, 0.04)',
+            'pill-primary': '0 4px 14px rgba(47, 111, 237, 0.35)'
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f2f9;
+      border-radius: 9999px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #cdd2e5;
+      border-radius: 9999px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #aab0cc;
+    }
+  </style>
+</head>
+<body class="h-full bg-[#f4f5fb] text-on-surface font-body-md antialiased overflow-x-hidden">
+<div class="flex min-h-screen w-full">
+<!-- ==================== SIDEBAR COMPONENT ==================== -->
+<aside class="fixed top-0 left-0 h-full w-64 z-40 bg-surface-container-lowest flex flex-col justify-between py-6 px-4 border-r border-outline-variant/30 shadow-sm">
+<!-- Top Workspace Brand -->
+<div class="flex flex-col gap-6">
+<div class="flex items-center justify-between px-2">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-xl bg-gradient-to-tr from-primary to-secondary-container flex items-center justify-center text-white shadow-sm ring-2 ring-primary/20">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">hub</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight">SkillRoute</span>
+<span class="px-1.5 py-0.5 text-[10px] font-bold rounded-full bg-primary/10 text-primary">IN</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant font-medium">India Workspace</p>
+</div>
+</div>
+<button class="h-8 w-8 rounded-full hover:bg-surface-container text-on-surface-variant flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">unfold_more</span>
+</button>
+</div>
+<!-- + New / Career Goal Action Button -->
+<button class="w-full flex items-center justify-center gap-2 py-2.5 px-4 bg-primary-container text-on-primary-container rounded-full shadow-pill-primary hover:bg-[#2458c7] transition-all transform active:scale-[0.98] font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>+ Add Career Goal</span>
+</button>
+<!-- Navigation Group -->
+<nav class="flex flex-col gap-1.5 pt-1">
+<div class="px-3 pb-1 text-[11px] font-bold tracking-wider text-outline uppercase">Career Engine</div>
+<!-- Roadmap & Graph (Active Tab) -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-surface-container-high text-on-surface font-semibold shadow-xs" href="#">
+<span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">alt_route</span>
+<span class="font-label-md text-label-md">Roadmap &amp; Graph</span>
+<span class="ml-auto w-2 h-2 rounded-full bg-primary"></span>
+</a>
+<!-- Other Navigation Items -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">grid_view</span>
+<span class="font-label-md text-label-md">Skill Gap Matrix</span>
+</a>
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">flag</span>
+<span class="font-label-md text-label-md">Target Roles</span>
+<span class="ml-auto px-1.5 py-0.2 rounded-md bg-[#EEF2FF] text-primary text-[10px] font-bold">3 Open</span>
+</a>
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+<span class="font-label-md text-label-md">AI Career Coach</span>
+<span class="ml-auto flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+</span>
+</a>
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">menu_book</span>
+<span class="font-label-md text-label-md">Curated Resources</span>
+</a>
+<div class="px-3 pt-3 pb-1 text-[11px] font-bold tracking-wider text-outline uppercase">Workspace Views</div>
+<a class="flex items-center gap-3 px-3.5 py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-[19px]">check_box</span>
+<span class="font-label-md text-label-md">Tasks</span>
+</a>
+<a class="flex items-center gap-3 px-3.5 py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-[19px]">description</span>
+<span class="font-label-md text-label-md">Docs &amp; Notes</span>
+</a>
+</nav>
+</div>
+<!-- Footer User Card & Meta Options -->
+<div class="flex flex-col gap-2 pt-4 border-t border-outline-variant/30">
+<div class="flex items-center justify-between px-1">
+<a class="flex items-center gap-2.5 text-on-surface-variant hover:text-on-surface font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined text-[19px]">settings</span>
+<span>Settings</span>
+</a>
+<a class="flex items-center gap-2 text-on-surface-variant hover:text-on-surface font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined text-[19px]">help</span>
+<span>Help</span>
+</a>
+</div>
+<!-- User Profile Pill -->
+<div class="mt-2 p-2.5 rounded-2xl bg-surface-container/70 flex items-center gap-3 hover:bg-surface-container transition-colors">
+<div class="relative">
+<img class="h-9 w-9 rounded-full object-cover ring-2 ring-white" data-alt="Portrait photo of Manjeet S., a smiling Indian software engineer in his late 20s wearing modern glasses and casual navy polo against a softly blurred tech company background. Bright natural studio lighting, ultra-clean aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBXpU5BymtIa5UB8fhsKXSxI-fNtr3MlR5-R4A4nbRVqHDfJDHyiHh-yvoDMzbIHy7Un5SBxctgUszi01vFUbUzec4Q7f_hqBju5NAP0osguMgbSArP2D-v9XJo8zSMb57l6cmPak75X_TJYXPVH4iesllPEVsLumSQSRCyWo3DUgP_qEw9G5KYmwIqYK0j6QKNho7ES5pRx9kyEJQemS2tMBvJeyszpxUjKXW4UHWYF5WwP-PgyFQ"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-500 rounded-full border-2 border-white"></span>
+</div>
+<div class="overflow-hidden">
+<p class="font-label-md text-label-md text-on-surface font-bold truncate">Manjeet S.</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Target: DevOps</p>
+</div>
+<button class="ml-auto text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- ==================== MAIN CANVAS (Offset by 16rem / 256px) ==================== -->
+<div class="ml-64 flex-1 flex flex-col min-w-0">
+<!-- Top Floating Navigation Bar -->
+<header class="sticky top-0 z-30 h-16 w-full bg-surface-container-lowest/90 backdrop-blur-md px-8 flex items-center justify-between border-b border-outline-variant/20 shadow-[0_4px_20px_-2px_rgba(90,80,140,0.06)]">
+<!-- Search bar (on left as specified) -->
+<div class="flex items-center gap-4 flex-1 max-w-md">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[19px]">search</span>
+<input class="w-full h-10 pl-10 pr-12 rounded-full bg-[#f4f5fb] border-none text-on-surface font-body-md text-body-md placeholder-outline focus:ring-2 focus:ring-primary focus:bg-white transition-all" placeholder="Search roadmap nodes, skills, commands... (⌘K)" type="text"/>
+<span class="absolute right-3.5 top-1/2 -translate-y-1/2 text-[10px] font-semibold text-outline bg-white px-1.5 py-0.5 rounded border border-outline-variant/50">⌘K</span>
+</div>
+</div>
+<!-- Trailing System Status & Actions -->
+<div class="flex items-center gap-4">
+<!-- Neo4j Graph Engine Status -->
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+</span>
+<span class="font-label-sm text-label-sm font-semibold text-emerald-800">Neo4j Active</span>
+</div>
+<!-- AI Agent Indicator -->
+<div class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-purple-50 border border-purple-200 text-secondary">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span class="font-label-sm text-label-sm font-semibold">AI Agent Ready</span>
+</div>
+<!-- Language Segmented Selector -->
+<div class="flex items-center bg-[#f4f5fb] p-1 rounded-full border border-outline-variant/30 text-body-sm">
+<button class="px-2.5 py-0.5 rounded-full bg-white font-bold text-primary shadow-xs">EN</button>
+<button class="px-2.5 py-0.5 rounded-full text-on-surface-variant hover:text-on-surface font-medium">HI</button>
+<button class="px-2.5 py-0.5 rounded-full text-on-surface-variant hover:text-on-surface font-medium">Hinglish</button>
+</div>
+<div class="h-6 w-px bg-outline-variant/40"></div>
+<!-- Ask Coach Button -->
+<button class="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary to-secondary text-white rounded-full font-label-md text-label-md font-semibold shadow-sm hover:opacity-95 transition-all">
+<span class="material-symbols-outlined text-[18px]">smart_toy</span>
+<span>Ask Coach</span>
+</button>
+<!-- Notification & Bag Icons -->
+<div class="flex items-center gap-1">
+<button class="h-9 w-9 rounded-full flex items-center justify-center hover:bg-surface-container text-on-surface-variant transition-colors relative">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-tertiary-container rounded-full"></span>
+</button>
+<button class="h-9 w-9 rounded-full flex items-center justify-center hover:bg-surface-container text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+</div>
+</header>
+<!-- ==================== BODY WORKSPACE CONTENT ==================== -->
+<main class="flex-1 p-8 space-y-6 max-w-[1600px] w-full mx-auto">
+<!-- Breadcrumb & Header Hero -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md mb-1.5">
+<span>Roadmap &amp; Graph</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-semibold">Career Pathway</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface">India Tech Hub Track</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Your Learning Roadmap &amp; Prerequisite Graph</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 max-w-3xl">
+              Deterministic acyclic sequence toward <span class="font-semibold text-on-surface">DevOps Engineer</span> based on verified skills, weekly study bandwidth, and budget constraints.
+            </p>
+</div>
+<!-- Secondary Toolbar Actions -->
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white border border-outline-variant/40 hover:bg-surface-container text-on-surface font-label-md text-label-md shadow-xs transition-colors">
+<span class="material-symbols-outlined text-[18px]">share</span>
+<span>Export Graph</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-outline-variant/40 hover:bg-surface-container text-primary font-label-md text-label-md shadow-xs transition-colors">
+<span class="material-symbols-outlined text-[18px]">cached</span>
+<span>Recalculate Pathway</span>
+</button>
+</div>
+</div>
+<!-- ==================== TOP CONTROLS TOOLBAR CARD ==================== -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 md:p-5 border border-outline-variant/30 shadow-clickup flex flex-wrap items-center justify-between gap-4">
+<div class="flex flex-wrap items-center gap-3">
+<!-- Target Role -->
+<div class="flex items-center gap-2 bg-[#f4f5fb] px-3.5 py-2 rounded-xl border border-outline-variant/20 hover:border-primary/40 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-primary text-[18px]">terminal</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Role:</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">DevOps Engineer</span>
+<span class="material-symbols-outlined text-outline text-[16px]">expand_more</span>
+</div>
+<!-- Bandwidth Selector -->
+<div class="flex items-center gap-2 bg-[#f4f5fb] px-3.5 py-2 rounded-xl border border-outline-variant/20 hover:border-primary/40 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-secondary text-[18px]">schedule</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Bandwidth:</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">12 hrs/week</span>
+<span class="material-symbols-outlined text-outline text-[16px]">expand_more</span>
+</div>
+<!-- Budget Filter -->
+<div class="flex items-center gap-2 bg-[#f4f5fb] px-3.5 py-2 rounded-xl border border-outline-variant/20 hover:border-primary/40 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">currency_rupee</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Budget:</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">₹0 – ₹2,500</span>
+<span class="material-symbols-outlined text-outline text-[16px]">expand_more</span>
+</div>
+<!-- Language Notes -->
+<div class="flex items-center gap-2 bg-[#f4f5fb] px-3.5 py-2 rounded-xl border border-outline-variant/20">
+<span class="material-symbols-outlined text-tertiary-container text-[18px]">translate</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Delivery:</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">English + Hinglish Notes</span>
+</div>
+</div>
+<!-- View Switcher -->
+<div class="flex items-center bg-[#f4f5fb] p-1 rounded-xl border border-outline-variant/30">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white text-primary font-label-md text-label-md font-bold shadow-xs">
+<span class="material-symbols-outlined text-[17px]">format_list_bulleted</span>
+<span>Timeline View</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-semibold transition-colors">
+<span class="material-symbols-outlined text-[17px]">account_tree</span>
+<span>Neo4j Graph View</span>
+</button>
+</div>
+</div>
+<!-- ==================== KPI SUMMARY STAT ROW ==================== -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Card 1: Estimated Duration -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 border border-outline-variant/30 shadow-clickup flex flex-col justify-between relative overflow-hidden group hover:shadow-clickup-hover transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-on-surface-variant">Estimated Duration</span>
+<div class="h-8 w-8 rounded-full bg-blue-50 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">timelapse</span>
+</div>
+</div>
+<div class="my-3">
+<div class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">14 Weeks</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Paced at 12 hrs/week commitment</p>
+</div>
+<div class="flex items-center gap-2 pt-2 border-t border-outline-variant/20">
+<span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-semibold">On Schedule</span>
+<span class="font-body-sm text-body-sm text-outline">Target finish: Oct 2024</span>
+</div>
+</div>
+<!-- Card 2: Current Stage -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 border border-outline-variant/30 shadow-clickup flex flex-col justify-between group hover:shadow-clickup-hover transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-on-surface-variant">Current Stage</span>
+<span class="px-2.5 py-1 rounded-full bg-[#FFF4ED] text-[#FF7A59] font-label-sm text-label-sm font-bold">In Progress</span>
+</div>
+<div class="my-3">
+<div class="font-headline-md text-headline-md text-on-surface font-bold">Phase 2: Containers</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Step 3 of 8 total milestones</p>
+</div>
+<div class="w-full bg-[#f4f5fb] rounded-full h-2 overflow-hidden">
+<div class="bg-primary h-2 rounded-full" style="width: 37.5%"></div>
+</div>
+</div>
+<!-- Card 3: Readiness Target -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 border border-outline-variant/30 shadow-clickup flex flex-col justify-between group hover:shadow-clickup-hover transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-on-surface-variant">Readiness Target</span>
+<div class="h-8 w-8 rounded-full bg-purple-50 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+</div>
+<div class="my-3">
+<div class="font-headline-md text-headline-md text-on-surface font-bold">Jr. DevOps Engineer</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Bengaluru &amp; IT Hubs</p>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-outline-variant/20 font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Salary Band:</span>
+<span class="font-bold text-on-surface">₹6.5 – ₹9.5 LPA</span>
+</div>
+</div>
+<!-- Card 4: Graph Validation -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 border border-outline-variant/30 shadow-clickup flex flex-col justify-between group hover:shadow-clickup-hover transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-on-surface-variant">Graph Validation</span>
+<span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-bold">Validated</span>
+</div>
+<div class="my-3">
+<div class="font-headline-md text-headline-md font-mono text-on-surface font-bold">DAG O(V+E)</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Deterministic acyclic sequence</p>
+</div>
+<div class="flex items-center gap-1.5 pt-2 border-t border-outline-variant/20 text-emerald-700 font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>0 cyclic deadlocks detected</span>
+</div>
+</div>
+</div>
+<!-- ==================== MAIN 2-COLUMN SECTION ==================== -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- LEFT COLUMN: 65% width (col-span-8) Timeline Sequences -->
+<div class="lg:col-span-8 space-y-6">
+<!-- Timeline Status Legend Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 border border-outline-variant/30 shadow-clickup flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-on-surface">Sequence Pathway</span>
+<span class="text-outline text-body-sm">· ClickUp style dependency chain</span>
+</div>
+<div class="flex flex-wrap items-center gap-2 text-label-sm font-label-sm">
+<span class="px-2.5 py-1 rounded-full bg-[#ECFDF5] text-[#10B981] font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-[#10B981]"></span> Completed (2)
+                </span>
+<span class="px-2.5 py-1 rounded-full bg-[#EEF2FF] text-[#2F6FED] font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-[#2F6FED]"></span> Active Target (1)
+                </span>
+<span class="px-2.5 py-1 rounded-full bg-[#f4f5fb] text-on-surface-variant font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Upcoming (3)
+                </span>
+<span class="px-2.5 py-1 rounded-full bg-[#FFF4ED] text-[#FF7A59] font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-[#FF7A59]"></span> Blocked (2)
+                </span>
+</div>
+</div>
+<!-- MILESTONE 1: COMPLETED -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 border border-outline-variant/30 shadow-clickup relative">
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="h-10 w-10 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-[#ECFDF5] text-[#10B981] font-label-sm text-label-sm font-bold">PHASE 1</span>
+<span class="font-label-sm text-label-sm text-outline">Verified Oct 4, 2024</span>
+</div>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface mt-1">Operating System &amp; SCM Foundations</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Core Linux internals, shell scripting, permission bits, and distributed branch models.</p>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-bold flex items-center gap-1 shrink-0">
+<span class="material-symbols-outlined text-[16px]">verified</span> 100% Passed
+                </span>
+</div>
+<!-- Verified Sub-items -->
+<div class="mt-5 space-y-2.5 pt-4 border-t border-outline-variant/20">
+<div class="flex items-center justify-between p-3 rounded-xl bg-[#f8f9fe] border border-outline-variant/20">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_box</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Linux OS Fluency &amp; Bash Scripting</span>
+<span class="px-2 py-0.5 rounded-md bg-white text-outline font-label-sm text-label-sm border border-outline-variant/30">POSIX / Systemd</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-label-md text-label-md font-semibold text-emerald-700">Score: 92/100</span>
+<span class="text-[11px] text-outline font-medium">GitHub Repo Verified</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-3 rounded-xl bg-[#f8f9fe] border border-outline-variant/20">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_box</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Git Distributed Version Control</span>
+<span class="px-2 py-0.5 rounded-md bg-white text-outline font-label-sm text-label-sm border border-outline-variant/30">Rebase / Submodules</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-label-md text-label-md font-semibold text-emerald-700">Score: 88/100</span>
+<span class="text-[11px] text-outline font-medium">PR Merge Verified</span>
+</div>
+</div>
+</div>
+</div>
+<!-- MILESTONE 2: ACTIVE TARGET (Current Hero Focus) -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 border-2 border-primary/60 shadow-clickup-hover relative ring-4 ring-primary/5">
+<!-- Active Badge -->
+<div class="absolute -top-3.5 left-6 px-3 py-0.5 rounded-full bg-primary text-white font-label-sm text-label-sm font-bold uppercase tracking-wider shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">flag</span> Current Active Target
+              </div>
+<div class="flex items-start justify-between gap-4 mt-1">
+<div class="flex items-start gap-4">
+<div class="h-10 w-10 rounded-2xl bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[24px]">layers</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-blue-100 text-primary font-label-sm text-label-sm font-bold">PHASE 2</span>
+<span class="font-label-sm text-label-sm font-bold text-primary">8 of 18 hrs logged</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface mt-1">Containerization &amp; Artifact Lifecycles</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Docker daemon, OCI specs, multi-stage builds, rootless containers, and image optimization.</p>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-headline-md text-headline-md font-bold text-primary">45%</span>
+<p class="font-label-sm text-label-sm text-outline">Paced Target</p>
+</div>
+</div>
+<!-- Progress bar -->
+<div class="mt-4">
+<div class="w-full bg-[#ededfc] h-2.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-500" style="width: 45%;"></div>
+</div>
+</div>
+<!-- Contextual Reason Card -->
+<div class="mt-4 p-4 rounded-xl bg-blue-50/70 border border-blue-100">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">lightbulb</span>
+<div class="text-body-sm font-body-sm text-on-surface">
+<span class="font-bold text-primary">Why this matters:</span> Containerization decouples application runtimes from host OS, eliminating the notorious <em class="font-semibold">"works on my machine"</em> anti-pattern across multi-stage cloud pipelines.
+                  </div>
+</div>
+</div>
+<!-- Prerequisites check tags -->
+<div class="mt-4 flex flex-wrap items-center gap-2">
+<span class="font-label-sm text-label-sm font-bold text-outline uppercase mr-1">Prerequisites:</span>
+<span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-bold flex items-center gap-1 border border-emerald-200">
+<span class="material-symbols-outlined text-[14px]">check</span> Linux (Met)
+                </span>
+<span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-bold flex items-center gap-1 border border-emerald-200">
+<span class="material-symbols-outlined text-[14px]">check</span> Git SCM (Met)
+                </span>
+<span class="px-2.5 py-1 rounded-full bg-blue-50 text-primary font-label-sm text-label-sm font-bold flex items-center gap-1 border border-blue-200">
+<span class="material-symbols-outlined text-[14px]">info</span> Networking Basics (Suggested)
+                </span>
+</div>
+<!-- Recommended Curated Resource -->
+<div class="mt-4 p-3.5 rounded-xl bg-[#f8f9fe] border border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="h-9 w-9 rounded-lg bg-red-100 text-red-600 flex items-center justify-center font-bold text-xs">
+                    FCC
+                  </div>
+<div>
+<h3 class="font-label-md text-label-md font-bold text-on-surface">Docker for DevOps by freeCodeCamp + IIT Madras NPTEL</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Free / ₹0 · Curated in English + Hinglish audio walkthroughs</p>
+</div>
+</div>
+<a class="px-3 py-1.5 rounded-lg bg-white border border-outline-variant/40 hover:bg-surface-container font-label-sm text-label-sm font-bold text-on-surface shadow-xs transition-colors" href="#">
+                  Open Course
+                </a>
+</div>
+<!-- Action button cluster -->
+<div class="mt-6 flex flex-wrap items-center gap-3 pt-4 border-t border-outline-variant/20">
+<button class="px-5 py-2.5 rounded-full bg-primary-container text-white font-label-md text-label-md font-bold shadow-pill-primary hover:bg-[#2458c7] transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+<span>Open Sandbox (Docker CLI)</span>
+</button>
+<button class="px-4 py-2.5 rounded-full bg-white border border-outline-variant/40 text-on-surface font-label-md text-label-md font-bold hover:bg-surface-container transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">task_alt</span>
+<span>Mark Completed</span>
+</button>
+<button class="px-4 py-2.5 rounded-full text-secondary hover:bg-purple-50 font-label-md text-label-md font-bold transition-all ml-auto flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">smart_toy</span>
+<span>Ask Coach about Docker</span>
+</button>
+</div>
+</div>
+<!-- MILESTONE 3: UPCOMING (Dashed boundary) -->
+<div class="bg-surface-container-lowest/80 rounded-2xl p-6 border border-dashed border-outline-variant shadow-sm relative">
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="h-10 w-10 rounded-2xl bg-surface-container text-on-surface-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">sync_alt</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-[#f4f5fb] text-outline font-label-sm text-label-sm font-bold">PHASE 3</span>
+<span class="font-label-sm text-label-sm text-outline">Unlocks in ~10 days upon Docker clearance</span>
+</div>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface mt-1">Pipeline Automation &amp; Declarative CI/CD</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Automated linting, secret management, container push/pull, and GitHub Actions matrix runners.</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-[#f4f5fb] text-outline font-label-sm text-label-sm font-bold shrink-0">
+                  Upcoming
+                </span>
+</div>
+<div class="mt-4 p-3 rounded-xl bg-[#fbf8ff] border border-outline-variant/20 flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">arrow_right_alt</span>
+<span>Sub-target: GitHub Actions &amp; Registry Dispatch Automation</span>
+</div>
+<span class="text-outline font-label-sm text-label-sm">Requires: Phase 2</span>
+</div>
+</div>
+<!-- MILESTONE 4: BLOCKED WITH DEPENDENCY GUARD WARNING -->
+<div class="bg-surface-container-lowest/70 rounded-2xl p-6 border border-tertiary-container/30 shadow-sm relative">
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="h-10 w-10 rounded-2xl bg-[#FFF4ED] text-[#FF7A59] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">lock</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-[#FFF4ED] text-[#FF7A59] font-label-sm text-label-sm font-bold">PHASE 4</span>
+<span class="px-2 py-0.5 rounded-full bg-red-100 text-error font-label-sm text-label-sm font-bold">Strict Dependency Guard Active</span>
+</div>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface mt-1">Cloud Infrastructure &amp; Orchestration (Kubernetes)</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Kube-apiserver, etcd quorum, pods, services, ingress controllers, and AWS EKS provisioning.</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-[#FFF4ED] text-[#FF7A59] font-label-sm text-label-sm font-bold shrink-0">
+                  Blocked
+                </span>
+</div>
+<!-- Guard Warning Banner -->
+<div class="mt-4 p-4 rounded-xl bg-orange-50/80 border border-orange-200/80">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[#FF7A59] text-[20px] shrink-0">warning</span>
+<div>
+<p class="font-label-md text-label-md font-bold text-tertiary">Cognitive Friction Blocker</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                      Learning Kubernetes orchestration prior to mastering Docker namespaces &amp; cgroups introduces severe cognitive friction. Complete Docker fundamentals first to unlock this phase.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Blocked requirements list -->
+<div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3">
+<div class="p-3 rounded-xl bg-white border border-outline-variant/30 flex items-center justify-between opacity-75">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Kubernetes Core Architecture</span>
+<span class="text-[11px] font-bold text-error bg-red-50 px-2 py-0.5 rounded">Requires: Docker</span>
+</div>
+<div class="p-3 rounded-xl bg-white border border-outline-variant/30 flex items-center justify-between opacity-75">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">AWS Cloud Foundations</span>
+<span class="text-[11px] font-bold text-error bg-red-50 px-2 py-0.5 rounded">Requires: Linux + Docker</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: 35% width (col-span-4) Neo4j Inspector & Market -->
+<div class="lg:col-span-4 space-y-6">
+<!-- CARD 1: Neo4j Cypher Prerequisite Inspector -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 border border-outline-variant/30 shadow-clickup">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="h-8 w-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[18px]">account_tree</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Prerequisite Inspector</h3>
+<p class="font-label-sm text-label-sm text-outline">Deterministic DAG Evaluator</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container font-mono text-[11px] font-bold text-primary">Cypher Engine</span>
+</div>
+<!-- Cypher Query Snippet -->
+<div class="mt-4 bg-[#191b26] text-[#b1c5ff] rounded-xl p-3.5 font-mono text-[11.5px] leading-relaxed overflow-x-auto shadow-inner border border-outline/30">
+<div class="text-outline text-[10px] mb-1 font-sans">// Real-time Traversal Query</div>
+<span class="text-[#ffb4a2]">MATCH</span> (p:Skill)-[r:ENABLES]-&gt;(c:Skill)<br/>
+<span class="text-[#ffb4a2]">WHERE</span> p.id = <span class="text-emerald-400">'Docker'</span><br/>
+<span class="text-[#ffb4a2]">RETURN</span> p.status, c.id, r.weight
+              </div>
+<!-- Visual Dynamic Dependency Subtree Graphic -->
+<div class="mt-5 p-4 rounded-xl bg-[#f4f5fb] border border-outline-variant/30">
+<div class="text-[11px] font-bold uppercase tracking-wider text-outline mb-3">Live Subtree Projection</div>
+<div class="space-y-3">
+<!-- Inputs (Met) -->
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-md bg-white border border-emerald-300 text-emerald-700 font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-xs">
+<span class="material-symbols-outlined text-[13px]">check</span> Linux
+                    </span>
+<span class="text-outline font-bold">+</span>
+<span class="px-2.5 py-1 rounded-md bg-white border border-emerald-300 text-emerald-700 font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-xs">
+<span class="material-symbols-outlined text-[13px]">check</span> Git SCM
+                    </span>
+</div>
+<!-- Flow Down Arrow -->
+<div class="flex items-center justify-center my-0.5">
+<span class="material-symbols-outlined text-primary text-[20px]">south</span>
+</div>
+<!-- Central Target -->
+<div class="p-2.5 rounded-xl bg-primary text-white font-label-md text-label-md font-bold text-center shadow-md ring-2 ring-primary/30 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Docker Core Engine (ACTIVE TARGET)</span>
+</div>
+<!-- Flow Split Arrow -->
+<div class="flex items-center justify-around my-0.5 text-outline">
+<span class="material-symbols-outlined text-[18px]">south_west</span>
+<span class="material-symbols-outlined text-[18px]">south_east</span>
+</div>
+<!-- Downstream Outputs -->
+<div class="grid grid-cols-2 gap-2 text-center">
+<div class="p-2 rounded-lg bg-white border border-outline-variant/40 text-on-surface font-label-sm text-label-sm font-bold shadow-xs">
+                      CI/CD Actions<br/><span class="text-[10px] text-emerald-600 font-normal">Ready in 10d</span>
+</div>
+<div class="p-2 rounded-lg bg-white border border-orange-200 text-tertiary font-label-sm text-label-sm font-bold shadow-xs">
+                      K8s Clusters<br/><span class="text-[10px] text-error font-normal">Blocked Guard</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Direct Downstream Beneficiaries -->
+<div class="mt-4 pt-4 border-t border-outline-variant/20">
+<div class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-outline mb-2">Direct Downstream Beneficiaries</div>
+<ul class="space-y-2 font-body-sm text-body-sm">
+<li class="flex items-center justify-between text-on-surface">
+<span class="flex items-center gap-1.5 font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Kubernetes Ingress &amp; Pods
+                    </span>
+<span class="font-bold text-primary bg-blue-50 px-2 py-0.5 rounded text-[11px]">+42% Salary Weight</span>
+</li>
+<li class="flex items-center justify-between text-on-surface">
+<span class="flex items-center gap-1.5 font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Microservice CI Pipelines
+                    </span>
+<span class="font-semibold text-outline text-[11px]">Core Requirement</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- CARD 2: AI Career Coach Instant Tip -->
+<div class="bg-gradient-to-br from-emerald-50/90 to-teal-50/50 rounded-2xl p-6 border border-emerald-200/60 shadow-clickup relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="h-8 w-8 rounded-full bg-emerald-600 text-white flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[18px]">smart_toy</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-emerald-950">Career Coach Instant Tip</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-white text-emerald-800 text-[10px] font-bold border border-emerald-200">
+                  India Product &amp; FinTech
+                </span>
+</div>
+<div class="mt-3.5 text-body-md font-body-md text-emerald-950 leading-relaxed">
+<p>
+                  "In Bengaluru &amp; Hyderabad startup interviews for Junior DevOps roles, <strong class="text-emerald-900 font-bold">70% of candidate rejections</strong> in the Docker round stem from <em>Container Networking (bridge vs overlay)</em> and volume persistence, not basic syntax."
+                </p>
+</div>
+<!-- Quick coach actions -->
+<div class="mt-5 flex items-center gap-2">
+<button class="px-3.5 py-1.5 rounded-full bg-emerald-600 text-white font-label-sm text-label-sm font-bold shadow-xs hover:bg-emerald-700 transition-colors">
+                  Start 5-min Networking Drill
+                </button>
+<button class="px-3.5 py-1.5 rounded-full bg-white text-emerald-800 border border-emerald-300 font-label-sm text-label-sm font-bold hover:bg-emerald-50 transition-colors">
+                  Ask Coach
+                </button>
+</div>
+</div>
+<!-- CARD 3: India Tech Market Hiring Metric -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 border border-outline-variant/30 shadow-clickup">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-outline">India Tech Hiring Trends</span>
+<span class="px-2 py-0.5 rounded-full bg-blue-50 text-primary font-label-sm text-label-sm font-bold">July 2024</span>
+</div>
+<div class="my-4">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tight">3,480</span>
+<span class="font-label-md text-label-md font-bold text-emerald-600">+14% MoM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                  Active job openings requiring verified Docker + CI/CD fundamentals across <strong class="text-on-surface">Bengaluru, NCR, Pune, &amp; Hyderabad</strong>.
+                </p>
+</div>
+<div class="space-y-2 pt-3 border-t border-outline-variant/20">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Top Hiring Sectors:</span>
+<span class="font-bold text-on-surface">FinTech, SaaS, EdTech</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Skill Overlap Premium:</span>
+<span class="font-bold text-primary">+28% with Bash + Docker</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+<script>
+    // Micro-interaction: Active view toggle handling
+    document.querySelectorAll('[data-view-switcher]').forEach(button => {
+      button.addEventListener('click', () => {
+        // Simple visual toggle for demonstration
+      });
+    });
+  </script>
+</body></html>

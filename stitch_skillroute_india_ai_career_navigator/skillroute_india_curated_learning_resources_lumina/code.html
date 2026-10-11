@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Curated Learning Resources | SkillRoute India</title>
+<!-- Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration verbatim as required -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "error": "#ba1a1a",
+            "on-tertiary-fixed-variant": "#862208",
+            "on-error": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "on-primary": "#ffffff",
+            "surface-container-high": "#e7e7f6",
+            "inverse-on-surface": "#f0efff",
+            "on-background": "#191b26",
+            "surface-container": "#ededfc",
+            "on-secondary-container": "#fffbff",
+            "surface-container-low": "#f3f2ff",
+            "outline-variant": "#c2c6d7",
+            "surface-dim": "#d9d9e8",
+            "primary-container": "#2f6fed",
+            "on-primary-fixed-variant": "#0040a0",
+            "outline": "#737786",
+            "on-primary-fixed": "#001847",
+            "on-surface": "#191b26",
+            "tertiary": "#a5381d",
+            "secondary": "#5a45cb",
+            "primary": "#0055ce",
+            "on-tertiary-fixed": "#3c0700",
+            "surface-variant": "#e1e1f1",
+            "surface-container-lowest": "#ffffff",
+            "on-surface-variant": "#424654",
+            "secondary-fixed-dim": "#c8bfff",
+            "tertiary-container": "#c65033",
+            "primary-fixed": "#dae2ff",
+            "inverse-surface": "#2e303b",
+            "surface-bright": "#fbf8ff",
+            "on-tertiary-container": "#fffeff",
+            "on-primary-container": "#ffffff",
+            "tertiary-fixed-dim": "#ffb4a2",
+            "secondary-container": "#7360e5",
+            "surface-container-highest": "#e1e1f1",
+            "surface-tint": "#0056d0",
+            "tertiary-fixed": "#ffdad2",
+            "error-container": "#ffdad6",
+            "on-secondary": "#ffffff",
+            "on-secondary-fixed": "#190064",
+            "surface": "#fbf8ff",
+            "primary-fixed-dim": "#b1c5ff",
+            "background": "#fbf8ff",
+            "inverse-primary": "#b1c5ff",
+            "on-secondary-fixed-variant": "#442bb5",
+            "secondary-fixed": "#e5deff",
+            "on-error-container": "#93000a"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1.125rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "1.25rem",
+            "space-2xl": "2.5rem",
+            "margin-tablet": "1.5rem",
+            "margin-desktop": "2rem",
+            "space-sm": "0.5rem",
+            "gutter-desktop": "1.5rem",
+            "space-xs": "0.25rem",
+            "margin": "1rem",
+            "space-md": "1rem",
+            "space-xl": "1.75rem",
+            "space-lg": "1.25rem"
+          },
+          "fontFamily": {
+            "headline-sm": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: rgba(115, 119, 134, 0.2);
+      border-radius: 9999px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb:hover {
+      background: rgba(115, 119, 134, 0.4);
+    }
+    .ambient-card {
+      background-color: #ffffff;
+      border: 1px solid rgba(194, 198, 215, 0.35);
+      box-shadow: 0 4px 20px -2px rgba(90, 80, 140, 0.05), 0 1px 3px 0 rgba(90, 80, 140, 0.03);
+    }
+    .ambient-card-hover {
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .ambient-card-hover:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px -4px rgba(90, 80, 140, 0.09), 0 4px 8px -2px rgba(90, 80, 140, 0.04);
+      border-color: rgba(47, 111, 237, 0.3);
+    }
+  </style>
+</head>
+<body class="bg-[#F4F5FB] text-on-surface font-body-md antialiased h-full flex overflow-hidden">
+<!-- ========================================================================= -->
+<!-- LEFT SIDEBAR (Semantic Shell mapping JSON: SideNavBar)                      -->
+<!-- ========================================================================= -->
+<aside class="fixed top-0 left-0 h-full w-64 z-40 bg-surface-container-lowest border-r border-outline-variant/30 shadow-sm flex flex-col justify-between py-5 px-4 select-none">
+<!-- Top Workspace Branding & Add Goal CTA -->
+<div class="flex flex-col gap-4">
+<!-- Workspace Brand Badge -->
+<div class="flex items-center gap-3 px-2 py-1">
+<div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm shadow-primary/30 font-headline-md font-bold">
+<span class="material-symbols-outlined text-[20px]" data-icon="route">route</span>
+</div>
+<div class="flex flex-col">
+<span class="text-headline-sm font-headline-sm text-on-surface leading-tight">SkillRoute</span>
+<span class="text-label-sm font-label-sm text-outline leading-none mt-0.5">India Workspace</span>
+</div>
+</div>
+<!-- + Add Career Goal Button -->
+<button class="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-[0_4px_14px_rgba(47,111,237,0.3)] hover:bg-primary transition-all duration-150 active:scale-[0.98]">
+<span class="material-symbols-outlined text-[18px]" data-icon="add">add</span>
+<span>Add Career Goal</span>
+</button>
+<!-- Navigation Links Cluster -->
+<nav class="flex flex-col gap-1 mt-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-xl text-on-surface-variant font-medium hover:bg-surface-container hover:text-on-surface transition-colors duration-150 text-label-md" href="#">
+<span class="material-symbols-outlined text-[19px]" data-icon="dashboard">dashboard</span>
+<span>Overview</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-xl text-on-surface-variant font-medium hover:bg-surface-container hover:text-on-surface transition-colors duration-150 text-label-md" href="#">
+<span class="material-symbols-outlined text-[19px]" data-icon="hub">hub</span>
+<span>Roadmap &amp; Graph</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-xl text-on-surface-variant font-medium hover:bg-surface-container hover:text-on-surface transition-colors duration-150 text-label-md" href="#">
+<span class="material-symbols-outlined text-[19px]" data-icon="auto_graph">auto_graph</span>
+<span>Skill Gap Matrix</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-xl text-on-surface-variant font-medium hover:bg-surface-container hover:text-on-surface transition-colors duration-150 text-label-md" href="#">
+<span class="material-symbols-outlined text-[19px]" data-icon="target">target</span>
+<span>Target Roles</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-xl text-on-surface-variant font-medium hover:bg-surface-container hover:text-on-surface transition-colors duration-150 text-label-md" href="#">
+<span class="material-symbols-outlined text-[19px]" data-icon="smart_toy">smart_toy</span>
+<span>AI Career Coach</span>
+</a>
+<!-- ACTIVE ITEM: Curated Resources -->
+<a class="flex items-center justify-between px-3 py-2.5 rounded-xl bg-surface-container-high text-on-surface font-semibold text-label-md shadow-sm border border-outline-variant/20" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="auto_stories" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+<span>Curated Resources</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+</a>
+<a class="flex items-center justify-between px-3 py-2 rounded-xl text-on-surface-variant font-medium hover:bg-surface-container hover:text-on-surface transition-colors duration-150 text-label-md" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[19px]" data-icon="check_box">check_box</span>
+<span>Tasks</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-[#EEF2FF] text-[#2F6FED] font-bold text-label-sm">4</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-xl text-on-surface-variant font-medium hover:bg-surface-container hover:text-on-surface transition-colors duration-150 text-label-md" href="#">
+<span class="material-symbols-outlined text-[19px]" data-icon="description">description</span>
+<span>Docs &amp; Notes</span>
+</a>
+</nav>
+</div>
+<!-- Bottom Workspace Profile & Status -->
+<div class="flex flex-col gap-3 pt-3 border-t border-outline-variant/20">
+<div class="flex items-center justify-between px-2">
+<div class="flex items-center gap-2.5">
+<div class="relative">
+<img class="w-9 h-9 rounded-full object-cover border border-outline-variant/40" data-alt="Professional studio portrait of an ambitious young Indian DevOps engineer named Manjeet S. smiling softly in modern tech office lighting with clean background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCin7zSeb3RnkpC7Xb18zGdsJ2WWjLCddzV6VSRr5cSrFLq1OEYTBwHo20ltY8XNK36GT3QApj3IDipG7UsbZRa0Y0cGsX0PwjhLuXr6xQsFv0n8RgIk0gAyUmWLmwo7vjvj5h9u4d8TCvIpO2dJZW9tpVgUyq9Of7a1u3nJHArlCKvGtggvWGmaFcgMzLViPQfEaghWNP3nTIks0ZMU_VSbS0-kyE_gkSM7hzJsJc_m60RUrFLXahY"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-[#10B981] ring-2 ring-white"></span>
+</div>
+<div class="flex flex-col text-left">
+<span class="text-label-md font-label-md text-on-surface leading-tight">Manjeet S.</span>
+<span class="text-label-sm font-label-sm text-outline leading-tight mt-0.5">Target: DevOps Eng.</span>
+</div>
+</div>
+<button class="text-outline hover:text-on-surface transition-colors p-1" title="Settings">
+<span class="material-symbols-outlined text-[18px]" data-icon="settings">settings</span>
+</button>
+</div>
+<div class="flex items-center justify-between px-3 py-2 rounded-xl bg-surface-container-low text-label-sm">
+<span class="text-outline flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]" data-icon="help">help</span> Help &amp; Support
+        </span>
+<span class="font-semibold text-primary">v2.4.1</span>
+</div>
+</div>
+</aside>
+<!-- ========================================================================= -->
+<!-- MAIN WORKSPACE CANVAS                                                     -->
+<!-- ========================================================================= -->
+<main class="ml-64 w-[calc(100%-16rem)] flex flex-col h-full overflow-hidden">
+<!-- Top Navigation Bar (Floating Header from JSON TopNavBar) -->
+<header class="flex justify-between items-center h-16 px-8 bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant/20 sticky top-0 z-30 shadow-[0_4px_20px_-2px_rgba(90,80,140,0.04)]">
+<!-- Left: Universal Search & Quick Context -->
+<div class="flex items-center gap-6">
+<div class="relative flex items-center w-80">
+<span class="material-symbols-outlined absolute left-3 text-outline text-[18px]" data-icon="search">search</span>
+<input class="w-full h-9 pl-9 pr-12 rounded-full bg-surface-container-low border border-transparent focus:border-primary focus:bg-surface-container-lowest focus:outline-none text-body-sm transition-all placeholder:text-outline/70" placeholder="Search resources, topics, instructors..." type="text"/>
+<kbd class="absolute right-3 px-1.5 py-0.5 text-[10px] font-semibold text-outline bg-surface-container-highest rounded border border-outline-variant/30 leading-none">⌘K</kbd>
+</div>
+<!-- Material Category Quick Filter Tabs -->
+<nav class="hidden xl:flex items-center gap-5 text-label-md">
+<a class="text-primary font-semibold border-b-2 border-primary pb-1" href="#">All Materials</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-medium pb-1" href="#">Free Govt / NPTEL</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-medium pb-1" href="#">YouTube Playlists</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-medium pb-1" href="#">Hands-on Labs</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-medium pb-1" href="#">Certification Prep</a>
+</nav>
+</div>
+<!-- Right Actions: System Status & CTAs -->
+<div class="flex items-center gap-3">
+<!-- Graph & AI Status Pills -->
+<div class="hidden lg:flex items-center gap-2">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-low border border-outline-variant/30 text-label-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-[#10B981]"></span>
+<span>Neo4j Active</span>
+<span class="text-outline font-normal">(320ms)</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#EEF2FF] border border-primary/20 text-label-sm text-primary font-medium">
+<span class="material-symbols-outlined text-[13px]" data-icon="bolt">bolt</span>
+<span>AI Agent Ready</span>
+</div>
+</div>
+<!-- Language Switcher Pill -->
+<div class="flex items-center bg-surface-container-low rounded-full p-0.5 border border-outline-variant/30 text-label-sm font-semibold">
+<button class="px-2 py-0.5 rounded-full bg-surface-container-lowest shadow-sm text-primary">EN</button>
+<button class="px-2 py-0.5 rounded-full text-on-surface-variant hover:text-on-surface">HI</button>
+<button class="px-2 py-0.5 rounded-full text-on-surface-variant hover:text-on-surface">Hinglish</button>
+</div>
+<!-- Ask Coach Button -->
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary shadow-sm active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px]" data-icon="psychology">psychology</span>
+<span>Ask Coach</span>
+</button>
+<!-- Notification & Bag Icons -->
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-outline hover:text-on-surface hover:bg-surface-container transition-colors relative">
+<span class="material-symbols-outlined text-[20px]" data-icon="notifications">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+</button>
+<div class="w-px h-5 bg-outline-variant/40 mx-0.5"></div>
+<!-- User mini icon -->
+<img class="w-8 h-8 rounded-full border border-outline-variant/40 object-cover cursor-pointer hover:ring-2 hover:ring-primary/40 transition-all" data-alt="Avatar icon of Manjeet Singh DevOps aspirant with high contrast lighting and modern workspace look." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOEQsBUE9T09hwSiZPlc-vDGFVVap7Kie3kHhb8BPFRmx0jnvHdiffTvEdbkqxi0Wknm82HfITvSla-8pBfc3KTgc87F009n1Skn2zRGOvrpvMmsFpJy2yQ-iwQQNjL84nTQmfEAOvdBvclbAbviC3ksShO6TbWRBPL3CE3inUrDgcWcdDtKxnzXURL7vgoyc3HVOEX5kRcQHf4VIXsAdBvjx6EricTyt3t0A4htK-OjvySNSWkUg5"/>
+</div>
+</header>
+<!-- Scrollable Content Canvas -->
+<div class="flex-1 overflow-y-auto custom-scroll px-8 py-6 space-y-6">
+<!-- ========================================================================= -->
+<!-- SECTION: Page Title & Subtitle + Action Toolbar                          -->
+<!-- ========================================================================= -->
+<section class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2.5 py-0.5 rounded-full bg-[#ECFDF5] text-[#10B981] font-bold text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" data-icon="verified">verified</span> Skill Graph Mapped
+            </span>
+<span class="text-outline text-label-sm">•</span>
+<span class="text-outline text-label-sm">Sprint Node #204: Container Orchestration</span>
+</div>
+<h1 class="text-headline-xl font-headline-xl text-on-surface tracking-tight">Curated Learning Resources &amp; Labs</h1>
+<p class="text-body-md font-body-md text-outline mt-1 max-w-3xl">
+            Zero-noise, verified learning pathways mapped directly to your missing Skill Graph nodes. Filter by budget, language, and hands-on lab depth.
+          </p>
+</div>
+<div class="flex items-center gap-2.5 shrink-0">
+<button class="flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container-lowest border border-outline-variant/40 hover:bg-surface-container-low text-on-surface font-label-md text-label-md shadow-sm transition-all">
+<span class="material-symbols-outlined text-[17px] text-primary" data-icon="calendar_month">calendar_month</span>
+<span>Sync with Schedule</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-xl bg-[#EEF2FF] text-[#2F6FED] border border-primary/20 hover:bg-[#dae2ff] font-label-md text-label-md shadow-sm transition-all">
+<span class="material-symbols-outlined text-[17px]" data-icon="search_insights">search_insights</span>
+<span>Resource Audit</span>
+</button>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- SECTION: Interactive Filter Toolbar Bar                                  -->
+<!-- ========================================================================= -->
+<section class="ambient-card rounded-2xl p-3.5 flex flex-wrap items-center justify-between gap-3 bg-white">
+<div class="flex flex-wrap items-center gap-2">
+<!-- Node Target Selector -->
+<div class="relative">
+<button class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm shadow-primary/20">
+<span class="material-symbols-outlined text-[16px]" data-icon="adjust">adjust</span>
+<span>Docker Fundamentals (Active Target)</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="expand_more">expand_more</span>
+</button>
+</div>
+<div class="w-px h-5 bg-outline-variant/40 mx-1"></div>
+<!-- Budget Filter Pills -->
+<div class="flex items-center bg-surface-container-low rounded-full p-1 border border-outline-variant/20 text-label-sm">
+<button class="px-3 py-1 rounded-full bg-surface-container-lowest text-primary font-bold shadow-sm">Free Only (₹0)</button>
+<button class="px-3 py-1 rounded-full text-on-surface-variant hover:text-on-surface">Under ₹1,000</button>
+<button class="px-3 py-1 rounded-full text-on-surface-variant hover:text-on-surface">All Budgets</button>
+</div>
+<!-- Language Filter Selector -->
+<div class="flex items-center bg-surface-container-low rounded-full p-1 border border-outline-variant/20 text-label-sm">
+<button class="px-2.5 py-1 rounded-full bg-surface-container-lowest text-primary font-bold shadow-sm flex items-center gap-1">
+<span>Hinglish (हिंग्लिश)</span>
+</button>
+<button class="px-2.5 py-1 rounded-full text-on-surface-variant hover:text-on-surface">English</button>
+<button class="px-2.5 py-1 rounded-full text-on-surface-variant hover:text-on-surface">Hindi</button>
+</div>
+<!-- Format Selector Dropdown -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low border border-outline-variant/30 text-on-surface-variant text-label-sm hover:text-on-surface">
+<span class="material-symbols-outlined text-[15px]" data-icon="view_stream">view_stream</span>
+<span>All Formats</span>
+<span class="material-symbols-outlined text-[15px]" data-icon="arrow_drop_down">arrow_drop_down</span>
+</button>
+<!-- Duration Selector -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low border border-outline-variant/30 text-on-surface-variant text-label-sm hover:text-on-surface">
+<span class="material-symbols-outlined text-[15px]" data-icon="schedule">schedule</span>
+<span>Time: 5-15 Hours</span>
+<span class="material-symbols-outlined text-[15px]" data-icon="arrow_drop_down">arrow_drop_down</span>
+</button>
+</div>
+<!-- Quick Reset & Counter -->
+<div class="flex items-center gap-2 text-label-sm text-outline">
+<span>Showing <strong>14 verified</strong> items</span>
+<button class="text-primary hover:underline font-semibold ml-1">Clear filters</button>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- SECTION 1: Top KPI / Resource Metric Cards (Bento 4-column)               -->
+<!-- ========================================================================= -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- KPI 1 -->
+<div class="ambient-card rounded-2xl p-4 flex items-center justify-between">
+<div class="space-y-1">
+<span class="text-label-sm font-label-sm text-outline uppercase tracking-wider">Matched to Next Move</span>
+<div class="text-headline-lg font-headline-lg text-on-surface font-bold">14 Resources</div>
+<p class="text-body-sm font-body-sm text-outline">For Docker &amp; Containerization</p>
+</div>
+<div class="w-12 h-12 rounded-2xl bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]" data-icon="folder_zip">folder_zip</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="ambient-card rounded-2xl p-4 flex items-center justify-between">
+<div class="space-y-1">
+<span class="text-label-sm font-label-sm text-outline uppercase tracking-wider">Free / Open Access</span>
+<div class="text-headline-lg font-headline-lg text-[#10B981] font-bold">85% Free</div>
+<p class="text-body-sm font-body-sm text-outline">NPTEL, freeCodeCamp, Docs</p>
+</div>
+<div class="w-12 h-12 rounded-2xl bg-[#ECFDF5] text-[#10B981] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]" data-icon="currency_rupee">currency_rupee</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="ambient-card rounded-2xl p-4 flex items-center justify-between">
+<div class="space-y-1">
+<span class="text-label-sm font-label-sm text-outline uppercase tracking-wider">Est. Total Study Time</span>
+<div class="text-headline-lg font-headline-lg text-on-surface font-bold">28 Hours</div>
+<p class="text-body-sm font-body-sm text-outline">Across recommended track</p>
+</div>
+<div class="w-12 h-12 rounded-2xl bg-surface-container-high text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]" data-icon="hourglass_top">hourglass_top</span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="ambient-card rounded-2xl p-4 flex items-center justify-between">
+<div class="space-y-1">
+<span class="text-label-sm font-label-sm text-outline uppercase tracking-wider">Avg. Learner Rating</span>
+<div class="text-headline-lg font-headline-lg text-on-surface font-bold flex items-center gap-1.5">
+<span>4.8 / 5.0</span>
+<span class="material-symbols-outlined text-[20px] text-[#FFB800]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-sm font-body-sm text-outline">1,240+ Indian aspirants</p>
+</div>
+<div class="w-12 h-12 rounded-2xl bg-[#FFF4ED] text-[#FF7A59] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]" data-icon="workspace_premium">workspace_premium</span>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- SECTION 2: Hero Track - Recommended Learning Track for Docker             -->
+<!-- ========================================================================= -->
+<section class="ambient-card rounded-2xl p-6 bg-gradient-to-br from-white via-white to-surface-container-low border border-primary/20 relative overflow-hidden">
+<div class="absolute -right-16 -top-16 w-64 h-64 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-5 border-b border-outline-variant/20">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-[#EEF2FF] text-[#2F6FED] font-bold text-label-sm uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" data-icon="bolt">bolt</span> AI Graph Recommended Track
+              </span>
+<span class="text-label-sm font-semibold text-outline">Sequential Pathway #DK-01</span>
+</div>
+<h2 class="text-headline-lg font-headline-lg text-on-surface">Docker Fundamentals: Zero to Production Deployments</h2>
+<p class="text-body-md font-body-md text-outline">Structured specifically for Indian DevOps job descriptions requiring microservice packaging &amp; CI/CD readiness.</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="text-right">
+<span class="text-label-sm text-outline block">Track Progress</span>
+<span class="text-headline-sm font-bold text-primary">35% Completed</span>
+</div>
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-[0_4px_14px_rgba(47,111,237,0.35)] hover:bg-[#2458C7] transition-all duration-150">
+<span class="material-symbols-outlined text-[18px]" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+<span>Continue Module 2</span>
+</button>
+</div>
+</div>
+<!-- Progress Bar Indicator -->
+<div class="w-full bg-surface-container-high rounded-full h-2 my-4 overflow-hidden">
+<div class="bg-primary h-2 rounded-full transition-all duration-500" style="width: 35%"></div>
+</div>
+<!-- Sequential Modules (Horizontal 3-Step Flow) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-5">
+<!-- Module 1: Completed -->
+<div class="p-4 rounded-xl bg-surface-container-lowest border border-[#10B981]/30 shadow-sm relative">
+<div class="flex items-center justify-between mb-2">
+<span class="px-2 py-0.5 rounded-full bg-[#ECFDF5] text-[#10B981] font-bold text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" data-icon="check_circle">check_circle</span> Module 1 · Completed
+              </span>
+<span class="text-label-sm text-outline">4.5 hrs</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface mb-1">Linux Containers from Scratch</h3>
+<p class="text-body-sm font-body-sm text-outline mb-3">freeCodeCamp · YouTube Playlist · Hinglish &amp; English captions</p>
+<div class="flex items-center justify-between pt-2 border-t border-outline-variant/10 text-label-sm">
+<span class="text-[#10B981] font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="done_all">done_all</span> Test Passed (92%)
+              </span>
+<a class="text-primary hover:underline font-medium" href="#">Review notes</a>
+</div>
+</div>
+<!-- Module 2: In-Progress (Current) -->
+<div class="p-4 rounded-xl bg-[#F8FAFF] border-2 border-primary/40 shadow-sm relative">
+<div class="flex items-center justify-between mb-2">
+<span class="px-2 py-0.5 rounded-full bg-[#EEF2FF] text-[#2F6FED] font-bold text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" data-icon="sync">sync</span> Module 2 · In Progress
+              </span>
+<span class="text-label-sm text-outline">8 hrs</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface mb-1">Docker Architecture &amp; CLI</h3>
+<p class="text-body-sm font-body-sm text-outline mb-3">NPTEL / IIT Madras · Govt Portal · Academic Depth</p>
+<div class="flex items-center justify-between pt-2 border-t border-outline-variant/10 text-label-sm">
+<span class="text-on-surface-variant font-medium">Lesson 4 of 12</span>
+<button class="text-primary font-bold flex items-center gap-0.5 hover:underline">
+                Resume <span class="material-symbols-outlined text-[14px]" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Module 3: Next Up -->
+<div class="p-4 rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm relative opacity-90">
+<div class="flex items-center justify-between mb-2">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-outline font-bold text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" data-icon="lock">lock</span> Module 3 · Next Up
+              </span>
+<span class="text-label-sm text-outline">6 hrs</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface mb-1">Multi-stage Production Builds &amp; Compose</h3>
+<p class="text-body-sm font-body-sm text-outline mb-3">KodeKloud Sandbox · Interactive Lab · Browser Terminal</p>
+<div class="flex items-center justify-between pt-2 border-t border-outline-variant/10 text-label-sm">
+<span class="text-outline">Unlocks after Module 2</span>
+<span class="text-[#FF7A59] font-semibold">₹499 / Free Tier</span>
+</div>
+</div>
+</div>
+<!-- Graph Insight Bar at bottom -->
+<div class="mt-4 p-3 rounded-xl bg-surface-container-low flex items-center gap-3 text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-icon="account_tree">account_tree</span>
+<span class="text-on-surface"><strong>Why this sequence?</strong> Neo4j traversal detected that candidates with hands-on CLI practice prior to production multi-stage caching perform 3.4x better in system design rounds.</span>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- SECTION 3: Comprehensive Resource Directory Grid (6 Bento Cards)         -->
+<!-- ========================================================================= -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="text-headline-md font-headline-md text-on-surface">Verified Learning Catalog</h2>
+<p class="text-body-sm text-outline">All links reviewed for pedagogical quality, Indian recruiter relevance, and code freshness.</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-label-sm text-outline">Sort:</span>
+<select class="bg-surface-container-lowest border border-outline-variant/30 rounded-lg text-label-sm px-2.5 py-1 text-on-surface focus:outline-none focus:border-primary">
+<option>Relevance to Skill Graph</option>
+<option>Highest Rated</option>
+<option>Shortest Duration</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+<!-- CARD 1 -->
+<div class="ambient-card ambient-card-hover rounded-2xl p-5 flex flex-col justify-between">
+<div class="space-y-3">
+<div class="flex items-start justify-between gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-[#EEF2FF] text-[#2F6FED] font-bold text-label-sm">Community Favorite · Hinglish</span>
+<span class="px-2 py-0.5 rounded-full bg-[#ECFDF5] text-[#10B981] font-bold text-label-sm">Free (YouTube)</span>
+</div>
+<div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">Docker for DevOps Beginners in Hinglish</h3>
+<p class="text-body-sm font-body-sm text-outline mt-1">Tech With Hitesh / Nana style creator. Comprehensive zero-to-hero covering cgroups, namespaces, and Docker daemon.</p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant text-[11px] font-medium">Node #204 Mapped</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant text-[11px] font-medium">Zero Setup</span>
+<span class="px-2 py-0.5 rounded bg-[#FFF4ED] text-[#FF7A59] text-[11px] font-medium">Prereqs Verified</span>
+</div>
+</div>
+<div class="pt-4 mt-4 border-t border-outline-variant/20 flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-3 text-outline">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]" data-icon="schedule">schedule</span> 6.5 hrs</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-[#FFB800]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span> 4.9</span>
+</div>
+<button class="flex items-center gap-1 text-primary font-label-md text-label-md hover:underline">
+<span>Start Video</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="open_in_new">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- CARD 2 -->
+<div class="ambient-card ambient-card-hover rounded-2xl p-5 flex flex-col justify-between">
+<div class="space-y-3">
+<div class="flex items-start justify-between gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-[#EEF2FF] text-[#5A45CB] font-bold text-label-sm">Academic Rigor · Govt Certified</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-bold text-label-sm">Free Audit</span>
+</div>
+<div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Virtualization &amp; Container Technologies</h3>
+<p class="text-body-sm font-body-sm text-outline mt-1">NPTEL / IIT Kharagpur faculty. Deep mathematical isolation models, kernel control groups, and hypervisor comparisons.</p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant text-[11px] font-medium">IIT Kharagpur</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant text-[11px] font-medium">Assignments Included</span>
+<span class="px-2 py-0.5 rounded bg-[#EEF2FF] text-primary text-[11px] font-medium">Govt Recognized</span>
+</div>
+</div>
+<div class="pt-4 mt-4 border-t border-outline-variant/20 flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-3 text-outline">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]" data-icon="schedule">schedule</span> 12 hrs</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-[#FFB800]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span> 4.7</span>
+</div>
+<button class="flex items-center gap-1 text-primary font-label-md text-label-md hover:underline">
+<span>Enroll Free</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="open_in_new">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- CARD 3 -->
+<div class="ambient-card ambient-card-hover rounded-2xl p-5 flex flex-col justify-between">
+<div class="space-y-3">
+<div class="flex items-start justify-between gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-[#ECFDF5] text-[#10B981] font-bold text-label-sm">Hands-on Sandbox</span>
+<span class="px-2 py-0.5 rounded-full bg-[#ECFDF5] text-[#10B981] font-bold text-label-sm">Free Browser Lab</span>
+</div>
+<div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Interactive Katacoda &amp; Play-with-Docker Labs</h3>
+<p class="text-body-sm font-body-sm text-outline mt-1">Zero-install live browser terminals. Run real Docker daemons, inspect storage overlays, and mount host volumes securely.</p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant text-[11px] font-medium">Browser Terminal</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant text-[11px] font-medium">Zero RAM Required</span>
+<span class="px-2 py-0.5 rounded bg-[#EEF2FF] text-[#2F6FED] text-[11px] font-medium">Instant Feedback</span>
+</div>
+</div>
+<div class="pt-4 mt-4 border-t border-outline-variant/20 flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-3 text-outline">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]" data-icon="schedule">schedule</span> 4 hrs</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-[#FFB800]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span> 4.8</span>
+</div>
+<button class="flex items-center gap-1 text-primary font-label-md text-label-md hover:underline">
+<span>Launch Terminal</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="terminal">terminal</span>
+</button>
+</div>
+</div>
+<!-- CARD 4 -->
+<div class="ambient-card ambient-card-hover rounded-2xl p-5 flex flex-col justify-between">
+<div class="space-y-3">
+<div class="flex items-start justify-between gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-[#FFF4ED] text-[#FF7A59] font-bold text-label-sm">Interview Goldmine</span>
+<span class="px-2 py-0.5 rounded-full bg-[#ECFDF5] text-[#10B981] font-bold text-label-sm">Free Guide</span>
+</div>
+<div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Production Dockerfile Best Practices &amp; Security Scanning</h3>
+<p class="text-body-sm font-body-sm text-outline mt-1">Snyk &amp; OWASP Container Security Guide. Covers Alpine distroless images, non-root users, Trivy vulnerability scans, and multi-stage layer caching.</p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant text-[11px] font-medium">CVE Scanning</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant text-[11px] font-medium">DevSecOps Standard</span>
+</div>
+</div>
+<div class="pt-4 mt-4 border-t border-outline-variant/20 flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-3 text-outline">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]" data-icon="schedule">schedule</span> 3 hrs</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-[#FFB800]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span> 4.9</span>
+</div>
+<button class="flex items-center gap-1 text-primary font-label-md text-label-md hover:underline">
+<span>Read Handbook</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="menu_book">menu_book</span>
+</button>
+</div>
+</div>
+<!-- CARD 5 -->
+<div class="ambient-card ambient-card-hover rounded-2xl p-5 flex flex-col justify-between">
+<div class="space-y-3">
+<div class="flex items-start justify-between gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-[#EEF2FF] text-[#2F6FED] font-bold text-label-sm">Cloud Aligned</span>
+<span class="px-2 py-0.5 rounded-full bg-[#ECFDF5] text-[#10B981] font-bold text-label-sm">Free on AWS</span>
+</div>
+<div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">AWS ECS &amp; ECR Container Deployment Foundations</h3>
+<p class="text-body-sm font-body-sm text-outline mt-1">AWS Skill Builder India. Pushing Docker images to private registries, configuring task definitions, and IAM role security.</p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant text-[11px] font-medium">AWS CCP / SAA</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant text-[11px] font-medium">Cloud Architecture</span>
+</div>
+</div>
+<div class="pt-4 mt-4 border-t border-outline-variant/20 flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-3 text-outline">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]" data-icon="schedule">schedule</span> 5 hrs</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-[#FFB800]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span> 4.6</span>
+</div>
+<button class="flex items-center gap-1 text-primary font-label-md text-label-md hover:underline">
+<span>Start Pathway</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="cloud">cloud</span>
+</button>
+</div>
+</div>
+<!-- CARD 6 -->
+<div class="ambient-card ambient-card-hover rounded-2xl p-5 flex flex-col justify-between">
+<div class="space-y-3">
+<div class="flex items-start justify-between gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-bold text-label-sm">Troubleshooting Bootcamp</span>
+<span class="px-2.5 py-0.5 rounded-full bg-[#FFF4ED] text-[#FF7A59] font-bold text-label-sm">₹499 (Udemy)</span>
+</div>
+<div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Docker &amp; Kubernetes Practical Troubleshooting Bootcamp</h3>
+<p class="text-body-sm font-body-sm text-outline mt-1">Udemy / Local Partner. Debug OOM kills, crashed containers, volume locks, and bridge network latency with real case studies.</p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant text-[11px] font-medium">Hindi Subtitles</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant text-[11px] font-medium">18 Practice Labs</span>
+</div>
+</div>
+<div class="pt-4 mt-4 border-t border-outline-variant/20 flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-3 text-outline">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]" data-icon="schedule">schedule</span> 14 hrs</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-[#FFB800]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span> 4.8</span>
+</div>
+<button class="flex items-center gap-1 text-primary font-label-md text-label-md hover:underline">
+<span>View Syllabus</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- SECTION 4: Neo4j Graph Integration Panel & Study Notes Drawer             -->
+<!-- ========================================================================= -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-5 pb-8">
+<!-- Prerequisite Graph Node Check (2 Columns) -->
+<div class="lg:col-span-2 ambient-card rounded-2xl p-5 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]" data-icon="account_tree">account_tree</span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Prerequisite Node Check (Neo4j Graph Engine)</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-[#ECFDF5] text-[#10B981] font-bold text-label-sm">100% Ready</span>
+</div>
+<p class="text-body-sm text-outline mb-4">
+              Our graph engine analyzed your verified GitHub commits and assessment badges. All prerequisite nodes for Docker are verified:
+            </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<!-- Prereq Node 1 -->
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low border border-outline-variant/20">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-[#ECFDF5] text-[#10B981] flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]" data-icon="check">check</span>
+</div>
+<div>
+<span class="text-label-md font-bold text-on-surface block">Linux Basics #104</span>
+<span class="text-label-sm text-outline">File permissions, grep, systemd</span>
+</div>
+</div>
+<span class="text-label-sm font-bold text-[#10B981]">Verified</span>
+</div>
+<!-- Prereq Node 2 -->
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low border border-outline-variant/20">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-[#ECFDF5] text-[#10B981] flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]" data-icon="check">check</span>
+</div>
+<div>
+<span class="text-label-md font-bold text-on-surface block">Git &amp; Branching #109</span>
+<span class="text-label-sm text-outline">Merge strategies, repo hygiene</span>
+</div>
+</div>
+<span class="text-label-sm font-bold text-[#10B981]">Verified</span>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/10 flex items-center justify-between text-body-sm text-outline">
+<span>Next Unlocked Graph Target: <strong>Kubernetes Pod Networking (#308)</strong></span>
+<button class="text-primary font-bold hover:underline flex items-center gap-1">
+              View Complete Graph <span class="material-symbols-outlined text-[15px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Downloadable Hinglish Cheat Sheet Panel (1 Column) -->
+<div class="ambient-card rounded-2xl p-5 bg-gradient-to-br from-white to-[#EEF2FF]/40 border border-primary/20 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-2 text-[#2F6FED]">
+<span class="material-symbols-outlined text-[20px]" data-icon="picture_as_pdf">picture_as_pdf</span>
+<span class="text-label-sm font-bold uppercase tracking-wider">Interview Accelerator</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface mb-1">Hinglish Study Notes &amp; Docker Cheat Sheet</h3>
+<p class="text-body-sm font-body-sm text-outline mb-4">
+              1-page printable summary featuring Hindi memory mnemonics for commands, port mapping tricks (`-p host:container`), and top 10 interview questions asked at Flipkart, Swiggy, and Razorpay.
+            </p>
+<div class="p-3 rounded-xl bg-surface-container-lowest border border-outline-variant/20 space-y-1 mb-4">
+<div class="flex items-center justify-between text-label-sm">
+<span class="text-on-surface font-semibold">Format: PDF (A4 Ready)</span>
+<span class="text-outline">1.4 MB</span>
+</div>
+<div class="text-[11px] text-outline">Includes: CLI flags, volume persistence formulas &amp; Docker Compose boilerplate</div>
+</div>
+</div>
+<button class="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-primary text-on-primary font-label-md text-label-md shadow-sm hover:bg-[#2458C7] transition-all">
+<span class="material-symbols-outlined text-[18px]" data-icon="download">download</span>
+<span>Download 1-Page Cheat Sheet</span>
+</button>
+</div>
+</section>
+</div>
+</main>
+</body></html>

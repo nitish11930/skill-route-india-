@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SkillRoute India - AI Career Coach</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Plus Jakarta Sans Font -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-fixed": "#3c0700",
+            "outline": "#737786",
+            "surface-variant": "#e1e1f1",
+            "error-container": "#ffdad6",
+            "on-secondary-fixed": "#190064",
+            "surface-container-highest": "#e1e1f1",
+            "surface-container-high": "#e7e7f6",
+            "secondary-fixed-dim": "#c8bfff",
+            "surface-container-lowest": "#ffffff",
+            "on-surface": "#191b26",
+            "outline-variant": "#c2c6d7",
+            "primary": "#0055ce",
+            "on-secondary": "#ffffff",
+            "tertiary-fixed-dim": "#ffb4a2",
+            "on-primary-fixed-variant": "#0040a0",
+            "surface-dim": "#d9d9e8",
+            "on-tertiary-fixed-variant": "#862208",
+            "tertiary-container": "#c65033",
+            "on-primary-fixed": "#001847",
+            "secondary": "#5a45cb",
+            "tertiary-fixed": "#ffdad2",
+            "inverse-surface": "#2e303b",
+            "surface-container-low": "#f3f2ff",
+            "on-primary": "#ffffff",
+            "surface-container": "#ededfc",
+            "on-surface-variant": "#424654",
+            "secondary-container": "#7360e5",
+            "tertiary": "#a5381d",
+            "on-background": "#191b26",
+            "on-error": "#ffffff",
+            "primary-fixed": "#dae2ff",
+            "on-tertiary-container": "#fffeff",
+            "surface-tint": "#0056d0",
+            "error": "#ba1a1a",
+            "surface-bright": "#fbf8ff",
+            "inverse-on-surface": "#f0efff",
+            "on-tertiary": "#ffffff",
+            "on-secondary-fixed-variant": "#442bb5",
+            "secondary-fixed": "#e5deff",
+            "primary-container": "#2f6fed",
+            "on-primary-container": "#ffffff",
+            "on-secondary-container": "#fffbff",
+            "surface": "#fbf8ff",
+            "background": "#fbf8ff",
+            "on-error-container": "#93000a",
+            "primary-fixed-dim": "#b1c5ff",
+            "inverse-primary": "#b1c5ff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-2xl": "2.5rem",
+            "space-md": "1rem",
+            "margin": "1rem",
+            "margin-desktop": "2rem",
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem",
+            "gutter": "1.25rem",
+            "margin-tablet": "1.5rem",
+            "space-xl": "1.75rem",
+            "space-lg": "1.25rem",
+            "gutter-desktop": "1.5rem"
+          },
+          "fontFamily": {
+            "label-sm": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #F4F5FB;
+      color: #191b26;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .lumina-card {
+      background: #FFFFFF;
+      border: 1px solid rgba(226, 228, 240, 0.7);
+      border-radius: 18px;
+      box-shadow: 0 4px 20px -2px rgba(90, 80, 140, 0.06), 0 1px 3px 0 rgba(90, 80, 140, 0.04);
+    }
+    .lumina-card-hover {
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .lumina-card-hover:hover {
+      box-shadow: 0 12px 28px -4px rgba(90, 80, 140, 0.12), 0 4px 8px -2px rgba(90, 80, 140, 0.04);
+      transform: translateY(-1px);
+    }
+    /* Custom subtle scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D9D9E8;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #C2C6D7;
+    }
+  </style>
+</head>
+<body class="h-full flex overflow-hidden antialiased text-on-surface">
+<!-- ==================== SHARED COMPONENT: SideNavBar ==================== -->
+<aside class="fixed top-0 left-0 h-full w-64 z-40 bg-surface-container-lowest dark:bg-inverse-surface border-r border-outline-variant/30 dark:border-outline-variant/10 shadow-sm dark:shadow-none flex flex-col justify-between py-6 px-4">
+<!-- Top Branding & CTA Section -->
+<div class="flex flex-col gap-5">
+<!-- Workspace Brand Anchor -->
+<div class="flex items-center gap-3 px-2">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary to-secondary-container flex items-center justify-center text-on-primary shadow-md shadow-primary/20">
+<span class="material-symbols-outlined text-2xl font-bold">hub</span>
+</div>
+<div class="flex flex-col leading-tight">
+<span class="text-headline-sm font-headline-sm font-bold text-on-surface dark:text-inverse-on-surface tracking-tight">SkillRoute</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant dark:text-outline-variant">India Workspace</span>
+</div>
+</div>
+<!-- Action Button CTA -->
+<button class="w-full flex items-center justify-center gap-2 bg-primary-container hover:bg-primary text-on-primary py-2.5 px-4 rounded-xl shadow-[0_4px_14px_rgba(47,111,237,0.35)] active:scale-[0.98] transition-all duration-150">
+<span class="material-symbols-outlined text-lg">add</span>
+<span class="text-label-md font-label-md">New Goal / Track</span>
+</button>
+<!-- Navigation Tab List -->
+<nav class="flex flex-col gap-1 mt-1">
+<!-- 1. Home -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant dark:text-outline-variant font-medium hover:bg-surface-container dark:hover:bg-surface-variant/50 hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150 active:scale-[0.98]" href="#home">
+<span class="material-symbols-outlined text-[20px]">home</span>
+<span class="text-label-md font-label-md">Home</span>
+</a>
+<!-- 2. Tasks -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant dark:text-outline-variant font-medium hover:bg-surface-container dark:hover:bg-surface-variant/50 hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150 active:scale-[0.98]" href="#tasks">
+<span class="material-symbols-outlined text-[20px]">check_box</span>
+<span class="text-label-md font-label-md">Tasks</span>
+<span class="ml-auto bg-surface-container text-on-surface-variant text-[11px] font-semibold px-2 py-0.5 rounded-full">4</span>
+</a>
+<!-- 3. Docs -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant dark:text-outline-variant font-medium hover:bg-surface-container dark:hover:bg-surface-variant/50 hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150 active:scale-[0.98]" href="#docs">
+<span class="material-symbols-outlined text-[20px]">description</span>
+<span class="text-label-md font-label-md">Docs</span>
+</a>
+<!-- 4. Goals -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface-variant dark:text-outline-variant font-medium hover:bg-surface-container dark:hover:bg-surface-variant/50 hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150 active:scale-[0.98]" href="#goals">
+<span class="material-symbols-outlined text-[20px]">flag</span>
+<span class="text-label-md font-label-md">Goals</span>
+</a>
+<!-- 5. Chat (ACTIVE MATCH: AI Career Coach Chat) -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-surface-container-high dark:bg-surface-variant text-primary font-semibold shadow-xs active:scale-[0.98] transition-all duration-150" href="#chat">
+<span class="material-symbols-outlined text-[20px] text-primary" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+<span class="text-label-md font-label-md text-primary">Chat</span>
+<span class="ml-auto flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+</a>
+<!-- Sub-ecosystem career tools -->
+<div class="pt-3 pb-1 px-3">
+<span class="text-label-sm font-label-sm text-outline tracking-wider uppercase">Skill Insights</span>
+</div>
+<a class="flex items-center gap-3 px-3.5 py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors duration-150 text-body-sm font-body-sm" href="#matrix">
+<span class="material-symbols-outlined text-[18px]">account_tree</span>
+<span>Knowledge Graph</span>
+</a>
+<a class="flex items-center gap-3 px-3.5 py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors duration-150 text-body-sm font-body-sm" href="#market">
+<span class="material-symbols-outlined text-[18px]">domain</span>
+<span>Bengaluru &amp; Pune Hub</span>
+</a>
+</nav>
+</div>
+<!-- Bottom User & Settings Footer -->
+<div class="flex flex-col gap-2 pt-4 border-t border-outline-variant/30">
+<!-- Learner Badge -->
+<div class="flex items-center gap-3 p-2 rounded-xl bg-surface-container-low/70 border border-outline-variant/20 mb-1">
+<img alt="Manjeet S." class="w-9 h-9 rounded-full object-cover ring-2 ring-primary/20" data-alt="Professional headshot of a young South Asian software developer wearing a smart casual jacket with soft studio lighting and an optimistic expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGt2Lt2LKVH46tFuxOQAcVFOfknFJdjsa9I7_NUYlFl1lLT8OY8FOdBvHX3t9Tep6E39VXYvIatYksD67iHEqNn6EW5u8mT_noIps_gdQa6bLkqWhCFLAiCS-M-iUS-PaB9g4_76l1qt2nVwTgcdXTFi19mjcZh-EiG2C3gUjPRL4zc46SW5ZsWAJOSBG9xVKxEWy01doDLsRocdfucyKl_qvIiJhHaye5F_BJ-KOU5dgBzqt19dmG"/>
+<div class="flex flex-col truncate">
+<span class="text-label-md font-label-md text-on-surface truncate">Manjeet Sharma</span>
+<span class="text-body-sm font-body-sm text-outline truncate">Target: DevOps Eng.</span>
+</div>
+</div>
+<a class="flex items-center gap-3 px-3.5 py-2 rounded-xl text-on-surface-variant dark:text-outline-variant font-medium hover:bg-surface-container dark:hover:bg-surface-variant/50 hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150" href="#settings">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="text-label-md font-label-md">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-3.5 py-2 rounded-xl text-on-surface-variant dark:text-outline-variant font-medium hover:bg-surface-container dark:hover:bg-surface-variant/50 hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150" href="#help">
+<span class="material-symbols-outlined text-[20px]">help</span>
+<span class="text-label-md font-label-md">Help</span>
+</a>
+</div>
+</aside>
+<!-- ==================== MAIN APPLICATION WRAPPER ==================== -->
+<div class="ml-64 w-[calc(100%-16rem)] flex flex-col h-full bg-[#F4F5FB]">
+<!-- ==================== SHARED COMPONENT: TopNavBar ==================== -->
+<header class="flex justify-between items-center h-16 px-8 sticky top-0 z-30 bg-surface-container-lowest/90 dark:bg-inverse-surface/90 backdrop-blur-md border-b border-outline-variant/20 dark:border-outline-variant/10 shadow-[0_4px_20px_-2px_rgba(90,80,140,0.06)] dark:shadow-none">
+<!-- Search & Left Actions -->
+<div class="flex items-center gap-5 w-1/3">
+<div class="relative w-full max-w-xs">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">search</span>
+<input class="w-full h-9 pl-9 pr-12 text-body-sm font-body-sm bg-surface-container-low border border-outline-variant/30 rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all placeholder:text-outline/70" placeholder="Search roadmap, graph nodes, skills..." type="text"/>
+<kbd class="absolute right-2.5 top-2 px-1.5 py-0.5 text-[10px] font-semibold text-outline bg-surface-container rounded border border-outline-variant/40">⌘K</kbd>
+</div>
+</div>
+<!-- Center Navigation Links -->
+<nav class="hidden lg:flex items-center gap-6">
+<a class="text-primary dark:text-inverse-primary font-semibold border-b-2 border-primary dark:border-inverse-primary pb-1 text-label-md font-label-md" href="#overview">Overview</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-on-surface dark:hover:text-inverse-on-surface font-medium pb-1 text-label-md font-label-md" href="#list">List</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-on-surface dark:hover:text-inverse-on-surface font-medium pb-1 text-label-md font-label-md" href="#board">Board</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-on-surface dark:hover:text-inverse-on-surface font-medium pb-1 text-label-md font-label-md" href="#timeline">Timeline</a>
+</nav>
+<!-- Trailing Action Icons & System Health Pills -->
+<div class="flex items-center gap-3">
+<!-- Live Neo4j & LLM Status Indicator -->
+<div class="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/60 text-label-sm font-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+<span>Neo4j AuraDB Active (320ms)</span>
+</div>
+<button class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-variant/40 transition-colors duration-150 active:scale-95" title="Notifications">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+</button>
+<button class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-variant/40 transition-colors duration-150 active:scale-95" title="Saved Insights">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<button class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-variant/40 transition-colors duration-150 active:scale-95" title="Learning Cart / Saved Modules">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+</button>
+<div class="h-5 w-px bg-outline-variant/40 mx-1"></div>
+<!-- Profile trigger -->
+<button class="flex items-center gap-2 pl-1 pr-2 py-1 rounded-full hover:bg-surface-container transition-colors">
+<img alt="User profile photo" class="w-7 h-7 rounded-full object-cover" data-alt="Close-up avatar thumbnail of Manjeet S smiling in front of tech workspace with natural soft ambient backlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkgcWxFlX4ZBVFQu07FWy6aEf236qRuzSM3iraCwpYyaxyc2THdboU_nxGJz853eaRMWapQe6UPcAYV6JFP60yBZ3guDYuMJ3-D4UZ8JiCIy7an0YngrwnKPpZDr3Z9YtrGaHmyHRi9a7a-H8ooGu6Gqp0FKEJKbvXZPH6AGeg8bhaIeLdf6PTXYRr6Q_cUy6vtdRhCtUliLiQAC1xNiKJVCk8dae0JGdNXzOfMxus5WmTn0wCideF"/>
+<span class="material-symbols-outlined text-outline text-[18px]">expand_more</span>
+</button>
+</div>
+</header>
+<!-- ==================== DUAL-PANE WORKSPACE BODY ==================== -->
+<div class="flex flex-1 overflow-hidden">
+<!-- ==================== PRIMARY CONVERSATION CANVAS (LEFT 70%) ==================== -->
+<main class="flex-1 flex flex-col h-[calc(100vh-4rem)] overflow-y-auto px-6 lg:px-8 py-5">
+<!-- Breadcrumb & Workspace Session Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-outline-variant/30">
+<div>
+<div class="flex items-center gap-1.5 text-body-sm font-body-sm text-outline mb-1">
+<span>Workspace</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>AI Coach</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface font-semibold">Career Guidance Session</span>
+</div>
+<div class="flex items-center gap-3">
+<h1 class="text-headline-lg font-headline-lg text-on-surface tracking-tight">AI Career Coach</h1>
+<span class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-blue-50 text-primary border border-primary/20 text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[14px]">psychology</span>
+                Grounded LLM v4.2
+              </span>
+</div>
+</div>
+<div class="flex items-center gap-2 self-start sm:self-center">
+<span class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest border border-outline-variant/50 text-on-surface text-label-md font-label-md shadow-xs flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+              Target: DevOps Engineer
+            </span>
+<button class="p-2 rounded-full hover:bg-surface-container-high text-outline hover:text-on-surface transition-colors" title="Export Thread">
+<span class="material-symbols-outlined text-[18px]">ios_share</span>
+</button>
+</div>
+</div>
+<!-- Quick Prompts / Recommendation Chips -->
+<div class="pt-4 pb-2">
+<p class="text-label-sm font-label-sm text-outline uppercase tracking-wider mb-2.5">Suggested Next Queries</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-2.5">
+<button class="lumina-card lumina-card-hover p-3 text-left flex items-start gap-2.5 group cursor-pointer border border-outline-variant/40 bg-surface-container-lowest">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5 group-hover:scale-110 transition-transform">help_outline</span>
+<span class="text-body-sm font-body-sm font-medium text-on-surface group-hover:text-primary transition-colors">Why Docker before Kubernetes?</span>
+</button>
+<button class="lumina-card lumina-card-hover p-3 text-left flex items-start gap-2.5 group cursor-pointer border border-outline-variant/40 bg-surface-container-lowest">
+<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5 group-hover:scale-110 transition-transform">payments</span>
+<span class="text-body-sm font-body-sm font-medium text-on-surface group-hover:text-secondary transition-colors">Compare DevOps vs Cloud Support salary in Bengaluru</span>
+</button>
+<button class="lumina-card lumina-card-hover p-3 text-left flex items-start gap-2.5 group cursor-pointer border border-outline-variant/40 bg-surface-container-lowest">
+<span class="material-symbols-outlined text-amber-600 text-[18px] mt-0.5 group-hover:scale-110 transition-transform">translate</span>
+<span class="text-body-sm font-body-sm font-medium text-on-surface group-hover:text-amber-600 transition-colors">Explain my skill gaps in simple Hinglish (हिंग्लिश)</span>
+</button>
+<button class="lumina-card lumina-card-hover p-3 text-left flex items-start gap-2.5 group cursor-pointer border border-outline-variant/40 bg-surface-container-lowest">
+<span class="material-symbols-outlined text-emerald-600 text-[18px] mt-0.5 group-hover:scale-110 transition-transform">school</span>
+<span class="text-body-sm font-body-sm font-medium text-on-surface group-hover:text-emerald-600 transition-colors">Find free NPTEL / freeCodeCamp resources</span>
+</button>
+</div>
+</div>
+<!-- Conversation Timeline -->
+<div class="flex-1 space-y-5 py-4">
+<!-- 1. AI Welcome Card -->
+<div class="lumina-card p-5 bg-surface-container-lowest flex gap-4">
+<div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-primary to-indigo-500 text-on-primary flex items-center justify-center shrink-0 shadow-md shadow-primary/20">
+<span class="material-symbols-outlined text-2xl">neurology</span>
+</div>
+<div class="space-y-2 flex-1">
+<div class="flex items-center justify-between">
+<span class="text-headline-sm font-headline-sm text-on-surface font-semibold">SkillRoute Career Navigator</span>
+<span class="text-body-sm font-body-sm text-outline">10:40 AM</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">
+<strong class="text-on-surface font-semibold">Namaste Manjeet!</strong> I am your AI Career Navigator. I cross-reference your verified competencies (<span class="font-semibold text-primary">Linux, Git</span>) against real-time Indian hiring graphs across Bengaluru, Pune, and Hyderabad tech hubs. How can we optimize your roadmap today?
+              </p>
+</div>
+</div>
+<!-- 2. User Question Card -->
+<div class="flex justify-end">
+<div class="max-w-2xl bg-primary text-on-primary p-4 rounded-2xl rounded-tr-sm shadow-md shadow-primary/10 space-y-1.5">
+<div class="flex items-center justify-between gap-4 text-primary-fixed text-label-sm font-label-sm">
+<span>Manjeet Sharma</span>
+<span>10:42 AM</span>
+</div>
+<p class="text-body-md font-body-md text-white font-medium">
+                I know Linux and Git. I want to become a DevOps Engineer. What should I learn next?
+              </p>
+</div>
+</div>
+<!-- 3. AI Grounded In-Depth Response Card -->
+<div class="lumina-card p-6 bg-surface-container-lowest space-y-5 border-l-4 border-l-primary">
+<!-- Header of Response -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-primary-container/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">smart_toy</span>
+</div>
+<div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface font-semibold">Recommended Path: Containerization First</h3>
+<span class="text-body-sm font-body-sm text-outline">Deterministic reasoning via Skill Graph traversal</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+                Verified Graph Insight
+              </span>
+</div>
+<!-- Synthesis Text -->
+<div class="text-body-md font-body-md text-on-surface-variant space-y-3 leading-relaxed">
+<p>
+                Based on your verified skills (<strong class="text-on-surface">Linux, Git</strong>) and target of <strong class="text-on-surface">DevOps Engineer</strong>, mastering <strong class="text-primary font-semibold">Docker fundamentals</strong> is your highest-impact next move before touching orchestration like Kubernetes.
+              </p>
+<!-- Rationale Bullet Points -->
+<ul class="space-y-2 pl-2">
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-base mt-1">check_circle</span>
+<span><strong>Linux OS Fluency:</strong> Your file system &amp; systemd knowledge directly maps to container isolation primitives (cgroups &amp; namespaces).</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-base mt-1">check_circle</span>
+<span><strong>Git-to-Image Pipelines:</strong> Packaging code into immutable OCI container images is prerequisite for every CI/CD tool (GitHub Actions, Jenkins).</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-base mt-1">check_circle</span>
+<span><strong>Orchestration Dependency:</strong> In Indian hiring standards, trying to learn Kubernetes without deep Docker mental models leads to high drop-out rates.</span>
+</li>
+</ul>
+</div>
+<!-- Embedded Interactive Graph Chain Card -->
+<div class="p-4 rounded-xl bg-surface-container-low/70 border border-outline-variant/30 space-y-3">
+<div class="flex items-center justify-between">
+<span class="text-label-md font-label-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">account_tree</span>
+                  Dependency Chain: Neo4j AuraDB Verification
+                </span>
+<span class="text-label-sm font-label-sm text-outline">Confidence: 96.4%</span>
+</div>
+<!-- Visual Flow Graph -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-3 p-3 bg-surface-container-lowest rounded-lg border border-outline-variant/20">
+<!-- Node 1: Completed -->
+<div class="flex items-center gap-2.5 px-3 py-2 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200">
+<span class="material-symbols-outlined text-[18px] text-emerald-600">check_circle</span>
+<div>
+<div class="text-label-sm font-label-sm font-bold">Linux &amp; Git</div>
+<div class="text-[10px] text-emerald-700">Verified Competency</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline rotate-90 sm:rotate-0">trending_flat</span>
+<!-- Node 2: Active Recommendation -->
+<div class="flex items-center gap-2.5 px-4 py-2.5 rounded-lg bg-blue-50 text-primary border-2 border-primary shadow-xs">
+<span class="material-symbols-outlined text-[20px] text-primary">play_circle</span>
+<div>
+<div class="text-label-sm font-label-sm font-bold">Docker Fundamentals</div>
+<div class="text-[10px] text-primary/80 font-medium">Immediate Next Step (2.5 Wks)</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline rotate-90 sm:rotate-0">trending_flat</span>
+<!-- Node 3: Future Goal -->
+<div class="flex items-center gap-2.5 px-3 py-2 rounded-lg bg-surface-container text-on-surface-variant border border-outline-variant/40 opacity-75">
+<span class="material-symbols-outlined text-[18px] text-outline">lock</span>
+<div>
+<div class="text-label-sm font-label-sm font-bold">Kubernetes (K8s)</div>
+<div class="text-[10px] text-outline">Prerequisite Blocked</div>
+</div>
+</div>
+</div>
+<!-- Downstream Market Impact -->
+<div class="flex items-center justify-between text-body-sm font-body-sm pt-1">
+<span class="text-outline">Downstream hiring potential:</span>
+<span class="font-semibold text-emerald-600 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+                  +42% interview eligibility in Bengaluru &amp; Pune tech corridors
+                </span>
+</div>
+</div>
+<!-- Recommended Course / Resource Module Card -->
+<div class="lumina-card p-4 border border-outline-variant/40 bg-surface-container-lowest flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+<div class="flex items-center gap-3.5">
+<div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center font-bold text-lg border border-amber-200 shrink-0">
+<span class="material-symbols-outlined text-2xl">terminal</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="text-label-md font-label-md text-on-surface">Docker Containers Bootcamp</span>
+<span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-[10px] font-bold">FREE</span>
+</div>
+<p class="text-body-sm font-body-sm text-outline mt-0.5">freeCodeCamp · 4.5 hrs · Hands-on Labs with English + Hinglish companion notes</p>
+</div>
+</div>
+<div class="flex items-center gap-2 w-full sm:w-auto">
+<button class="flex-1 sm:flex-initial px-4 py-2 rounded-xl border border-outline-variant hover:bg-surface-container text-on-surface text-label-md font-label-md transition-colors">
+                  Add to Roadmap
+                </button>
+<button class="flex-1 sm:flex-initial px-5 py-2 rounded-xl bg-primary text-on-primary hover:bg-primary/90 text-label-md font-label-md shadow-sm transition-all active:scale-95">
+                  Start Module
+                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Chat Composer Area -->
+<div class="sticky bottom-0 pt-2 pb-4 bg-gradient-to-t from-[#F4F5FB] via-[#F4F5FB] to-transparent">
+<div class="lumina-card p-3 shadow-lg bg-surface-container-lowest border border-outline-variant/50 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/20 transition-all">
+<!-- Composer Text Area -->
+<textarea class="w-full resize-none border-0 p-2 text-body-md font-body-md text-on-surface focus:outline-none focus:ring-0 placeholder:text-outline bg-transparent" placeholder="Ask anything about your roadmap, skill gaps, or compare roles... (Press Enter to send)" rows="2"></textarea>
+<!-- Bottom Control Toolbar -->
+<div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-outline-variant/20">
+<!-- Left switches & icons -->
+<div class="flex items-center gap-3">
+<!-- Hinglish Mode Switch -->
+<label class="flex items-center gap-2 cursor-pointer select-none px-2 py-1 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="relative inline-flex items-center">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-7 h-4 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-primary"></div>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface">Hinglish Mode (हिंग्लिश)</span>
+</label>
+<div class="h-4 w-px bg-outline-variant/30"></div>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container transition-colors" title="Attach Code or Resume">
+<span class="material-symbols-outlined text-[18px]">attachment</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container transition-colors" title="Voice Input">
+<span class="material-symbols-outlined text-[18px]">mic</span>
+</button>
+<span class="hidden md:inline-flex items-center gap-1 text-[11px] text-outline font-medium">
+<span class="material-symbols-outlined text-[13px] text-emerald-600">bolt</span>
+                  Graph Reranker: ~320ms
+                </span>
+</div>
+<!-- Right Send Pill -->
+<div class="flex items-center gap-2">
+<button class="px-5 py-2 rounded-full bg-primary hover:bg-primary/90 text-on-primary text-label-md font-label-md flex items-center gap-2 shadow-md shadow-primary/25 active:scale-95 transition-all">
+<span>Send</span>
+<span class="material-symbols-outlined text-[16px]">send</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- ==================== CONTEXT INSPECTOR SIDEBAR (RIGHT 30%) ==================== -->
+<aside class="w-80 lg:w-96 border-l border-outline-variant/30 bg-surface-container-lowest/60 backdrop-blur-sm overflow-y-auto p-5 space-y-5 hidden md:block">
+<!-- Section Header -->
+<div class="flex items-center justify-between pb-2 border-b border-outline-variant/30">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+<h2 class="text-headline-sm font-headline-sm text-on-surface font-semibold">Learner Context</h2>
+</div>
+<span class="text-label-sm font-label-sm text-outline">Session Live</span>
+</div>
+<!-- 1. Learner Profile & Target Goal Widget -->
+<div class="lumina-card p-4 bg-surface-container-lowest space-y-3">
+<div class="flex items-center justify-between">
+<span class="text-label-md font-label-md text-on-surface font-bold">Manjeet's Velocity</span>
+<span class="px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-700 text-label-sm font-label-sm">Level: Early Career</span>
+</div>
+<!-- Target Track -->
+<div class="p-2.5 rounded-xl bg-surface-container-low border border-outline-variant/30">
+<div class="text-[11px] text-outline uppercase font-semibold">Target Specialization</div>
+<div class="text-body-md font-body-md font-bold text-on-surface mt-0.5">DevOps Engineer</div>
+<div class="text-[12px] text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">location_on</span>
+              Bengaluru, Pune, Hyderabad Focus
+            </div>
+</div>
+<!-- Progress Bar -->
+<div class="space-y-1.5 pt-1">
+<div class="flex justify-between text-body-sm font-body-sm">
+<span class="text-outline">Core Competencies:</span>
+<span class="font-bold text-on-surface">6 / 12 (50%)</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-primary h-2 rounded-full w-1/2"></div>
+</div>
+</div>
+</div>
+<!-- 2. Active Session Configuration -->
+<div class="lumina-card p-4 bg-surface-container-lowest space-y-3">
+<div class="text-label-md font-label-md text-on-surface font-bold">Active Graph Parameters</div>
+<div class="space-y-2 text-body-sm font-body-sm">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<span class="text-outline">Language Mode</span>
+<span class="font-semibold text-primary">EN + Hinglish</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<span class="text-outline">Graph Grounding</span>
+<span class="font-semibold text-emerald-700">Strict Neo4j (No hallucination)</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<span class="text-outline">Market Base</span>
+<span class="font-semibold text-on-surface">India Q2 Tech Index</span>
+</div>
+</div>
+</div>
+<!-- 3. Key Career Bottlenecks Card -->
+<div class="lumina-card p-4 bg-surface-container-lowest space-y-3 border-l-4 border-l-amber-500">
+<div class="flex items-center gap-2 text-amber-700">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+<span class="text-label-md font-label-md font-bold">Current Roadmap Blocker</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-normal">
+            Kubernetes &amp; CI/CD deployment tracks remain <strong>locked</strong> until Docker daemon management and container image optimization are validated.
+          </p>
+<div class="flex items-center justify-between pt-1">
+<span class="text-[11px] text-outline">Estimated resolution time:</span>
+<span class="text-label-sm font-label-sm font-bold text-primary">14 Days</span>
+</div>
+</div>
+<!-- 4. Pinned / Saved Insights -->
+<div class="lumina-card p-4 bg-surface-container-lowest space-y-3">
+<div class="flex items-center justify-between">
+<span class="text-label-md font-label-md text-on-surface font-bold">Saved Coach Insights</span>
+<span class="text-label-sm font-label-sm text-outline">2 Pinned</span>
+</div>
+<div class="space-y-2.5">
+<div class="p-2.5 rounded-xl border border-outline-variant/30 hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center gap-1.5 text-label-sm font-label-sm text-primary mb-1">
+<span class="material-symbols-outlined text-[14px]">bookmark</span>
+                Market Insight
+              </div>
+<p class="text-body-sm font-body-sm font-medium text-on-surface">Bengaluru Cloud start-ups prioritize Linux bash script tests in Round 1.</p>
+</div>
+<div class="p-2.5 rounded-xl border border-outline-variant/30 hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center gap-1.5 text-label-sm font-label-sm text-secondary mb-1">
+<span class="material-symbols-outlined text-[14px]">bookmark</span>
+                Salary Benchmark
+              </div>
+<p class="text-body-sm font-body-sm font-medium text-on-surface">Junior DevOps CTC ranges ₹7.5L - ₹11.2L with Docker + Git competence.</p>
+</div>
+</div>
+</div>
+<!-- Help & Verification Footer Note -->
+<div class="p-3 text-center">
+<p class="text-[11px] text-outline leading-relaxed">
+            Data sourced from SkillRoute India Graph Ecosystem. Updated 4 hrs ago from 2,400+ tech job openings.
+          </p>
+</div>
+</aside>
+</div>
+</div>
+<!-- Client Interaction Script for Tab Toggles and Message Sending -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const textarea = document.querySelector('textarea');
+      if (textarea) {
+        textarea.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            if (textarea.value.trim().length > 0) {
+              textarea.value = '';
+              // Visual feedback
+              const sendBtn = textarea.closest('.lumina-card').querySelector('button.bg-primary');
+              if (sendBtn) {
+                sendBtn.classList.add('scale-95');
+                setTimeout(() => sendBtn.classList.remove('scale-95'), 150);
+              }
+            }
+          }
+        });
+      }
+    });
+  </script>
+</body></html>
