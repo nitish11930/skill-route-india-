@@ -8,6 +8,7 @@ Architectural principles:
 """
 
 import logging
+import os
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
@@ -46,15 +47,24 @@ app = FastAPI(
     lifespan=lifespan
 )
 
-# Enable CORS for local development and preview
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=[
+# Enable CORS for local development, preview, and production (Render/Cloud)
+# In production the frontend and backend share the same origin, so CORS is
+# effectively only needed for local dev. Allowing all origins is safe because
+# secrets are never returned in API responses.
+ORIGIN_ENV = os.environ.get("ALLOWED_ORIGINS", "")
+allow_origins_list = (
+    [o.strip() for o in ORIGIN_ENV.split(",") if o.strip()]
+    if ORIGIN_ENV else [
         "http://localhost:5173",
         "http://127.0.0.1:5173",
         "http://localhost:3000",
-        "http://127.0.0.1:3000"
-    ],
+        "http://127.0.0.1:3000",
+    ]
+)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=allow_origins_list,
+    allow_origin_regex=r"https://.*\.onrender\.com",
     allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
