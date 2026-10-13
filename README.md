@@ -1,8 +1,8 @@
 <div align="center">
 
-# SkillRoute India 🚀
+# SkillRoute India 🚀 
 ### AI-Powered Career Navigator & Prerequisite Graph Engine
-**Tailored for India's GCC & Product Tech Ecosystem**
+**Tailored for India's GCC & Product Tech Ecosystem** 
 
 [![Python 3.9+](https://img.shields.io/badge/Python-3.9+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
