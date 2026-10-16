@@ -98,7 +98,7 @@ export const AICareerCoachView: React.FC<AICareerCoachViewProps> = ({
   }, [initialPrompt, handleSend, onClearInitialPrompt])
 
   return (
-    <div className="flex flex-col lg:flex-row gap-6 p-6 max-w-7xl mx-auto h-[calc(100vh-80px)]">
+    <div className="flex flex-col lg:flex-row gap-6 p-6 max-w-7xl mx-auto min-h-[600px] lg:h-[calc(100dvh-100px)]">
       {/* Main Chat Interface */}
       <div className="flex-1 bg-white rounded-3xl border border-[#E6E8F2] shadow-card flex flex-col overflow-hidden">
         {/* Coach Header */}
@@ -122,7 +122,7 @@ export const AICareerCoachView: React.FC<AICareerCoachViewProps> = ({
 
           <div className="text-[11px] text-[#626784] bg-[#F4F5FB] px-2.5 py-1 rounded-xl hidden sm:flex items-center gap-1.5 border border-[#E6E8F2]">
             <span className="material-symbols-outlined text-[14px] text-[#2F6FED]">shield</span>
-            <span>Zero Hallucination Guardrail</span>
+            <span>Graph-backed guidance · verify advice</span>
           </div>
         </div>
 

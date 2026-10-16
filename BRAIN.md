@@ -38,3 +38,9 @@ Onboarding (all 26 skills), five target roles, scored gaps, dependency graph, ph
 
 ## Review rules
 Read this file first; avoid rereading the whole project. Preserve reviewed graph-source labeling, deterministic ordering, input validation, atomic persistence and isolated tests. Never overwrite `.env`, leak credentials, silently seed remotely, or execute LLM-generated Cypher. Update this context only with actual results.
+
+## Refinement, 16 October 2026
+- Independent graph/coach status labels; combined health description no longer claims in-memory data when Neo4j is live. Configured Gemini remains explicitly unverified until generation succeeds.
+- Removed absolute hallucination guarantee and design-tool copy from product UI. CTC fixed/variable units are annual with illustrative-scenario disclosure; no false readiness-based pricing claim.
+- Mobile target-role selector, visible coach status, 44px touch targets, keyboard focus, reduced motion; readiness meter correctly renders zero. Completion remains a self-report, not a verified assessment.
+- Validation: production build passes; 24 isolated backend tests pass including mixed integration modes. Lint passes with two existing effect warnings. Mobile 390px checked with no document overflow; original exports and .env preserved.

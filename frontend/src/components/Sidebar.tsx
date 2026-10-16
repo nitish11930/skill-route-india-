@@ -30,7 +30,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
     <>
     <div className="md:hidden w-full bg-white border-b border-[#E6E8F2] p-4 flex items-center justify-between gap-3">
       <strong className="text-[#2F6FED] whitespace-nowrap">SkillRoute India</strong>
-      <select aria-label="Navigate SkillRoute" value={activeTab} onChange={e => onSelectTab(e.target.value as NavTab)} className="text-xs rounded-xl border border-[#E6E8F2] p-2 min-w-0">
+      <select aria-label="Navigate SkillRoute" value={activeTab} onChange={e => onSelectTab(e.target.value as NavTab)} className="text-xs rounded-xl border border-[#E6E8F2] p-2 min-w-0 min-h-11 flex-1 max-w-[220px]">
         {navItems.map(item => <option key={item.id} value={item.id}>{item.label}</option>)}
       </select>
     </div>

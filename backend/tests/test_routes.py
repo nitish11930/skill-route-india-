@@ -93,3 +93,18 @@ def test_user_profile_and_skill_toggle():
         assert test_skill not in current_skills
     else:
         assert test_skill in current_skills
+
+@pytest.mark.parametrize("graph_live,coach_live,configured", [
+    (True, False, True), (False, True, True), (True, True, True), (False, False, False),
+])
+def test_health_describes_each_integration(monkeypatch, graph_live, coach_live, configured):
+    from backend.app.routes import health
+    monkeypatch.setattr(health.neo4j_client, "check_health", lambda: {"connected": graph_live})
+    monkeypatch.setattr(health.gemini_coach, "check_health", lambda: {"connected": coach_live})
+    monkeypatch.setattr(health.settings, "gemini_api_key", "test-key" if configured else "")
+    monkeypatch.setattr(health.settings, "gemini_model", "test-model")
+    data = health.get_health_status()
+    assert data["isDemoMode"] == (not (graph_live and coach_live))
+    description = data["modeDescription"]
+    assert ("Graph: live Neo4j." if graph_live else "Graph: in-memory demo.") in description
+    assert ("verified Gemini." if coach_live else "unverified; fallback available." if configured else "deterministic demo fallback.") in description

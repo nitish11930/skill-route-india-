@@ -28,13 +28,13 @@ export const PrototypeLabView: React.FC = () => {
             <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-white/20 text-white backdrop-blur-xs">
               Prototype Sandbox Hub
             </span>
-            <span className="text-xs text-white/80">Stitch Screen Suite</span>
+            <span className="text-xs text-white/80">Practice with sample data</span>
           </div>
           <h2 className="text-xl font-bold tracking-tight">
             GCC Ecosystem Technical Prototypes
           </h2>
           <p className="text-xs text-white/80 max-w-2xl">
-            Faithfully ported from the Stitch design system. These 6 specialized modules explore simulated interview triage, CTC negotiation modeling, recruiter talent pipelines, and portfolio verification.
+            Explore six practice modules for simulated interview triage, CTC negotiation modeling, recruiter talent pipelines, and portfolio verification.
           </p>
         </div>
 
@@ -80,7 +80,7 @@ export const PrototypeLabView: React.FC = () => {
                 Offer Negotiation &amp; CTC Benchmark Simulator
               </h3>
               <p className="text-xs text-[#8B90A7]">
-                Model expected compensation bands based on prerequisite readiness scores and GCC hiring percentiles.
+                Explore an illustrative offer using your current CTC, sample company-tier multipliers and variable-pay split.
               </p>
             </div>
             <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#EEF2FF] text-[#2F6FED]">
@@ -140,7 +140,7 @@ export const PrototypeLabView: React.FC = () => {
             <div className="flex flex-col justify-between p-5 bg-gradient-to-tr from-[#F0EEFE] to-white rounded-2xl border border-[#2F6FED]/20">
               <div>
                 <span className="text-[11px] font-bold uppercase text-[#7C5CFC] tracking-wider">
-                  Projected Benchmark Offer
+                  Illustrative Annual Offer
                 </span>
                 <div className="text-3xl font-extrabold text-[#1E2238] my-2">
                   ₹{estimatedOffer} Lakhs <span className="text-xs font-normal text-[#626784]">PA</span>
@@ -151,13 +151,14 @@ export const PrototypeLabView: React.FC = () => {
                 </div>
               </div>
 
+              <p className="mt-3 text-xs text-[#626784]">Illustrative scenario, not a market benchmark or take-home estimate. Taxes, deductions and equity vesting are excluded.</p>
               <div className="mt-4 pt-4 border-t border-[#E6E8F2] flex flex-col gap-2 text-xs">
                 <div className="flex justify-between">
-                  <span className="text-[#626784]">Fixed Base (Monthly In-hand core):</span>
+                  <span className="text-[#626784]">Fixed base (annual, before tax):</span>
                   <strong className="text-[#1E2238]">₹{fixedComponent}L PA</strong>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-[#626784]">Variable / RSU Performance Grant:</span>
+                  <span className="text-[#626784]">Variable / equity (annual illustration):</span>
                   <strong className="text-[#7C5CFC]">₹{variableComponent}L PA</strong>
                 </div>
               </div>

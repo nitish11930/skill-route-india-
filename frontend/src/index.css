@@ -49,3 +49,16 @@
 .coach-markdown blockquote {border-left:3px solid #7c5cfc;padding-left:1em;color:#626784;}
 .coach-markdown code {background:#f2efff;border-radius:4px;padding:2px 4px;}
 .coach-markdown a {color:#2f6fed;text-decoration:underline;}
+
+/* Keyboard, touch and reduced-motion support across core screens. */
+button, select, input, textarea, a { touch-action: manipulation; }
+:where(button, a, select, input, textarea):focus-visible {
+  outline: 3px solid #2f6fed; outline-offset: 3px;
+}
+@media (max-width: 767px) {
+  button { min-height: 44px; }
+  main { min-width: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

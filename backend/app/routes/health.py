@@ -39,8 +39,9 @@ def get_health_status():
             }
         },
         "modeDescription": (
-            "Running in Production Graph Mode with live Neo4j AuraDB & Gemini"
-            if not is_demo_mode
-            else "Running in Transparent Demo Mode with In-Memory Graph Engine & Grounded Coach Fallback"
+            ("Graph: live Neo4j. " if neo4j_health.get("connected") else "Graph: in-memory demo. ")
+            + ("Coach: verified Gemini." if gemini_health.get("connected")
+               else "Coach: Gemini configured but unverified; fallback available." if settings.has_gemini_config
+               else "Coach: deterministic demo fallback.")
         )
     }

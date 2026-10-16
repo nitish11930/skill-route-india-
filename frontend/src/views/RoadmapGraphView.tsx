@@ -417,7 +417,7 @@ export const RoadmapGraphView: React.FC<RoadmapGraphViewProps> = ({
                       }`}
                     >
                       {selectedNode.status === 'COMPLETED'
-                        ? 'Mastered'
+                        ? 'Complete · self-reported'
                         : selectedNode.status === 'READY'
                         ? 'Ready to Learn'
                         : 'Blocked by Prerequisites'}
@@ -428,7 +428,7 @@ export const RoadmapGraphView: React.FC<RoadmapGraphViewProps> = ({
                   <p className="text-xs text-[#424654]">
                     {selectedPrereqs.length > 0 ? (
                       <span>
-                        Prerequisites:{' '}
+                        Recommended learning order; completion is self-reported, not assessed. Prerequisites:{' '}
                         <strong className="text-[#1E2238]">
                           {selectedPrereqs.map((pid) => nodes.find((n) => n.id === pid)?.label || pid).join(', ')}
                         </strong>
@@ -452,7 +452,7 @@ export const RoadmapGraphView: React.FC<RoadmapGraphViewProps> = ({
                       {selectedNode.status === 'COMPLETED' ? 'undo' : 'check_circle'}
                     </span>
                     <span>
-                      {selectedNode.status === 'COMPLETED' ? 'Mark Incomplete' : 'Mark as Mastered'}
+                      {selectedNode.status === 'COMPLETED' ? 'Mark Incomplete' : 'Mark complete (self-reported)'}
                     </span>
                   </button>
 
